@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Free Site Measurement | Timber & Plank Craft Studio</title>
+  <meta name="description" content="Book your complimentary precision laser site measurement and in-home wood consultation. Visit our architectural showroom or schedule an on-site evaluation.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  <!-- Immediate Theme & Direction Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('timber_plank_theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      const dir = localStorage.getItem('timber_plank_direction');
+      if (dir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.classList.add('rtl-mode');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Custom Showroom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              dark: '#1b130e',
+              charcoal: '#120e0b',
+              walnut: '#2c1d16',
+              espresso: '#3d281e',
+              pecan: '#5a3a29',
+              amber: '#c58940',
+              oak: '#d4a373',
+              honey: '#e9c46a',
+              bone: '#f7f3ed',
+              cream: '#faf7f2',
+              parchment: '#f0e8dc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="wood-texture-subtle min-h-screen flex flex-col antialiased">
+
+  <!-- Main Navigation Header (Top content removed as requested) -->
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e3d7c5] shadow-sm transition">
+    <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Fixed Perfectly Aligned Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3.5 group flex-shrink-0">
+        <div class="w-11 h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
+          <svg class="w-6 h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)"/>
+            <path d="M3 12l9 4.5 9-4.5"/>
+            <path d="M3 16.5l9 4.5 9-4.5"/>
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="font-serif text-lg sm:text-xl font-bold tracking-wider text-[#c58940] leading-tight">TIMBER &amp; PLANK</span>
+          <span class="text-[9px] tracking-[0.26em] text-[#c58940]/80 uppercase font-semibold mt-0.5">CRAFT STUDIO &amp; SHOWROOM</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Single-Line Alignment) -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-[13px] xl:text-sm font-medium text-[#5a3a29] whitespace-nowrap">
+        <a href="index.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Home</a>
+        <a href="about.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">About Us</a>
+        <a href="products.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Products &amp; Wood</a>
+        <a href="services.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Services &amp; Refinishing</a>
+        <a href="gallery.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Gallery</a>
+        <a href="pricing.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Pricing Guide</a>
+        <a href="contact.html" class="px-3.5 py-2 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] flex items-center h-10">Contact &amp; Measure</a>
+      </nav>
+
+      <!-- Action Buttons (Theme Toggle, RTL Button, Login/Logout Button, Sample Drawer, Mobile Hamburger) -->
+      <div class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
+        <!-- Theme Toggle Button (Dark / Light) -->
+        <button type="button" class="theme-toggle-btn p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center shadow-sm" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+          <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg class="theme-icon-sun hidden w-4 h-4 sm:w-5 sm:h-5 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+
+        <!-- RTL Toggle Button -->
+        <button type="button" class="rtl-toggle-btn px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#5a3a29] font-bold text-xs tracking-wider transition hover-lift shadow-sm flex items-center justify-center" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+
+        <!-- Login / Logout Button -->
+        <a href="login.html" class="auth-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition flex items-center gap-1.5">
+          <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+          </svg>
+          <span class="auth-btn-text">Login</span>
+        </a>
+
+        <!-- Sample Box Drawer Trigger -->
+        <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center" title="View Sample Swatch Box">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] text-[#2c1d16] flex items-center justify-center" aria-label="Toggle navigation">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Down Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] bg-[#faf7f2] px-6 py-5 space-y-3 shadow-lg">
+      <a href="index.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Home</a>
+      <a href="about.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">About Our Studio</a>
+      <a href="products.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Products &amp; Wood Types</a>
+      <a href="services.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Services &amp; Refinishing</a>
+      <a href="gallery.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Showroom Gallery</a>
+      <a href="pricing.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Pricing Guide &amp; Estimator</a>
+      <a href="contact.html" class="block text-base font-semibold text-[#c58940]">Contact &amp; Site Measurement</a>
+
+      <!-- Mobile Quick Toggles -->
+      <div class="pt-3 border-t border-[#e3d7c5] flex items-center justify-between gap-2">
+        <button type="button" class="theme-toggle-btn flex-1 py-2 px-3 rounded-lg border border-[#e3d7c5] bg-white text-xs font-semibold text-[#5a3a29] flex items-center justify-center gap-1.5">
+          <span class="theme-mobile-label">Dark Mode</span>
+        </button>
+        <button type="button" class="rtl-toggle-btn flex-1 py-2 px-3 rounded-lg border border-[#e3d7c5] bg-white text-xs font-bold text-[#5a3a29] flex items-center justify-center gap-1.5">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <a href="login.html" class="auth-btn flex-1 py-2 px-3 rounded-lg bg-[#c58940] text-white text-xs font-semibold flex items-center justify-center gap-1.5 text-center">
+          <span class="auth-btn-text">Login</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Banner -->
+  <section class="py-16 bg-[#2c1d16] text-[#f7f3ed] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Showroom &amp; On-Site Care</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#f7f3ed] mt-2 mb-4 leading-tight">
+          Visit Our Showroom or Book a Free Site Measurement
+        </h1>
+        <p class="text-[#f7f3ed]/80 text-sm sm:text-base leading-relaxed">
+          Walk across full-room timber mockups in our design gallery, touch raw oil vs. ceramic satin finishes, or have our senior estimator bring the showroom directly to your residence with laser measurement tools.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showroom Details & Location Row -->
+  <section class="py-12 bg-white border-b border-[#e3d7c5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 bg-[#faf7f2] rounded-2xl border border-[#e4d8c7] flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#2c1d16] text-[#c58940] flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-[#2c1d16]">Design Showroom</h4>
+            <p class="text-xs text-[#5a3a29] mt-1">480 Artisan Boulevard, Suite 100<br>Architectural Design Quarter</p>
+            <span class="inline-block mt-2 text-[11px] text-[#c58940] font-semibold">Free Dedicated Valet Parking</span>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[#faf7f2] rounded-2xl border border-[#e4d8c7] flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#2c1d16] text-[#c58940] flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-[#2c1d16]">Showroom Hours</h4>
+            <p class="text-xs text-[#5a3a29] mt-1">Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 5:00 PM</p>
+            <span class="inline-block mt-2 text-[11px] text-[#5a3a29] font-medium">Sunday by Private Appointment</span>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[#faf7f2] rounded-2xl border border-[#e4d8c7] flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#2c1d16] text-[#c58940] flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-[#2c1d16]">Direct Concierge</h4>
+            <p class="text-xs text-[#5a3a29] mt-1">Phone: +91 98765 43210<br>Email: concierge@timberplankcraft.com</p>
+            <span class="inline-block mt-2 text-[11px] text-[#c58940] font-semibold">24/7 Rapid Repair Helpline</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Site Measurement Form Section -->
+  <section id="booking-section" class="py-16 bg-[#faf7f2]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Complimentary In-Home Service</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] mt-1 mb-2">
+          Schedule Free Laser Site Measurement
+        </h2>
+        <p class="text-xs sm:text-sm text-[#5a3a29] max-w-lg mx-auto">
+          We bring full-length timber swatches, measure rooms with millimetric laser sensors, and inspect subfloor moisture. Zero fees, zero pressure.
+        </p>
+      </div>
+
+      <!-- Multi-step Card Container -->
+      <div class="bg-white rounded-3xl border border-[#e4d8c7] shadow-xl p-6 sm:p-10">
+        
+        <!-- Step Progress Header -->
+        <div class="flex items-center justify-between mb-8 pb-6 border-b border-[#f0e8dc]">
+          <div class="flex items-center gap-3">
+            <span id="step-indicator-1" class="w-8 h-8 rounded-full bg-[#c58940] text-white text-xs font-bold flex items-center justify-center">1</span>
+            <span class="text-xs font-semibold text-[#2c1d16] hidden sm:inline">Project Scope</span>
+          </div>
+          <div class="w-12 h-0.5 bg-[#e4d8c7]"></div>
+          <div class="flex items-center gap-3">
+            <span id="step-indicator-2" class="w-8 h-8 rounded-full bg-[#f0e8dc] text-[#8c786a] text-xs font-bold flex items-center justify-center">2</span>
+            <span class="text-xs font-semibold text-[#8c786a] hidden sm:inline">Date &amp; Location</span>
+          </div>
+          <div class="w-12 h-0.5 bg-[#e4d8c7]"></div>
+          <div class="flex items-center gap-3">
+            <span id="step-indicator-3" class="w-8 h-8 rounded-full bg-[#f0e8dc] text-[#8c786a] text-xs font-bold flex items-center justify-center">3</span>
+            <span class="text-xs font-semibold text-[#8c786a] hidden sm:inline">Confirmation</span>
+          </div>
+        </div>
+
+        <form id="site-measure-form">
+          
+          <!-- STEP 1: Project Scope -->
+          <div id="step-panel-1" class="space-y-6">
+            <h3 class="font-serif text-lg font-bold text-[#2c1d16]">Step 1: Tell Us About Your Space</h3>
+            
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#8c786a] mb-3">Service Required</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 p-3.5 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl cursor-pointer hover:border-[#c58940] transition">
+                  <input type="radio" name="projectType" value="Hardwood Flooring" checked class="text-[#c58940] focus:ring-[#c58940]">
+                  <div>
+                    <span class="text-xs font-bold text-[#1b130e] block">Hardwood Flooring Installation</span>
+                    <span class="text-[11px] text-[#8c786a]">Engineered, solid, herringbone, or chevron</span>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3.5 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl cursor-pointer hover:border-[#c58940] transition">
+                  <input type="radio" name="projectType" value="Exterior Decking" class="text-[#c58940] focus:ring-[#c58940]">
+                  <div>
+                    <span class="text-xs font-bold text-[#1b130e] block">Exterior Decking &amp; Balcony</span>
+                    <span class="text-[11px] text-[#8c786a]">Brazilian Ipe, Teak, or architectural composite</span>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3.5 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl cursor-pointer hover:border-[#c58940] transition">
+                  <input type="radio" name="projectType" value="Dustless Refinishing" class="text-[#c58940] focus:ring-[#c58940]">
+                  <div>
+                    <span class="text-xs font-bold text-[#1b130e] block">Dustless Sanding &amp; Refinishing</span>
+                    <span class="text-[11px] text-[#8c786a]">99.8% HEPA vacuum, ceramic coats, or custom stain</span>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3.5 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl cursor-pointer hover:border-[#c58940] transition">
+                  <input type="radio" name="projectType" value="Commercial / Heritage" class="text-[#c58940] focus:ring-[#c58940]">
+                  <div>
+                    <span class="text-xs font-bold text-[#1b130e] block">Commercial or Heritage Restoration</span>
+                    <span class="text-[11px] text-[#8c786a]">Boutique retail, galleries, and historic chateaux</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Property Type</label>
+                <select id="book-property-type" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+                  <option>Residential Detached Home</option>
+                  <option>High-Rise Apartment / Penthouse</option>
+                  <option>Commercial Boutique / Office</option>
+                  <option>Heritage Bungalow / Estate</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Approximate Area</label>
+                <select id="book-area" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+                  <option>Under 500 sq ft (1 or 2 rooms)</option>
+                  <option selected>500 - 1,000 sq ft (Main floor)</option>
+                  <option>1,000 - 2,000 sq ft (Whole residence)</option>
+                  <option>Over 2,000 sq ft (Estate / Commercial)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Preferred Wood Species / Style</label>
+              <select id="book-wood-pref" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+                <option>European White Oak (Natural Matte Oil)</option>
+                <option>American Black Walnut Wide Plank</option>
+                <option>French White Oak Herringbone Parquet</option>
+                <option>French Chevron 45° Parquet</option>
+                <option>Brazilian Ipe Hardwood Decking</option>
+                <option>Canadian Sugar Maple</option>
+                <option>Strand-Woven Carbonized Bamboo</option>
+                <option>Undecided / Need Artisan Recommendation</option>
+              </select>
+            </div>
+
+            <div class="flex justify-end pt-4">
+              <button type="button" class="btn-step-next px-8 py-3.5 bg-[#2c1d16] hover:bg-[#1b130e] text-white text-xs font-bold rounded-xl transition flex items-center gap-2 shadow">
+                <span>Continue to Date &amp; Address</span>
+                <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Date & Address -->
+          <div id="step-panel-2" class="space-y-6 hidden">
+            <h3 class="font-serif text-lg font-bold text-[#2c1d16]">Step 2: Choose Date &amp; Measurement Location</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Preferred Consultation Date *</label>
+                <input type="date" id="book-date" required class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+                <span class="text-[10px] text-[#8c786a] mt-1 block">Appointments available Monday through Saturday.</span>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Time Window Window</label>
+                <select id="book-time" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+                  <option>Morning Window (9:00 AM – 12:00 PM)</option>
+                  <option>Afternoon Window (1:00 PM – 4:00 PM)</option>
+                  <option>Evening Window (4:30 PM – 6:30 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Property Street Address *</label>
+              <input type="text" id="book-address" required placeholder="e.g. 742 Indiranagar, 12th Main Road, Bengaluru" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+            </div>
+
+            <div class="p-4 bg-[#fbf9f5] rounded-xl border border-[#e4d8c7] text-xs text-[#5a3a29] flex items-center gap-3">
+              <svg class="w-5 h-5 text-[#c58940] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Our master artisan will arrive with precision laser distance meters, a Delmhorst wood moisture pin-meter, and a mobile swatch trunk containing physical timber boards.</span>
+            </div>
+
+            <div class="flex justify-between pt-4">
+              <button type="button" class="btn-step-prev px-6 py-3.5 bg-white border border-[#e4d8c7] text-[#5a3a29] text-xs font-bold rounded-xl hover:bg-[#faf7f2] transition">
+                ← Back
+              </button>
+              <button type="button" class="btn-step-next px-8 py-3.5 bg-[#2c1d16] hover:bg-[#1b130e] text-white text-xs font-bold rounded-xl transition flex items-center gap-2 shadow">
+                <span>Continue to Final Review</span>
+                <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Contact & Submit -->
+          <div id="step-panel-3" class="space-y-6 hidden">
+            <h3 class="font-serif text-lg font-bold text-[#2c1d16]">Step 3: Contact Details &amp; Appointment Confirmation</h3>
+            
+            <!-- Summary Card -->
+            <div class="p-4 bg-[#f3ede2] rounded-2xl border border-[#e4d8c7] text-xs space-y-1.5">
+              <div class="flex justify-between">
+                <span class="text-[#8c786a]">Scope:</span>
+                <span id="review-scope" class="font-bold text-[#2c1d16]"></span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#8c786a]">Requested Schedule:</span>
+                <span id="review-schedule" class="font-bold text-[#2c1d16]"></span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#8c786a]">Site Location:</span>
+                <span id="review-address" class="font-bold text-[#2c1d16]"></span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Full Name *</label>
+                <input type="text" id="book-name" required placeholder="e.g. Julian Thorne" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Phone Number *</label>
+                <input type="tel" id="book-phone" required placeholder="e.g. +91 98765 43210" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Email Address</label>
+              <input type="email" id="book-email" placeholder="e.g. julian@example.com" class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#5a3a29] mb-1.5">Project Notes or Sample Swatch Requests</label>
+              <textarea id="book-notes" rows="3" placeholder="Describe any stairs, existing flooring to demolish, or specific wood finishes you would like us to bring..." class="w-full p-3 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]"></textarea>
+            </div>
+
+            <div class="flex justify-between pt-4">
+              <button type="button" class="btn-step-prev px-6 py-3.5 bg-white border border-[#e4d8c7] text-[#5a3a29] text-xs font-bold rounded-xl hover:bg-[#faf7f2] transition">
+                ← Back
+              </button>
+              <button type="submit" class="px-8 py-4 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] text-xs font-bold rounded-xl transition shadow hover-lift flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>Reserve Free Laser Measurement</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+      <!-- Recent Saved Bookings Section -->
+      <div class="mt-12">
+        <h4 class="font-serif text-base font-bold text-[#2c1d16] mb-3">Your Scheduled Consultations</h4>
+        <div id="recent-bookings-list" class="space-y-3">
+          <!-- Populated from LocalStorage -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white border-t border-[#e3d7c5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Site Measurement FAQ</span>
+        <h3 class="font-serif text-2xl font-bold text-[#2c1d16] mt-1">Frequently Asked Questions</h3>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm">
+        <div class="p-5 bg-[#faf7f2] rounded-2xl border border-[#e4d8c7]">
+          <h4 class="font-bold text-[#2c1d16] mb-1">Is the site measurement genuinely free?</h4>
+          <p class="text-[#5a3a29] leading-relaxed">Yes. Our laser site measurement and subfloor moisture evaluation are completely free with zero obligation. You will receive an exact itemized quote in Rupees (₹) valid for 60 days.</p>
+        </div>
+
+        <div class="p-5 bg-[#faf7f2] rounded-2xl border border-[#e4d8c7]">
+          <h4 class="font-bold text-[#2c1d16] mb-1">Do you bring real wood samples to our home?</h4>
+          <p class="text-[#5a3a29] leading-relaxed">Absolutely. Wood changes dramatically depending on natural sunlight exposure and artificial lighting temperature. Our master estimator travels with a portable trunk containing large-format planks and finishes.</p>
+        </div>
+
+        <div class="p-5 bg-[#faf7f2] rounded-2xl border border-[#e4d8c7]">
+          <h4 class="font-bold text-[#2c1d16] mb-1">How long does the in-home measurement visit take?</h4>
+          <p class="text-[#5a3a29] leading-relaxed">Typically between 30 to 45 minutes for standard residences up to 2,000 square feet. This allows sufficient time to test subfloor levelness, measure doors and transitions, and discuss finish options.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Sample Drawer -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="sample-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#faf7f2] border-l border-[#e3d7c5] shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-6 border-b border-[#e3d7c5] flex items-center justify-between bg-white">
+      <div>
+        <h3 class="font-serif text-lg font-bold text-[#2c1d16]">Complimentary Sample Box</h3>
+        <p class="text-xs text-[#8c786a]">Select up to 5 wood species &amp; finishes for direct courier delivery</p>
+      </div>
+      <button id="close-sample-drawer" class="p-2 text-[#8c786a] hover:text-[#1b130e]">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-6 space-y-3" id="drawer-samples-list"></div>
+    <div id="drawer-empty-message" class="text-center py-12 px-6">
+      <div class="w-12 h-12 rounded-full bg-[#f3ede2] text-[#c58940] flex items-center justify-center mx-auto mb-3">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+      </div>
+      <h4 class="font-serif text-base font-bold text-[#2c1d16]">Your sample box is empty</h4>
+      <p class="text-xs text-[#8c786a] mt-1 max-w-xs mx-auto">Browse our products to add complimentary swatches to your box.</p>
+    </div>
+    <div class="p-6 border-t border-[#e3d7c5] bg-white">
+      <button id="drawer-order-btn" class="w-full py-3.5 bg-[#2c1d16] hover:bg-[#1b130e] text-white font-medium text-sm rounded-xl transition shadow flex items-center justify-center gap-2">
+        <span>Proceed with Samples to Site Measure</span>
+        <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Showroom Footer -->
+  <footer class="bg-[#1b130e] text-[#f7f3ed] border-t border-[#3d281e] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-3.5 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md flex-shrink-0">
+              <svg class="w-5 h-5 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)"/>
+                <path d="M3 12l9 4.5 9-4.5"/>
+                <path d="M3 16.5l9 4.5 9-4.5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="block font-serif text-lg font-bold tracking-wide text-[#d4a373]">TIMBER &amp; PLANK</span>
+              <span class="text-[9px] tracking-[0.25em] text-[#d4a373] uppercase font-semibold">CRAFT STUDIO &amp; SHOWROOM</span>
+            </div>
+          </a>
+          <p class="text-xs text-[#f7f3ed]/70 leading-relaxed max-w-sm mb-6">
+            Dedicated to architectural hardwood floors, structural outdoor decking, and zero-VOC refinishing. Every project is measured by laser and laid by master artisans.
+          </p>
+          <div class="text-xs text-[#d4a373] space-y-1">
+            <p>Showroom Address: 480 Artisan Boulevard, Suite 100</p>
+            <p>Direct Line: +91 98765 43210 • concierge@timberplankcraft.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4">Showroom Pages</h4>
+          <ul class="space-y-2 text-xs text-[#f7f3ed]/75">
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Products by Species</a></li>
+            <li><a href="services.html" class="hover:text-[#c58940] transition">Installation &amp; Refinishing</a></li>
+            <li><a href="gallery.html" class="hover:text-[#c58940] transition">Showroom Gallery</a></li>
+            <li><a href="pricing.html" class="hover:text-[#c58940] transition">Pricing &amp; Estimator</a></li>
+            <li><a href="contact.html" class="hover:text-[#c58940] transition">Free Site Measure</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4">Wood Collections</h4>
+          <ul class="space-y-2 text-xs text-[#f7f3ed]/75">
+            <li><a href="products.html" class="hover:text-[#c58940] transition">European White Oak</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">American Black Walnut</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">French Chevron &amp; Parquet</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Brazilian Ipe Decking</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Architectural Composite</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4">Craftsman Newsletter</h4>
+          <p class="text-xs text-[#f7f3ed]/70 mb-3">Seasonal wood care guides, timber trends, and private showroom event invitations.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <input type="email" required placeholder="Enter your email"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-[#2c1d16] border border-[#3d281e] text-xs text-white placeholder-gray-400 focus:outline-none focus:border-[#c58940]">
+            <button type="submit"
+              class="w-full py-2 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-10 mt-12 border-t border-[#3d281e] text-center text-xs text-[#f7f3ed]/60">
+        <p>© 2026 Timber &amp; Plank Craft Studio. All rights reserved. NWFA Certified Master Craftsperson.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client & Trade Sign In | Timber & Plank Craft Studio</title>
+  <meta name="description" content="Sign in to your Timber & Plank Client Portal to manage site measurements, wood swatches, and custom installation projects.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  <!-- Immediate Theme & Direction Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('timber_plank_theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      const dir = localStorage.getItem('timber_plank_direction');
+      if (dir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.classList.add('rtl-mode');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Custom Showroom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              dark: '#1b130e',
+              charcoal: '#120e0b',
+              walnut: '#2c1d16',
+              espresso: '#3d281e',
+              pecan: '#5a3a29',
+              amber: '#c58940',
+              oak: '#d4a373',
+              honey: '#e9c46a',
+              bone: '#f7f3ed',
+              cream: '#faf7f2',
+              parchment: '#f0e8dc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="wood-texture-subtle min-h-screen flex flex-col justify-between antialiased selection:bg-[#c58940] selection:text-white">
+
+  <!-- Floating Utility Bar (No Navbar, clean right corner toggles) -->
+  <div class="w-full px-4 sm:px-6 lg:px-8 pt-6 flex items-center justify-between">
+    <a href="index.html" class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#5a3a29] hover:text-[#c58940] transition">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+      </svg>
+      <span>Back to Showroom</span>
+    </a>
+
+    <!-- Theme & RTL Controls -->
+    <div class="flex items-center gap-2">
+      <!-- Dark/Light Theme Toggle -->
+      <button type="button" class="theme-toggle-btn p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center shadow-sm" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+        <svg class="theme-icon-moon w-4 h-4 text-[#5a3a29]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+        <svg class="theme-icon-sun hidden w-4 h-4 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+      </button>
+
+      <!-- RTL Toggle Button -->
+      <button type="button" class="rtl-toggle-btn px-3 py-1.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#5a3a29] font-bold text-xs tracking-wider transition hover-lift shadow-sm flex items-center justify-center" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+        <span class="rtl-btn-text">RTL</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Central Authentication Container (No Navbar) -->
+  <main class="flex-1 flex items-center justify-center px-4 sm:px-6 py-10">
+    <div class="w-full max-w-md bg-white border border-[#e3d7c5] rounded-3xl p-7 sm:p-9 shadow-xl relative overflow-hidden transition-all duration-300">
+      
+      <!-- Decorative Warm Accent Top Line -->
+      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#c58940] via-[#e9c46a] to-[#c58940]"></div>
+
+      <!-- Brand Logo Header -->
+      <div class="text-center mb-8">
+        <a href="index.html" class="inline-flex flex-col items-center group">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-2xl flex items-center justify-center shadow-lg group-hover:border-[#c58940] transition mb-3">
+            <svg class="w-7 h-7 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)"/>
+              <path d="M3 12l9 4.5 9-4.5"/>
+              <path d="M3 16.5l9 4.5 9-4.5"/>
+            </svg>
+          </div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-[#c58940]">TIMBER &amp; PLANK</span>
+          <span class="text-[10px] tracking-[0.28em] text-[#c58940]/80 uppercase font-semibold mt-0.5">CRAFT STUDIO &amp; SHOWROOM</span>
+        </a>
+
+        <h1 class="font-serif text-2xl font-semibold text-[#2c1d16] mt-5 mb-1.5">Client &amp; Trade Portal</h1>
+        <p class="text-xs sm:text-sm text-[#5a3a29] leading-relaxed">
+          Sign in to manage on-site laser measurements, sample swatch boxes, and architectural floor schedules.
+        </p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="login-email" class="block text-xs font-semibold uppercase tracking-wider text-[#5a3a29] mb-1.5">
+            Email Address
+          </label>
+          <div class="relative">
+            <input type="email" id="login-email" required
+              value="client@timberplank.com"
+              placeholder="architect@domain.com"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-[#e3d7c5] focus:border-[#c58940] focus:ring-2 focus:ring-[#c58940]/20 text-sm text-[#2c1d16] bg-[#faf7f2] transition outline-none">
+            <svg class="w-4 h-4 text-[#8c786a] absolute right-3.5 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.206"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label for="login-password" class="block text-xs font-semibold uppercase tracking-wider text-[#5a3a29]">
+              Password
+            </label>
+            <a href="#" onclick="showToast('Password reset link has been dispatched to your email.', 'info'); return false;" class="text-xs text-[#c58940] hover:underline">Forgot?</a>
+          </div>
+          <div class="relative">
+            <input type="password" id="login-password" required
+              value="timbercraft2026"
+              placeholder="••••••••"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-[#e3d7c5] focus:border-[#c58940] focus:ring-2 focus:ring-[#c58940]/20 text-sm text-[#2c1d16] bg-[#faf7f2] transition outline-none">
+            <svg class="w-4 h-4 text-[#8c786a] absolute right-3.5 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-[#5a3a29] pt-1">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 rounded border-[#e3d7c5] text-[#c58940] focus:ring-[#c58940]">
+            <span>Keep me signed in</span>
+          </label>
+          <span class="text-[#8c786a]">SSL 256-bit Encrypted</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white font-semibold text-sm tracking-wide shadow-md hover:shadow-lg transition hover-lift flex items-center justify-center gap-2">
+          <span>Sign In to Account</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </button>
+
+        <!-- Instant 1-Click Demo Login -->
+        <button type="button" id="demo-login-btn"
+          class="w-full py-2.5 px-4 rounded-xl border border-[#c58940]/40 hover:border-[#c58940] bg-[#c58940]/5 hover:bg-[#c58940]/10 text-[#c58940] font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          <span>1-Click Instant Demo Login</span>
+        </button>
+      </form>
+
+      <!-- Security Guarantee -->
+      <div class="mt-6 pt-5 border-t border-[#e3d7c5] text-center text-[11px] text-[#8c786a] space-y-1">
+        <p>National Wood Flooring Association (NWFA) Accredited Portal</p>
+        <p>Need trade onboarding? Contact <span class="text-[#c58940] font-medium">+91 98765 43210</span></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Centered Footer (No full navbar footer) -->
+  <footer class="py-6 text-center text-xs text-[#5a3a29]/70">
+    <p>© 2026 Timber &amp; Plank Craft Studio. All rights reserved. NWFA Certified Master Craftsperson.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Handle form submit and demo sign in
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginForm = document.getElementById('login-form');
+      const demoBtn = document.getElementById('demo-login-btn');
+
+      function performLogin(email) {
+        showToast(`Welcome back, ${email || 'Client'}! Redirecting to Home...`, 'success');
+        setTimeout(() => {
+          AuthManager.login();
+        }, 600);
+      }
+
+      if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('login-email').value;
+          performLogin(email);
+        });
+      }
+
+      if (demoBtn) {
+        demoBtn.addEventListener('click', () => {
+          performLogin('client@timberplank.com');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

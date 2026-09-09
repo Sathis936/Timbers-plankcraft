@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craftsmanship Gallery & Portfolio | Timber & Plank Craft Studio</title>
+  <meta name="description" content="Explore our completed residential and commercial flooring, architectural herringbone parquet, and exterior Ipe decking installations.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  <!-- Immediate Theme & Direction Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('timber_plank_theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      const dir = localStorage.getItem('timber_plank_direction');
+      if (dir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.classList.add('rtl-mode');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Custom Showroom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              dark: '#1b130e',
+              charcoal: '#120e0b',
+              walnut: '#2c1d16',
+              espresso: '#3d281e',
+              pecan: '#5a3a29',
+              amber: '#c58940',
+              oak: '#d4a373',
+              honey: '#e9c46a',
+              bone: '#f7f3ed',
+              cream: '#faf7f2',
+              parchment: '#f0e8dc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="wood-texture-subtle min-h-screen flex flex-col antialiased">
+
+  <!-- Main Navigation Header (Top content removed as requested) -->
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e3d7c5] shadow-sm transition">
+    <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Fixed Perfectly Aligned Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3.5 group flex-shrink-0">
+        <div class="w-11 h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
+          <svg class="w-6 h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)"/>
+            <path d="M3 12l9 4.5 9-4.5"/>
+            <path d="M3 16.5l9 4.5 9-4.5"/>
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="font-serif text-lg sm:text-xl font-bold tracking-wider text-[#c58940] leading-tight">TIMBER &amp; PLANK</span>
+          <span class="text-[9px] tracking-[0.26em] text-[#c58940]/80 uppercase font-semibold mt-0.5">CRAFT STUDIO &amp; SHOWROOM</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Single-Line Alignment) -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-[13px] xl:text-sm font-medium text-[#5a3a29] whitespace-nowrap">
+        <a href="index.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Home</a>
+        <a href="about.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">About Us</a>
+        <a href="products.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Products &amp; Wood</a>
+        <a href="services.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Services &amp; Refinishing</a>
+        <a href="gallery.html" class="px-3.5 py-2 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] flex items-center h-10">Gallery</a>
+        <a href="pricing.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Pricing Guide</a>
+        <a href="contact.html" class="px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Contact &amp; Measure</a>
+      </nav>
+
+      <!-- Action Buttons (Theme Toggle, RTL Button, Login/Logout Button, Sample Drawer, Mobile Hamburger) -->
+      <div class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
+        <!-- Theme Toggle Button (Dark / Light) -->
+        <button type="button" class="theme-toggle-btn p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center shadow-sm" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+          <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg class="theme-icon-sun hidden w-4 h-4 sm:w-5 sm:h-5 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+
+        <!-- RTL Toggle Button -->
+        <button type="button" class="rtl-toggle-btn px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#5a3a29] font-bold text-xs tracking-wider transition hover-lift shadow-sm flex items-center justify-center" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+
+        <!-- Login / Logout Button -->
+        <a href="login.html" class="auth-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition flex items-center gap-1.5">
+          <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+          </svg>
+          <span class="auth-btn-text">Login</span>
+        </a>
+
+        <!-- Sample Box Drawer Trigger -->
+        <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center" title="View Sample Swatch Box">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] text-[#2c1d16] flex items-center justify-center" aria-label="Toggle navigation">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Down Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] bg-[#faf7f2] px-6 py-5 space-y-3 shadow-lg">
+      <a href="index.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Home</a>
+      <a href="about.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">About Our Studio</a>
+      <a href="products.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Products &amp; Wood Types</a>
+      <a href="services.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Services &amp; Refinishing</a>
+      <a href="gallery.html" class="block text-base font-semibold text-[#c58940]">Showroom Gallery</a>
+      <a href="pricing.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Pricing Guide &amp; Estimator</a>
+      <a href="contact.html" class="block text-base text-[#5a3a29] hover:text-[#c58940]">Contact &amp; Site Measurement</a>
+
+      <!-- Mobile Quick Toggles -->
+      <div class="pt-3 border-t border-[#e3d7c5] flex items-center justify-between gap-2">
+        <button type="button" class="theme-toggle-btn flex-1 py-2 px-3 rounded-lg border border-[#e3d7c5] bg-white text-xs font-semibold text-[#5a3a29] flex items-center justify-center gap-1.5">
+          <span class="theme-mobile-label">Dark Mode</span>
+        </button>
+        <button type="button" class="rtl-toggle-btn flex-1 py-2 px-3 rounded-lg border border-[#e3d7c5] bg-white text-xs font-bold text-[#5a3a29] flex items-center justify-center gap-1.5">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <a href="login.html" class="auth-btn flex-1 py-2 px-3 rounded-lg bg-[#c58940] text-white text-xs font-semibold flex items-center justify-center gap-1.5 text-center">
+          <span class="auth-btn-text">Login</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Header -->
+  <section class="py-16 bg-[#2c1d16] text-[#f7f3ed] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Architectural Showcase</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#f7f3ed] mt-2 mb-4 leading-tight">
+          Craftsmanship Gallery &amp; Completed Installations
+        </h1>
+        <p class="text-[#f7f3ed]/80 text-sm sm:text-base leading-relaxed">
+          Explore our real-world portfolio across luxury residences, coastal outdoor decks, commercial galleries, and historic restorations. Click any photograph for technical timber details.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-[#e3d7c5] py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+      
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full" id="gallery-filters">
+        <button class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-[#2c1d16] text-white transition border border-[#2c1d16]" data-filter="all">All Projects (9)</button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-filter="living">Living Spaces</button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-filter="decking">Outdoor Decks</button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-filter="herringbone">Parquet &amp; Chevron</button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-filter="commercial">Commercial</button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-filter="restoration">Restoration</button>
+      </div>
+
+      <div class="text-xs text-[#8c786a] hidden sm:block">
+        Use arrow keys ◀ ▶ to navigate photos in lightbox
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery Tiles Grid -->
+  <section class="py-14 bg-[#faf7f2] flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+        
+        <!-- Tile 1 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="herringbone" data-title="French White Oak Herringbone Foyer" data-wood="European White Oak • Natural Hardwax Oil" data-location="Bel Air Residence • 1,450 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1000&q=80" alt="White Oak Herringbone" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Herringbone Parquet</span>
+            <h4 class="font-serif text-lg font-bold">French White Oak Herringbone Foyer</h4>
+            <p class="text-xs text-white/80">Bel Air Residence • 1,450 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="decking" data-title="Cantilevered Brazilian Ipe Pool Deck" data-wood="Brazilian Ipe • Marine UV Shield Oil" data-location="Malibu Coastal Villa • 1,800 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80" alt="Brazilian Ipe Pool Deck" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Exterior Decking</span>
+            <h4 class="font-serif text-lg font-bold">Cantilevered Brazilian Ipe Pool Deck</h4>
+            <p class="text-xs text-white/80">Malibu Coastal Villa • 1,800 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="living" data-title="American Black Walnut Great Room" data-wood="American Black Walnut • Satin German Poly" data-location="Aspen Mountain Lodge • 2,200 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Black Walnut Great Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Living Spaces</span>
+            <h4 class="font-serif text-lg font-bold">American Black Walnut Great Room</h4>
+            <p class="text-xs text-white/80">Aspen Mountain Lodge • 2,200 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 4 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="herringbone" data-title="Scandinavian Wire-Brushed Chevron" data-wood="White Oak Chevron 45° • Ultra Matte Sheen" data-location="Tribeca Penthouse Loft • 1,600 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80" alt="Scandinavian Chevron" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Chevron Parquet</span>
+            <h4 class="font-serif text-lg font-bold">Scandinavian Wire-Brushed Chevron</h4>
+            <p class="text-xs text-white/80">Tribeca Penthouse Loft • 1,600 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 5 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="restoration" data-title="Historic Estate Floor Restoration" data-wood="Quartersawn Historic Red Oak • Custom Smoked Stain" data-location="Greenwich Historic District • 3,100 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="Historic Tudor Restoration" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Dustless Refinishing</span>
+            <h4 class="font-serif text-lg font-bold">Historic Estate Restoration</h4>
+            <p class="text-xs text-white/80">Greenwich Historic District • 3,100 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 6 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="commercial" data-title="Boutique Luxury Art Gallery Flooring" data-wood="Wide Plank Sugar Maple • High-Traffic Commercial Ceramic" data-location="Chelsea Arts Building • 4,500 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1000&q=80" alt="Commercial Art Gallery Flooring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Commercial Gallery</span>
+            <h4 class="font-serif text-lg font-bold">Boutique Luxury Art Gallery Flooring</h4>
+            <p class="text-xs text-white/80">Chelsea Arts Building • 4,500 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 7 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="decking" data-title="Modern Rooftop Teak Terrace" data-wood="Sustainable Royal Teak • Hidden Fasteners" data-location="Downtown Rooftop Sky Villa • 950 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80" alt="Rooftop Teak Terrace" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Outdoor Decking</span>
+            <h4 class="font-serif text-lg font-bold">Modern Rooftop Teak Terrace</h4>
+            <p class="text-xs text-white/80">Downtown Rooftop Sky Villa • 950 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 8 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="living" data-title="Wide Plank White Oak Master Suite" data-wood="European White Oak 240mm • Hardwax Natural Oil" data-location="Sonoma Wine Country Estate • 1,200 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Master Suite White Oak" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Living Spaces</span>
+            <h4 class="font-serif text-lg font-bold">Wide Plank White Oak Master Suite</h4>
+            <p class="text-xs text-white/80">Sonoma Wine Country Estate • 1,200 sq. ft.</p>
+          </div>
+        </div>
+
+        <!-- Tile 9 -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm bg-white cursor-pointer hover-lift"
+             data-category="restoration" data-title="Historic Parquet Radiator Patch &amp; Polish" data-wood="Reclaimed Oak • Hand-Rubbed Oil" data-location="Gramercy Park Residence • 850 sq. ft.">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80" alt="Historic Parquet Patch" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-6 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-[#d4a373]">Restoration</span>
+            <h4 class="font-serif text-lg font-bold">Historic Parquet Radiator Patch &amp; Polish</h4>
+            <p class="text-xs text-white/80">Gramercy Park Residence • 850 sq. ft.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Lightbox Modal -->
+  <div id="gallery-lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/90 backdrop-blur-md hidden modal-fade-in">
+    <button onclick="GalleryApp.closeLightbox()" class="absolute top-5 right-5 p-2.5 text-white/70 hover:text-white bg-black/40 rounded-full transition z-20">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+
+    <button onclick="GalleryApp.prevImage()" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 text-white/80 hover:text-white bg-black/50 hover:bg-[#c58940] rounded-full transition z-20" title="Previous Image">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+    </button>
+
+    <button onclick="GalleryApp.nextImage()" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 text-white/80 hover:text-white bg-black/50 hover:bg-[#c58940] rounded-full transition z-20" title="Next Image">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+
+    <div class="max-w-5xl w-full bg-[#1b130e] border border-[#3d281e] rounded-3xl overflow-hidden shadow-2xl flex flex-col">
+      <div class="relative max-h-[70vh] bg-black flex items-center justify-center overflow-hidden">
+        <img id="lightbox-image" src="" alt="" class="max-h-[68vh] w-auto object-contain mx-auto">
+        <span id="lightbox-counter" class="absolute top-4 left-4 bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-mono text-white/80 border border-white/10">1 / 9</span>
+      </div>
+
+      <div class="p-6 bg-[#2c1d16] text-[#f7f3ed] flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-[#3d281e]">
+        <div>
+          <h3 id="lightbox-title" class="font-serif text-xl font-bold text-[#f7f3ed]">Project Title</h3>
+          <p id="lightbox-wood" class="text-xs text-[#c58940] mt-0.5">Wood Species &amp; Finish</p>
+          <p id="lightbox-location" class="text-[11px] text-[#f7f3ed]/60 mt-0.5">Location &amp; Scope</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="pricing.html" class="px-5 py-2.5 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition shadow">
+            Estimate Similar Project
+          </a>
+          <a href="contact.html" class="px-5 py-2.5 bg-[#3d281e] hover:bg-[#5a3a29] text-white font-medium text-xs rounded-xl transition border border-white/20">
+            Book Site Measure
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Sample Drawer -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="sample-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#faf7f2] border-l border-[#e3d7c5] shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-6 border-b border-[#e3d7c5] flex items-center justify-between bg-white">
+      <div>
+        <h3 class="font-serif text-lg font-bold text-[#2c1d16]">Complimentary Sample Box</h3>
+        <p class="text-xs text-[#8c786a]">Select up to 5 wood species &amp; finishes for direct courier delivery</p>
+      </div>
+      <button id="close-sample-drawer" class="p-2 text-[#8c786a] hover:text-[#1b130e]">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-6 space-y-3" id="drawer-samples-list"></div>
+    <div id="drawer-empty-message" class="text-center py-12 px-6">
+      <div class="w-12 h-12 rounded-full bg-[#f3ede2] text-[#c58940] flex items-center justify-center mx-auto mb-3">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+      </div>
+      <h4 class="font-serif text-base font-bold text-[#2c1d16]">Your sample box is empty</h4>
+      <p class="text-xs text-[#8c786a] mt-1 max-w-xs mx-auto">Select timber samples from our products page for direct courier delivery.</p>
+    </div>
+    <div class="p-6 border-t border-[#e3d7c5] bg-white">
+      <button id="drawer-order-btn" class="w-full py-3.5 bg-[#2c1d16] hover:bg-[#1b130e] text-white font-medium text-sm rounded-xl transition shadow flex items-center justify-center gap-2">
+        <span>Proceed with Samples to Site Measure</span>
+        <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Showroom Footer -->
+  <footer class="bg-[#1b130e] text-[#f7f3ed] border-t border-[#3d281e] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-3.5 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md flex-shrink-0">
+              <svg class="w-5 h-5 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)"/>
+                <path d="M3 12l9 4.5 9-4.5"/>
+                <path d="M3 16.5l9 4.5 9-4.5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="block font-serif text-lg font-bold tracking-wide text-[#d4a373]">TIMBER &amp; PLANK</span>
+              <span class="text-[9px] tracking-[0.25em] text-[#d4a373] uppercase font-semibold">CRAFT STUDIO &amp; SHOWROOM</span>
+            </div>
+          </a>
+          <p class="text-xs text-[#f7f3ed]/70 leading-relaxed max-w-sm mb-6">
+            Dedicated to architectural hardwood floors, structural outdoor decking, and zero-VOC refinishing. Every project is measured by laser and laid by master artisans.
+          </p>
+          <div class="text-xs text-[#d4a373] space-y-1">
+            <p>Showroom Address: 480 Artisan Boulevard, Suite 100</p>
+            <p>Direct Line: +91 98765 43210 • concierge@timberplankcraft.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4">Showroom Pages</h4>
+          <ul class="space-y-2 text-xs text-[#f7f3ed]/75">
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Products by Species</a></li>
+            <li><a href="services.html" class="hover:text-[#c58940] transition">Installation &amp; Refinishing</a></li>
+            <li><a href="gallery.html" class="hover:text-[#c58940] transition">Showroom Gallery</a></li>
+            <li><a href="pricing.html" class="hover:text-[#c58940] transition">Pricing &amp; Estimator</a></li>
+            <li><a href="contact.html" class="hover:text-[#c58940] transition">Free Site Measure</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4">Wood Collections</h4>
+          <ul class="space-y-2 text-xs text-[#f7f3ed]/75">
+            <li><a href="products.html" class="hover:text-[#c58940] transition">European White Oak</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">American Black Walnut</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">French Chevron &amp; Parquet</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Brazilian Ipe Decking</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Architectural Composite</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4">Craftsman Newsletter</h4>
+          <p class="text-xs text-[#f7f3ed]/70 mb-3">Seasonal wood care guides, timber trends, and private showroom event invitations.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <input type="email" required placeholder="Enter your email"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-[#2c1d16] border border-[#3d281e] text-xs text-white placeholder-gray-400 focus:outline-none focus:border-[#c58940]">
+            <button type="submit"
+              class="w-full py-2 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-10 mt-12 border-t border-[#3d281e] text-center text-xs text-[#f7f3ed]/60">
+        <p>© 2026 Timber &amp; Plank Craft Studio. All rights reserved. NWFA Certified Master Craftsperson.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

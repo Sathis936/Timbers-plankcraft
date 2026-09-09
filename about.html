@@ -6,17 +6,23 @@
   <title>About Our Studio | Timber & Plank Craft Studio - Master Woodworking & Flooring Heritage</title>
   <meta name="description" content="Discover the heritage, master woodworkers, and architectural precision behind Timber & Plank Craft Studio. 30+ years of artisanal timber floors, zero-VOC finishes, and luxury woodcraft.">
 
-  <!-- Immediate Theme Application to Prevent Flash -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Immediate Theme & Direction Init (Prevents FOUC) -->
   <script>
-    (function () {
-      const savedTheme = localStorage.getItem('timber_theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    (function() {
+      const theme = localStorage.getItem('timber_plank_theme');
+      if (theme === 'dark') {
         document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-      const savedDir = localStorage.getItem('timber_direction') || 'ltr';
-      document.documentElement.setAttribute('dir', savedDir);
+      const dir = localStorage.getItem('timber_plank_direction');
+      if (dir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.classList.add('rtl-mode');
+      }
     })();
   </script>
 

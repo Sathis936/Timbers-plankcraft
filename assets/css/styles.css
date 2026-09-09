@@ -25,11 +25,15 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--wood-cream);
   color: var(--wood-dark);
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .font-serif {
@@ -582,6 +586,27 @@ html.dark .auth-btn.border:hover {
 
 html.dark .rtl-btn-text {
   color: #f7f3ed !important;
+}
+
+/* Mobile Slide Down Menu in Dark Mode */
+html.dark #mobile-menu {
+  background-color: #1b130e !important;
+  border-color: #38271e !important;
+  color: #f7f3ed !important;
+}
+
+html.dark #mobile-menu a {
+  color: #dfd3c5 !important;
+}
+
+html.dark #mobile-menu a:hover {
+  color: #e9c46a !important;
+  background-color: #261b14 !important;
+}
+
+html.dark #mobile-menu a.bg-\[\#f0e8dc\]\/60 {
+  background-color: #2a1e16 !important;
+  color: #e9c46a !important;
 }
 
 /* Sample Swatch Drawer in Dark Mode */

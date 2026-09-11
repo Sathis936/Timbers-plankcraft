@@ -81,7 +81,35 @@
 
       <!-- Desktop Nav Links (Centered, visible on lg+) -->
       <nav class="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-1 xl:mx-4 gap-0.5 xl:gap-1 text-xs xl:text-[13.5px] font-medium text-[#5a3a29] whitespace-nowrap">
-        <a href="index.html" class="px-2.5 xl:px-3.5 py-2 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center h-10">Home</a>
+        
+        <!-- Home Dropdown (Home 1 & Home 2) -->
+        <div class="relative group">
+          <button type="button" class="px-2.5 xl:px-3.5 py-2 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center gap-1 h-10">
+            <span>Home 1</span>
+            <svg class="w-3.5 h-3.5 text-[#c58940] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-1.5 hidden group-hover:block z-50 min-w-[250px]">
+            <div class="bg-white dark:bg-[#1c1511] border border-[#e3d7c5] dark:border-[#38271e] rounded-2xl shadow-xl p-2 space-y-1 backdrop-blur-lg">
+              <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-[#faf7f2] dark:hover:bg-[#261b14] transition bg-[#f0e8dc]/60 dark:bg-[#2a1e16] text-[#c58940] font-bold">
+                <div class="w-8 h-8 rounded-lg bg-[#c58940] text-[#120e0b] flex items-center justify-center flex-shrink-0 font-bold text-xs">01</div>
+                <div>
+                  <div class="text-xs font-bold text-[#c58940]">Home 1: Showroom</div>
+                  <div class="text-[10px] text-[#8c786a]">Artisan Finishes &amp; Restoration</div>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-[#faf7f2] dark:hover:bg-[#261b14] transition text-[#2c1d16] dark:text-[#dfd3c5]">
+                <div class="w-8 h-8 rounded-lg bg-[#c58940]/15 text-[#c58940] flex items-center justify-center flex-shrink-0 font-bold text-xs">02</div>
+                <div>
+                  <div class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 2: Architectural</div>
+                  <div class="text-[10px] text-[#8c786a]">Atelier &amp; Hardwood Matrix</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <a href="about.html" class="px-2.5 xl:px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">About<span class="hidden xl:inline">&nbsp;Us</span></a>
         <a href="products.html" class="px-2.5 xl:px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Products<span class="hidden xl:inline">&nbsp;&amp; Wood</span></a>
         <a href="services.html" class="px-2.5 xl:px-3.5 py-2 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-10">Services<span class="hidden xl:inline">&nbsp;&amp; Refinishing</span></a>
@@ -134,8 +162,20 @@
 
     <!-- Mobile Slide Down Menu -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] bg-[#faf7f2] px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+      
+      <!-- Home 1 & Home 2 Twin Cards on Mobile -->
+      <div class="grid grid-cols-2 gap-2 pb-1">
+        <a href="index.html" class="block py-2.5 px-3 rounded-xl text-xs font-bold text-[#c58940] bg-[#f0e8dc]/70 border border-[#c58940] text-center transition">
+          <span class="block text-[10px] uppercase tracking-wider text-[#c58940] font-bold">Style 1</span>
+          <span class="font-bold text-[#2c1d16]">Home 1 (Showroom)</span>
+        </a>
+        <a href="home-2.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] bg-white border border-[#e3d7c5] hover:border-[#c58940] text-center transition">
+          <span class="block text-[10px] uppercase tracking-wider text-[#c58940] font-bold">Style 2</span>
+          <span class="font-bold text-[#2c1d16]">Home 2 (Architectural)</span>
+        </a>
+      </div>
+
       <div class="space-y-1">
-        <a href="index.html" class="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#c58940] bg-[#f0e8dc]/60 transition">Home</a>
         <a href="about.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">About Our Studio</a>
         <a href="products.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Products &amp; Wood Types</a>
         <a href="services.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Services &amp; Refinishing</a>
@@ -146,7 +186,6 @@
 
       <!-- Quick Actions for Mobile in Drawer -->
       <div class="pt-4 border-t border-[#e3d7c5] space-y-3">
-        <!-- Sample Drawer Trigger in Mobile Menu -->
         <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] bg-white text-[#2c1d16] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
@@ -155,23 +194,18 @@
           <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
         </button>
 
-        <!-- 2-Col Toggles (Theme & RTL) -->
         <div class="grid grid-cols-2 gap-2">
-          <!-- Theme Toggle -->
           <button type="button" class="theme-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] bg-white text-[#2c1d16] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
             <svg class="theme-icon-moon w-4 h-4 text-[#5a3a29]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             <svg class="theme-icon-sun hidden w-4 h-4 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <span class="theme-mobile-label">Dark Mode</span>
           </button>
-
-          <!-- RTL Direction Toggle -->
           <button type="button" class="rtl-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] bg-white text-[#5a3a29] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
             <svg class="w-4 h-4 text-[#5a3a29]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
             <span>Direction: <strong class="rtl-btn-text">RTL</strong></span>
           </button>
         </div>
 
-        <!-- Client Login / Logout -->
         <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
           <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
           <span class="auth-btn-text">Client Login</span>

@@ -159,7 +159,7 @@
     </div>
 
     <!-- Mobile Slide Down Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] bg-[#faf7f2] px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 w-full border-t border-[#e3d7c5] bg-[#faf7f2] dark:bg-[#18110c] px-4 sm:px-6 py-5 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto z-50">
       
       <!-- Home 1 & Home 2 Twin Cards on Mobile -->
       <div class="grid grid-cols-2 gap-2 pb-1">
@@ -229,69 +229,68 @@
   </section>
 
   <!-- Interactive Filter Controls Bar -->
-  <section class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-[#e3d7c5] py-4 shadow-sm">
+  <section class="sticky top-20 z-30 bg-white/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] py-5 shadow-sm transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
       
-      <!-- Top Row: Search & Wood Species Pills -->
-      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      <!-- Top Row: Search Input & Collection Filter Tabs -->
+      <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
         
-        <!-- Wood Type Filter Pills -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full no-scrollbar" id="wood-filter-container">
-          <span class="text-xs font-bold text-[#8c786a] uppercase tracking-wider mr-1 flex-shrink-0">Wood:</span>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#2c1d16] text-white border border-[#2c1d16] transition active" data-wood="all">All Species</button>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-wood="oak">European White Oak</button>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-wood="walnut">American Walnut</button>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-wood="teak-ipe">Ipe &amp; Teak Decking</button>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-wood="maple">Sugar Maple</button>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-wood="bamboo">Strand Bamboo</button>
-          <button class="wood-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] text-[#5a3a29] border border-[#e4d8c7] hover:border-[#c58940] transition" data-wood="hickory">Vintage Hickory</button>
+        <!-- Primary Collection Categorization Tabs -->
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 max-w-full no-scrollbar" id="collection-filter-container">
+          <span class="text-xs font-bold text-[#8c786a] dark:text-[#a89687] uppercase tracking-wider mr-1 flex-shrink-0">Collection:</span>
+          <button class="collection-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-[#2c1d16] text-white border border-[#2c1d16] transition shadow-sm active whitespace-nowrap" data-collection="all">All Products (13)</button>
+          <button class="collection-filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-collection="flooring">Indoor Flooring</button>
+          <button class="collection-filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-collection="decking">Outdoor Decking</button>
+          <button class="collection-filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-collection="wall">Wall Collections</button>
+          <button class="collection-filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-collection="ceiling">Ceiling Collections</button>
+          <button class="collection-filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-collection="other">Other Products</button>
         </div>
 
-        <!-- Search Bar -->
+        <!-- Search Bar with Proper Spacing & Alignment -->
         <div class="relative w-full lg:w-72 flex-shrink-0">
-          <input type="text" id="product-search" placeholder="Search species, pattern, finish..." class="w-full pl-9 pr-4 py-2 bg-[#faf7f2] border border-[#e4d8c7] rounded-xl text-xs text-[#1b130e] focus:outline-none focus:border-[#c58940]">
-          <svg class="w-4 h-4 text-[#8c786a] absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input type="text" id="product-search" placeholder="Search species, pattern, finish..." class="w-full pl-9 pr-4 py-2.5 bg-[#faf7f2] dark:bg-[#241a14] border border-[#e4d8c7] dark:border-[#38271e] rounded-xl text-xs text-[#1b130e] dark:text-[#f7f3ed] focus:outline-none focus:border-[#c58940] shadow-inner">
+          <svg class="w-4 h-4 text-[#8c786a] absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
 
       </div>
 
-      <!-- Second Row: Style Filter Pills & Match Counter -->
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-[#f0e8dc]">
-        <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full" id="style-filter-container">
-          <span class="text-xs font-bold text-[#8c786a] uppercase tracking-wider mr-1 flex-shrink-0">Style:</span>
-          <button class="style-filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#f0e8dc] text-[#2c1d16] transition active" data-style="all">All Styles</button>
-          <button class="style-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-[#5a3a29] hover:bg-[#f0e8dc] transition" data-style="herringbone">Herringbone &amp; Chevron</button>
-          <button class="style-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-[#5a3a29] hover:bg-[#f0e8dc] transition" data-style="wide-plank">Wide Plank (190-260mm)</button>
-          <button class="style-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-[#5a3a29] hover:bg-[#f0e8dc] transition" data-style="solid">Solid Hardwood</button>
-          <button class="style-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-[#5a3a29] hover:bg-[#f0e8dc] transition" data-style="engineered">Engineered Multi-Ply</button>
-          <button class="style-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-[#5a3a29] hover:bg-[#f0e8dc] transition" data-style="decking">Exterior Decking</button>
+      <!-- Second Row: Wood Species Pills & Live Counter -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-[#f0e8dc] dark:border-[#2e2017]">
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 max-w-full no-scrollbar" id="wood-filter-container">
+          <span class="text-xs font-bold text-[#8c786a] dark:text-[#a89687] uppercase tracking-wider mr-1 flex-shrink-0">Wood Species:</span>
+          <button class="wood-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#2c1d16] text-white border border-[#2c1d16] transition active whitespace-nowrap" data-wood="all">All Species</button>
+          <button class="wood-filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-wood="oak">European White Oak</button>
+          <button class="wood-filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-wood="walnut">American Walnut</button>
+          <button class="wood-filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-wood="teak-ipe">Ipe &amp; Teak</button>
+          <button class="wood-filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-wood="maple">Sugar Maple</button>
+          <button class="wood-filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#faf7f2] dark:bg-[#241a14] text-[#5a3a29] dark:text-[#dfd3c5] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition whitespace-nowrap" data-wood="bamboo">Strand Bamboo</button>
         </div>
 
-        <div class="text-xs text-[#8c786a]">
-          Showing <span id="product-count" class="font-bold text-[#1b130e]">6</span> curated wood systems
+        <div class="text-xs text-[#8c786a] dark:text-[#a89687] flex-shrink-0">
+          Showing <span id="product-count" class="font-bold text-[#1b130e] dark:text-[#f7f3ed]">13</span> curated architectural products
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Products Catalog Grid (All in Rupees ₹) -->
-  <section class="py-12 bg-[#faf7f2] flex-1">
+  <!-- Products Catalog Grid -->
+  <section class="py-12 bg-[#faf7f2] dark:bg-[#140e0a] flex-1 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch" id="product-cards-grid">
         
-        <!-- Product 1: White Oak Herringbone -->
-        <div class="product-item bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between"
-             data-wood="oak" data-style="herringbone" data-name="French White Oak Herringbone Parquet" data-price="1,150">
+        <!-- PRODUCT 1: White Oak Herringbone (Indoor Flooring) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="flooring" data-wood="oak" data-style="herringbone" data-name="French White Oak Herringbone Parquet" data-price="1,150">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
               <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="French White Oak Herringbone Parquet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
-                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Oak</span>
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Indoor Flooring</span>
                 <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Herringbone</span>
               </div>
-              <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,360 lbf</span>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,360 lbf</span>
             </div>
 
             <div class="p-6 flex flex-col flex-1">
@@ -317,24 +316,24 @@
                 Quick Specs ↗
               </button>
             </div>
-            <button onclick="SampleManager.addSample({id: 'prod-oak-herringbone', name: 'French White Oak Herringbone', type: 'European White Oak', finish: 'Hardwax Oil', image: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5">
+            <button onclick="SampleManager.addSample({id: 'prod-oak-herringbone', name: 'French White Oak Herringbone', type: 'Indoor Flooring', finish: 'Hardwax Oil', image: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
               <span>Order Free Sample Swatch</span>
             </button>
           </div>
         </div>
 
-        <!-- Product 2: American Black Walnut Wide Plank -->
-        <div class="product-item bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between"
-             data-wood="walnut" data-style="wide-plank" data-name="Chateau American Black Walnut Wide Plank" data-price="1,450">
+        <!-- PRODUCT 2: American Black Walnut Wide Plank (Indoor Flooring) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="flooring" data-wood="walnut" data-style="wide-plank" data-name="American Black Walnut Wide Plank" data-price="1,450">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="American Black Walnut Wide Plank" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
-                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Walnut</span>
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Indoor Flooring</span>
                 <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Wide Plank</span>
               </div>
-              <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,010 lbf</span>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,010 lbf</span>
             </div>
 
             <div class="p-6 flex flex-col flex-1">
@@ -360,24 +359,110 @@
                 Quick Specs ↗
               </button>
             </div>
-            <button onclick="SampleManager.addSample({id: 'prod-walnut-wide', name: 'American Black Walnut Wide Plank', type: 'American Walnut', finish: 'Satin Ceramic', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5">
+            <button onclick="SampleManager.addSample({id: 'prod-walnut-wide', name: 'American Black Walnut Wide Plank', type: 'Indoor Flooring', finish: 'Satin Ceramic', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
               <span>Order Free Sample Swatch</span>
             </button>
           </div>
         </div>
 
-        <!-- Product 3: Brazilian Ipe Decking -->
-        <div class="product-item bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between"
-             data-wood="teak-ipe" data-style="decking" data-name="Brazilian Ipe Architectural Decking" data-price="1,850">
+        <!-- PRODUCT 3: French Chevron 45° Parquet (Indoor Flooring) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="flooring" data-wood="oak" data-style="herringbone" data-name="Artisan French Chevron 45° Parquet" data-price="1,300">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80" alt="Artisan French Chevron 45 Parquet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Indoor Flooring</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Chevron</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,360 lbf</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Artisan French Chevron 45°</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Precision 45° Miter Cut • Continuous Arrow Geometry</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Thickness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">16mm Multi-Ply</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Dimensions:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">120mm x 600mm Pair</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Smoked &amp; Wire-Brushed</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Sheen:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">8% Ultra Matte</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹1,300 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+              </div>
+              <button onclick="openProductModal('Artisan French Chevron 45°', 'European White Oak', '1,300', '1,360 lbf', '16mm (4.5mm top wear)', '120mm x 600mm Pair', 'Smoked & Wire Brushed Matte', 'Full glue-down installation with laser-guided center chalk line.', 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-chevron-oak', name: 'Artisan French Chevron 45°', type: 'Indoor Flooring', finish: 'Smoked Matte', image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 4: Canadian Sugar Maple (Indoor Flooring) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="flooring" data-wood="maple" data-style="wide-plank" data-name="Canadian Sugar Maple Select Commercial" data-price="850">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Canadian Sugar Maple Flooring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Indoor Flooring</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Sugar Maple</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,450 lbf</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Canadian Sugar Maple Select</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">High-Traffic Hardwood • Creamy Uniform Blonde</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Grain:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Closed Fine Fiber</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Wear Resistance:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Commercial High Impact</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Nordic Matte Ceramic</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Thickness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">18mm Solid / Engineered</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹850 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+              </div>
+              <button onclick="openProductModal('Canadian Sugar Maple Select', 'Canadian Hard Maple', '850', '1,450 lbf', '18mm (5mm top wear)', '150mm x 1800mm', 'Nordic Matte Ceramic', 'Ideal for art galleries, boutiques, and daylight-rich minimalist homes.', 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-maple-select', name: 'Canadian Sugar Maple Select', type: 'Indoor Flooring', finish: 'Nordic Matte', image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 5: Brazilian Ipe Decking (Outdoor Decking) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="decking" data-wood="teak-ipe" data-style="decking" data-name="Brazilian Ipe Architectural Decking" data-price="1,850">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
               <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" alt="Brazilian Ipe Architectural Decking" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
-                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Ipe / Teak</span>
-                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Exterior Deck</span>
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Outdoor Decking</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Ipe Ironwood</span>
               </div>
-              <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 3,680 lbf</span>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 3,680 lbf</span>
             </div>
 
             <div class="p-6 flex flex-col flex-1">
@@ -403,35 +488,35 @@
                 Quick Specs ↗
               </button>
             </div>
-            <button onclick="SampleManager.addSample({id: 'prod-ipe-deck', name: 'Brazilian Ipe Ironwood Decking', type: 'Exotic Hardwood Decking', finish: 'Marine UV Oil', image: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5">
+            <button onclick="SampleManager.addSample({id: 'prod-ipe-deck', name: 'Brazilian Ipe Ironwood Decking', type: 'Outdoor Decking', finish: 'Marine UV Oil', image: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
               <span>Order Free Sample Swatch</span>
             </button>
           </div>
         </div>
 
-        <!-- Product 4: French Chevron White Oak -->
-        <div class="product-item bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between"
-             data-wood="oak" data-style="herringbone" data-name="Artisan French Chevron 45° Parquet" data-price="1,300">
+        <!-- PRODUCT 6: Burmese Royal Teak Terrace (Outdoor Decking) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="decking" data-wood="teak-ipe" data-style="decking" data-name="Burmese Royal Teak Terrace Plank" data-price="2,200">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Artisan French Chevron 45 Parquet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Burmese Royal Teak Decking" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
-                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Oak</span>
-                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Chevron</span>
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Outdoor Decking</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Royal Teak</span>
               </div>
-              <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,360 lbf</span>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,150 lbf</span>
             </div>
 
             <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Artisan French Chevron 45°</h3>
-              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Precision 45° Miter Cut • Continuous Arrow Line</p>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Burmese Royal Teak Terrace</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Old-Growth Marine Heartwood • Silicon-Rich Natural Oils</p>
               
               <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Thickness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">16mm Multi-Ply</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Dimensions:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">120mm x 600mm Pair</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Smoked &amp; Brushed</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Sheen:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">8% Ultra Matte</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Oil Content:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Extreme (Yacht Grade)</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Weathering:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Zero Cracking / Splitting</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Width:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">120mm x 2400mm RL</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Application:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Rooftops &amp; Patios</span></div>
               </div>
             </div>
           </div>
@@ -440,84 +525,41 @@
             <div class="flex items-center justify-between py-3 h-14">
               <div>
                 <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
-                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹1,300 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹2,200 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
               </div>
-              <button onclick="openProductModal('Artisan French Chevron 45°', 'European White Oak', '1,300', '1,360 lbf', '16mm (4.5mm top wear)', '120mm x 600mm Pair', 'Smoked & Wire Brushed Matte', 'Full glue-down installation with laser-guided center chalk line.', 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+              <button onclick="openProductModal('Burmese Royal Teak Terrace', 'Tectona Grandis', '2,200', '1,150 lbf', '20mm Solid Marine Teak', '120mm x 2400mm', 'Trans-Oxide Teak Oil', 'Concealed deck fasteners with rubber expansion gaskets.', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
                 Quick Specs ↗
               </button>
             </div>
-            <button onclick="SampleManager.addSample({id: 'prod-chevron-oak', name: 'Artisan French Chevron 45°', type: 'European White Oak', finish: 'Smoked Matte', image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5">
+            <button onclick="SampleManager.addSample({id: 'prod-teak-deck', name: 'Burmese Royal Teak Terrace', type: 'Outdoor Decking', finish: 'Marine Teak Oil', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
               <span>Order Free Sample Swatch</span>
             </button>
           </div>
         </div>
 
-        <!-- Product 5: Canadian Sugar Maple -->
-        <div class="product-item bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between"
-             data-wood="maple" data-style="solid" data-name="Canadian Sugar Maple Solid Hardwood" data-price="950">
+        <!-- PRODUCT 7: Fluted Oak Acoustic Slats (Wall Collection) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="wall" data-wood="oak" data-style="wall" data-name="Fluted White Oak Acoustic Wall Slats" data-price="780">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Canadian Sugar Maple Solid Hardwood" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80" alt="Fluted White Oak Acoustic Wall Slats" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
-                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Maple</span>
-                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Solid</span>
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Wall Collection</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Acoustic Slats</span>
               </div>
-              <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 1,450 lbf</span>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">NRC: 0.85 Sound Absorb</span>
             </div>
 
             <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Canadian Sugar Maple Solid Planks</h3>
-              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Hard Rock Maple • Blonde Lustre &amp; Fine Pores</p>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Fluted Oak Acoustic Wall Slats</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">3D Vertical Timber Ribs • Recycled Acoustic Felt Backing</p>
               
               <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Thickness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">19mm Solid Timber</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Plank Width:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">130mm Plank</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Clear Crystal Satin Poly</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Warranty:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">30-Year Structural</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
-            <div class="flex items-center justify-between py-3 h-14">
-              <div>
-                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
-                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹950 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
-              </div>
-              <button onclick="openProductModal('Canadian Sugar Maple Solid Planks', 'Sugar Maple (Acer saccharum)', '950', '1,450 lbf', '19mm Solid 3/4 inch', '130mm x Random Lengths', 'Clear Crystal Satin Poly', 'Blind nail or staple-down with moisture retarder paper over wood subfloor.', 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
-                Quick Specs ↗
-              </button>
-            </div>
-            <button onclick="SampleManager.addSample({id: 'prod-maple-solid', name: 'Canadian Sugar Maple Solid', type: 'Canadian Maple', finish: 'Clear Satin Poly', image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-              <span>Order Free Sample Swatch</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Product 6: High-Density Carbonized Strand Bamboo -->
-        <div class="product-item bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between"
-             data-wood="bamboo" data-style="solid" data-name="High-Density Strand Woven Bamboo" data-price="780">
-          <div class="flex flex-col flex-1">
-            <div class="relative h-60 overflow-hidden group flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="High-Density Strand Woven Bamboo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              <div class="absolute top-3 left-3 flex gap-2">
-                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Bamboo</span>
-                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Strand Woven</span>
-              </div>
-              <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 3,000 lbf</span>
-            </div>
-
-            <div class="p-6 flex flex-col flex-1">
-              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Strand-Woven Carbonized Bamboo</h3>
-              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">High-Pressure Hydraulic Compression • Eco-Friendly</p>
-              
-              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Thickness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">14mm Solid Strand</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Hardness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">2x Harder than Red Oak</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">10-Coat Aluminum Oxide</span></div>
-                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Eco Rating:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Rapidly Renewable (5-Yr)</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Panel Size:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">600mm x 2400mm</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Slat Depth:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">27mm x 12mm Timber</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Matte Natural Oil</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Installation:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Direct Screw or Glue</span></div>
               </div>
             </div>
           </div>
@@ -528,11 +570,269 @@
                 <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
                 <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹780 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
               </div>
-              <button onclick="openProductModal('Strand-Woven Carbonized Bamboo', 'Phyllostachys edulis Moso Bamboo', '780', '3,000 lbf', '14mm Solid High-Density', '135mm x 1850mm', '10-Coat Anti-Scratch Aluminum Oxide', 'Glue-down or floating on acoustic silent vapor underlayment.', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+              <button onclick="openProductModal('Fluted Oak Acoustic Wall Slats', 'European White Oak', '780', 'Acoustic Wall Panel', '21mm overall thickness', '600mm x 2400mm panel', 'Natural Matte Hardwax', 'Screw directly through felt into studs or acoustic drywall.', 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
                 Quick Specs ↗
               </button>
             </div>
-            <button onclick="SampleManager.addSample({id: 'prod-bamboo-strand', name: 'Strand-Woven Carbonized Bamboo', type: 'Strand Woven Bamboo', finish: 'Aluminum Oxide Matte', image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5">
+            <button onclick="SampleManager.addSample({id: 'prod-fluted-wall', name: 'Fluted Oak Acoustic Slats', type: 'Wall Collection', finish: 'Matte Natural Oil', image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 8: Shiplap Smoked Walnut Wall Cladding (Wall Collection) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="wall" data-wood="walnut" data-style="wall" data-name="Shiplap Smoked Walnut Wall Cladding" data-price="920">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Smoked Walnut Wall Cladding" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Wall Collection</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Shiplap</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Micro-Reveal Joint</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Shiplap Smoked Walnut Cladding</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Horizontal Precision Tongue &amp; Groove Accent Walls</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Plank Width:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">160mm x 2400mm</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Joint:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">3mm Shadow Gap</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Smoked Botanical Oil</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Orientation:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Horizontal or Vertical</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹920 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+              </div>
+              <button onclick="openProductModal('Shiplap Smoked Walnut Cladding', 'American Black Walnut', '920', 'Architectural Cladding', '14mm solid profile', '160mm x 2400mm', 'Smoked Botanical Oil', 'Blind-nailed through tongue onto furring strips with acoustic backing.', 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-walnut-wall', name: 'Shiplap Smoked Walnut Wall Cladding', type: 'Wall Collection', finish: 'Smoked Oil', image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 9: Coffered Timber Ceiling & Exposed Beams (Ceiling Collection) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="ceiling" data-wood="oak" data-style="ceiling" data-name="Coffered White Oak Ceiling & Exposed Beams" data-price="1,100">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Coffered White Oak Ceiling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Ceiling Collection</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Timber Beams</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Structural Look</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Coffered Oak Ceiling &amp; Beams</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Architectural Box Beams • Matched Oak Grain Infill</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Beam Depth:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">150mm x 150mm Box</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Wood Type:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">French White Oak Miter</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Lighting:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Integrated LED Channelling</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Cerused Raw Hardwax</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹1,100 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+              </div>
+              <button onclick="openProductModal('Coffered Oak Ceiling & Beams', 'European White Oak', '1,100', 'Ceiling System', 'Bespoke box beam assemblies', 'Custom room grid', 'Cerused Raw Hardwax', 'Suspended sub-frame anchored into ceiling joists.', 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-oak-ceiling', name: 'Coffered Oak Ceiling & Beams', type: 'Ceiling Collection', finish: 'Cerused Hardwax', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 10: Linear Tongue & Groove Wood Ceiling (Ceiling Collection) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="ceiling" data-wood="oak" data-style="ceiling" data-name="Linear Tongue & Groove Oak Ceiling Planks" data-price="850">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Linear Tongue & Groove Wood Ceiling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Ceiling Collection</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Linear Planks</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Acoustic Warmth</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Linear T&amp;G Ceiling Planks</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Continuous Grain Extension from Floor to Overhead</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Plank Width:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">120mm x 2400mm</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Profile:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">End-Matched V-Groove</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Weight:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Lightweight Engineered Ply</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Finish:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Non-Yellowing Matte Poly</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹850 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+              </div>
+              <button onclick="openProductModal('Linear T&G Ceiling Planks', 'European White Oak', '850', 'Ceiling System', '12mm lightweight engineered profile', '120mm x 2400mm', 'Non-Yellowing Satin Poly', 'Blind fastened with pneumatic brad nails into acoustic strapping.', 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-tg-ceiling', name: 'Linear T&G Ceiling Planks', type: 'Ceiling Collection', finish: 'Satin Poly', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 11: Solid Hardwood Stair Treads & Risers (Other Available Products) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="other" data-wood="oak" data-style="other" data-name="Solid Timber Stair Treads & Risers" data-price="1,400">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Solid Hardwood Stair Treads" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Other Products</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Stair Treads</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Solid Bullnose</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Solid Timber Stair Treads</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Full-Thickness Treads • Mitered Matching End Grain</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Thickness:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">38mm Solid Heartwood</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Nosing:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Square or Bullnose Profile</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Wood Match:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Exact Match to Floor Lot</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Anti-Slip:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Embedded Micro-Grip Channel</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹1,400 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ tread</span></span>
+              </div>
+              <button onclick="openProductModal('Solid Timber Stair Treads', 'European White Oak / Walnut', '1,400', 'Stair Millwork', '38mm solid thickness', 'Custom cut to stringer', 'Matched to Flooring', 'Structural polyurethane adhesive anchoring directly to rough stairs.', 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-stair-treads', name: 'Solid Timber Stair Treads', type: 'Other Products', finish: 'Matched Floor Finish', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 12: Flush-Mount Solid Wood HVAC Floor Vents (Other Available Products) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="other" data-wood="oak" data-style="other" data-name="Flush-Mount Wood Floor Vents & Reducers" data-price="450">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=800&q=80" alt="Flush Mount Wood Floor Vents" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Other Products</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Floor Vents</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Seamless Flush</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Flush Wood Vents &amp; Transitions</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Eliminates Raised Metal Grilles • Zero Trip Hazard</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Integration:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Sits Level with Plank</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Air Flow:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Calibrated HVAC CFM</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Frame:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Grooved Outer Carrier</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Cleanability:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Lift-Out Removable Grate</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹450 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ unit</span></span>
+              </div>
+              <button onclick="openProductModal('Flush Wood Vents & Transitions', 'European White Oak / Walnut', '450', 'HVAC Accessory', 'Matched to floor thickness (15-20mm)', 'Standard 4x10 & 4x12 inch', 'Matched Finish', 'Framed into floor opening during plank installation.', 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-floor-vents', name: 'Flush Wood Vents & Transitions', type: 'Other Products', finish: 'Matched Floor Finish', image: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Order Free Sample Swatch</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 13: Strand-Woven Carbonized Bamboo (Other Available Products) -->
+        <div class="product-item bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between transition"
+             data-collection="other" data-wood="bamboo" data-style="wide-plank" data-name="Strand-Woven Carbonized Bamboo" data-price="650">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-60 overflow-hidden group flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Strand Woven Carbonized Bamboo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Other Products</span>
+                <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Bamboo</span>
+              </div>
+              <span class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1b130e]/90 backdrop-blur text-[#2c1d16] dark:text-[#f7f3ed] text-xs font-bold px-2.5 py-0.5 rounded shadow">Janka: 3,000+ lbf</span>
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1 min-h-[3.25rem] flex items-center leading-snug">Strand Carbonized Bamboo</h3>
+              <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-4 min-h-[2.5rem] flex items-center">Rapidly Renewable Grass Fiber • Extreme High Density</p>
+              
+              <div class="grid grid-cols-2 gap-2 text-xs bg-[#fbf9f5] dark:bg-[#281c15] p-3 rounded-xl border border-[#f0e8dc] dark:border-[#38271e] mb-4 min-h-[108px] content-start">
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Density:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Hydraulic Compressed</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Scratch Resistance:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Extreme (Pet-Friendly)</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Coloring:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">Steam Caramelized</span></div>
+                <div><span class="text-[#8c786a] dark:text-[#a89687] block text-[10px] uppercase font-medium">Sustainability:</span> <span class="font-medium text-[#2c1d16] dark:text-[#ece2d0]">5-Year Moso Bamboo Harvest</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between py-3 h-14">
+              <div>
+                <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
+                <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹650 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
+              </div>
+              <button onclick="openProductModal('Strand Carbonized Bamboo', 'Phyllostachys Edulis', '650', '3,000+ lbf', '14mm solid compressed profile', '135mm x 1850mm', 'Aluminum Oxide Ceramic', 'Drop-lock floating or full glue-down over subfloor.', 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+                Quick Specs ↗
+              </button>
+            </div>
+            <button onclick="SampleManager.addSample({id: 'prod-bamboo-strand', name: 'Strand Carbonized Bamboo', type: 'Other Products', finish: 'Ceramic Matte', image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
               <span>Order Free Sample Swatch</span>
             </button>
@@ -559,7 +859,7 @@
       <h3 class="font-serif text-2xl font-bold text-[#2c1d16] mb-4" id="modal-title">Product Name</h3>
 
       <div class="rounded-2xl overflow-hidden mb-6 h-52 border border-[#e4d8c7]">
-        <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+        <img id="modal-image" src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-full object-cover">
       </div>
 
       <div class="space-y-3 text-xs mb-6">
@@ -696,6 +996,7 @@
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
   <script>
+    let currentCollectionFilter = 'all';
     let currentWoodFilter = 'all';
     let currentStyleFilter = 'all';
     let currentSearchTerm = '';
@@ -705,15 +1006,17 @@
       let visibleCount = 0;
 
       items.forEach(item => {
-        const itemWood = item.getAttribute('data-wood');
-        const itemStyle = item.getAttribute('data-style');
+        const itemCollection = item.getAttribute('data-collection') || 'all';
+        const itemWood = item.getAttribute('data-wood') || 'all';
+        const itemStyle = item.getAttribute('data-style') || 'all';
         const itemName = item.getAttribute('data-name').toLowerCase();
 
+        const matchCollection = (currentCollectionFilter === 'all' || itemCollection === currentCollectionFilter);
         const matchWood = (currentWoodFilter === 'all' || itemWood === currentWoodFilter);
         const matchStyle = (currentStyleFilter === 'all' || itemStyle === currentStyleFilter);
         const matchSearch = (currentSearchTerm === '' || itemName.includes(currentSearchTerm));
 
-        if (matchWood && matchStyle && matchSearch) {
+        if (matchCollection && matchWood && matchStyle && matchSearch) {
           item.classList.remove('hidden');
           visibleCount++;
         } else {
@@ -724,28 +1027,30 @@
       document.getElementById('product-count').textContent = visibleCount;
     }
 
+    // Collection Filter Buttons
+    document.querySelectorAll('.collection-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentCollectionFilter = btn.getAttribute('data-collection');
+        document.querySelectorAll('.collection-filter-btn').forEach(b => {
+          b.classList.remove('bg-[#2c1d16]', 'text-white', 'border-[#2c1d16]');
+          b.classList.add('bg-[#faf7f2]', 'dark:bg-[#241a14]', 'text-[#5a3a29]', 'dark:text-[#dfd3c5]', 'border-[#e4d8c7]', 'dark:border-[#38271e]');
+        });
+        btn.classList.add('bg-[#2c1d16]', 'text-white', 'border-[#2c1d16]');
+        btn.classList.remove('bg-[#faf7f2]', 'dark:bg-[#241a14]', 'text-[#5a3a29]', 'dark:text-[#dfd3c5]', 'border-[#e4d8c7]', 'dark:border-[#38271e]');
+        filterProducts();
+      });
+    });
+
+    // Wood Species Filter Buttons
     document.querySelectorAll('.wood-filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         currentWoodFilter = btn.getAttribute('data-wood');
         document.querySelectorAll('.wood-filter-btn').forEach(b => {
           b.classList.remove('bg-[#2c1d16]', 'text-white', 'border-[#2c1d16]');
-          b.classList.add('bg-[#faf7f2]', 'text-[#5a3a29]', 'border-[#e4d8c7]');
+          b.classList.add('bg-[#faf7f2]', 'dark:bg-[#241a14]', 'text-[#5a3a29]', 'dark:text-[#dfd3c5]', 'border-[#e4d8c7]', 'dark:border-[#38271e]');
         });
         btn.classList.add('bg-[#2c1d16]', 'text-white', 'border-[#2c1d16]');
-        btn.classList.remove('bg-[#faf7f2]', 'text-[#5a3a29]', 'border-[#e4d8c7]');
-        filterProducts();
-      });
-    });
-
-    document.querySelectorAll('.style-filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentStyleFilter = btn.getAttribute('data-style');
-        document.querySelectorAll('.style-filter-btn').forEach(b => {
-          b.classList.remove('bg-[#f0e8dc]', 'text-[#2c1d16]');
-          b.classList.add('text-[#5a3a29]');
-        });
-        btn.classList.add('bg-[#f0e8dc]', 'text-[#2c1d16]');
-        btn.classList.remove('text-[#5a3a29]');
+        btn.classList.remove('bg-[#faf7f2]', 'dark:bg-[#241a14]', 'text-[#5a3a29]', 'dark:text-[#dfd3c5]', 'border-[#e4d8c7]', 'dark:border-[#38271e]');
         filterProducts();
       });
     });
@@ -762,8 +1067,8 @@
       const modal = document.getElementById('quick-specs-modal');
       document.getElementById('modal-title').textContent = name;
       document.getElementById('modal-species').textContent = species;
-      document.getElementById('modal-price').textContent = `₹${price} / sq. ft.`;
-      document.getElementById('modal-janka').textContent = `Janka Hardness: ${janka}`;
+      document.getElementById('modal-price').textContent = '₹' + price + ' / sq. ft.';
+      document.getElementById('modal-janka').textContent = 'Janka Hardness: ' + janka;
       document.getElementById('modal-thickness').textContent = thickness;
       document.getElementById('modal-dimensions').textContent = dimensions;
       document.getElementById('modal-finish').textContent = finish;
@@ -783,21 +1088,22 @@
     // URL Parameter Auto-filter handler
     window.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
+      const collectionParam = urlParams.get('collection');
       const woodParam = urlParams.get('wood');
       const styleParam = urlParams.get('style');
       const searchParam = urlParams.get('search');
 
+      if (collectionParam) {
+        const targetBtn = document.querySelector('.collection-filter-btn[data-collection="' + collectionParam + '"]');
+        if (targetBtn) targetBtn.click();
+      }
       if (woodParam) {
-        const targetBtn = document.querySelector(`.wood-filter-btn[data-wood="${woodParam}"]`);
-        if (targetBtn) {
-          targetBtn.click();
-        }
+        const targetBtn = document.querySelector('.wood-filter-btn[data-wood="' + woodParam + '"]');
+        if (targetBtn) targetBtn.click();
       }
       if (styleParam) {
-        const targetBtn = document.querySelector(`.style-filter-btn[data-style="${styleParam}"]`);
-        if (targetBtn) {
-          targetBtn.click();
-        }
+        currentStyleFilter = styleParam;
+        filterProducts();
       }
       if (searchParam && searchInput) {
         searchInput.value = searchParam;
@@ -805,7 +1111,7 @@
         filterProducts();
       }
 
-      if (woodParam || styleParam || searchParam) {
+      if (collectionParam || woodParam || styleParam || searchParam) {
         const grid = document.getElementById('product-cards-grid');
         if (grid) {
           setTimeout(() => {

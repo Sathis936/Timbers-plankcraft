@@ -159,7 +159,7 @@
     </div>
 
     <!-- Mobile Slide Down Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] bg-[#faf7f2] px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 w-full border-t border-[#e3d7c5] bg-[#faf7f2] dark:bg-[#18110c] px-4 sm:px-6 py-5 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto z-50">
       
       <!-- Home 1 & Home 2 Twin Cards on Mobile -->
       <div class="grid grid-cols-2 gap-2 pb-1">
@@ -213,211 +213,435 @@
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="py-16 lg:py-24 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden">
+  <!-- Hero Banner with Relevant Background Image -->
+  <section class="py-20 lg:py-28 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1920&q=80" 
+         alt="Master timber craftsman installing hardwood flooring planks" 
+         class="absolute inset-0 w-full h-full object-cover opacity-25">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/95 via-[#1b130e]/85 to-[#120e0b]/75"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Installation &amp; Refinishing Craft</span>
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Architectural Timber Craft</span>
         <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#f7f3ed] mt-2 mb-4 leading-tight">
-          Master Installation &amp; Zero-Dust Wood Refinishing
+          Master Installation, Exterior Decking &amp; Zero-Dust Refinishing
         </h1>
-        <p class="text-[#f7f3ed]/80 text-sm sm:text-base leading-relaxed mb-8">
-          Whether constructing a weather-resistant Ipe pool deck from the sub-structure up, precision-gluing herringbone white oak, or restoring century-old parquet with German dust-free technology, our craftsmen hold the highest standards under the National Wood Flooring Association.
+        <p class="text-[#f7f3ed]/85 text-sm sm:text-base leading-relaxed mb-8">
+          Whether laying full-spread elastic glue-down European white oak, erecting marine-grade cantilevered Ipe pool decking, mounting acoustic slatted wall cladding, or restoring antique parquet with German dustless HEPA sanding, our NWFA-certified master artisans ensure lifetime structural integrity.
         </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#services-grid" class="px-6 py-3 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-semibold text-xs rounded-xl transition shadow">
-            Browse Services
+        <div class="flex flex-wrap gap-3 sm:gap-4">
+          <a href="#flooring-services" class="px-5 py-3 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition shadow flex items-center gap-2">
+            <span>Indoor Flooring</span>
+            <span>↓</span>
           </a>
-          <a href="#refinishing-process" class="px-6 py-3 bg-[#3d281e] hover:bg-[#5a3a29] text-white font-medium text-xs rounded-xl transition border border-[#c58940]/30">
-            5-Step Refinishing Process
+          <a href="#decking-services" class="px-5 py-3 bg-[#2c1d16] hover:bg-[#3d281e] text-white font-medium text-xs rounded-xl transition border border-[#c58940]/40 flex items-center gap-2">
+            <span>Exterior Decking</span>
+            <span>↓</span>
+          </a>
+          <a href="#other-services" class="px-5 py-3 bg-[#2c1d16] hover:bg-[#3d281e] text-white font-medium text-xs rounded-xl transition border border-[#c58940]/40 flex items-center gap-2">
+            <span>Walls &amp; Other Services</span>
+            <span>↓</span>
+          </a>
+          <a href="#refinishing-process" class="px-5 py-3 bg-white/10 hover:bg-white/20 text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-white/20 flex items-center gap-2">
+            <span>5-Stage Protocol</span>
+            <span>↓</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Grid Breakdown (Prices in ₹) -->
-  <section id="services-grid" class="py-20 bg-[#faf7f2] border-b border-[#e3d7c5]">
+  <!-- Section 1: Indoor Hardwood Flooring Installation & Finishing -->
+  <section id="flooring-services" class="py-20 bg-[#faf7f2] border-b border-[#e3d7c5]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">What We Do</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] mt-1 mb-3">
-          Specialized Architectural Timber Services
-        </h2>
-        <p class="text-xs sm:text-sm text-[#5a3a29]">
-          Every installation is paired with subfloor laser leveling and moisture equilibrium tracking to prevent buckling, cupping, or squeaking.
-        </p>
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Collection 01 • Indoor Flooring</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] mt-1 mb-2">
+            Hardwood Flooring Installation &amp; Refinishing
+          </h2>
+          <p class="text-xs sm:text-sm text-[#5a3a29] max-w-2xl">
+            From precision full-spread silane glue-down to complex French herringbone and German 99.8% dust-free restoration, our flooring craft is backed by NWFA Master standards.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0 flex-shrink-0">
+          <a href="service-flooring.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#c58940] hover:text-[#2c1d16] transition">
+            <span>Explore Full Flooring Guide</span>
+            <span>→</span>
+          </a>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Service 1: Hardwood Flooring Installation -->
+        <!-- Flooring Service 1: Solid & Engineered Plank Installation -->
         <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
-          <a href="service-flooring.html" class="block relative h-56 overflow-hidden flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Hardwood Flooring Installation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
-            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Indoor Flooring</span>
-            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹350 / sq. ft.</span>
+          <a href="service-flooring.html" class="block relative h-48 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" 
+                 alt="Hardwood Flooring Installation" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Plank Systems</span>
+            <span class="absolute bottom-3 right-3 bg-white/95 backdrop-blur text-[#2c1d16] text-[11px] font-bold px-2.5 py-0.5 rounded shadow">From ₹350 / sq. ft.</span>
           </a>
-          <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
+          <div class="p-5 flex flex-col justify-between flex-1">
             <div>
               <a href="service-flooring.html" class="block">
-                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Hardwood Installation</h3>
+                <h3 class="font-serif text-lg font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Plank Installation</h3>
               </a>
-              <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
-                Expert nail-down, full-spread silane elastic glue-down, and acoustic floating floor systems for solid and engineered planks. Complex parquet geometry including Herringbone and Chevron.
+              <p class="text-xs text-[#5a3a29] leading-relaxed mb-4">
+                Full-spread silane elastic glue-down, acoustic float, and secret cleat nail-down installation for 180mm–280mm wide boards with perimeter expansion buffers.
               </p>
-              <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Subfloor flatness grinding &amp; laser checking</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> German acoustic decoupling underlayment</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Custom flush floor HVAC vents and reducers</li>
+              <ul class="space-y-1.5 text-xs text-[#8c786a] mb-5">
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Subfloor grinding to 3mm / 3m tolerance</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Acoustic decoupling underlayment</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Compatible with radiant underfloor heating</li>
               </ul>
             </div>
-            <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
-              <a href="pricing.html?service=flooring" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Quick Estimate</a>
-              <a href="service-flooring.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
-                <span>View Full Service Specs</span>
+            <div class="pt-3 border-t border-[#f0e8dc] flex items-center justify-between">
+              <a href="pricing.html?service=flooring" class="text-[11px] text-[#8c786a] hover:text-[#2c1d16]">Pricing Guide</a>
+              <a href="service-flooring.html" class="text-xs font-bold text-[#c58940] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>Details</span>
                 <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 2: Outdoor Decking & Balconies -->
+        <!-- Flooring Service 2: Parquet, Herringbone & Chevron -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
+          <a href="service-heritage.html" class="block relative h-48 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+                 alt="French Chevron & Parquet Flooring" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Parquet Atelier</span>
+            <span class="absolute bottom-3 right-3 bg-white/95 backdrop-blur text-[#2c1d16] text-[11px] font-bold px-2.5 py-0.5 rounded shadow">From ₹450 / sq. ft.</span>
+          </a>
+          <div class="p-5 flex flex-col justify-between flex-1">
+            <div>
+              <a href="service-heritage.html" class="block">
+                <h3 class="font-serif text-lg font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Herringbone &amp; Parquet</h3>
+              </a>
+              <p class="text-xs text-[#5a3a29] leading-relaxed mb-4">
+                Precision 45° French Chevron and 90° Traditional Herringbone with laser-centered axes, double-border wenge feature lines, and Versailles panel inlays.
+              </p>
+              <ul class="space-y-1.5 text-xs text-[#8c786a] mb-5">
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Dual-axis laser alignment protocol</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Solid walnut / brass inlay border options</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Hand-scribed architectural threshold transitions</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[#f0e8dc] flex items-center justify-between">
+              <a href="pricing.html?service=heritage" class="text-[11px] text-[#8c786a] hover:text-[#2c1d16]">Pricing Guide</a>
+              <a href="service-heritage.html" class="text-xs font-bold text-[#c58940] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flooring Service 3: 99.8% Dustless Sanding & Refinishing -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
+          <a href="service-refinishing.html" class="block relative h-48 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" 
+                 alt="99.8% Dustless Sanding & Refinishing" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Zero-Dust HEPA</span>
+            <span class="absolute bottom-3 right-3 bg-white/95 backdrop-blur text-[#2c1d16] text-[11px] font-bold px-2.5 py-0.5 rounded shadow">From ₹270 / sq. ft.</span>
+          </a>
+          <div class="p-5 flex flex-col justify-between flex-1">
+            <div>
+              <a href="service-refinishing.html" class="block">
+                <h3 class="font-serif text-lg font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Dustless Refinishing</h3>
+              </a>
+              <p class="text-xs text-[#5a3a29] leading-relaxed mb-4">
+                Trailer-mounted German HEPA vacuum system captures 99.8% of particulates directly at the drum. Strips yellowed polyurethane down to pristine bare grain.
+              </p>
+              <ul class="space-y-1.5 text-xs text-[#8c786a] mb-5">
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Zero airborne dust in ducts or furniture</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> 3x commercial two-component ceramic sealers</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Walkable in 3 hours / Furniture back in 24h</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[#f0e8dc] flex items-center justify-between">
+              <a href="pricing.html?service=refinishing" class="text-[11px] text-[#8c786a] hover:text-[#2c1d16]">Pricing Guide</a>
+              <a href="service-refinishing.html" class="text-xs font-bold text-[#c58940] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flooring Service 4: Custom Staining & Color Transformations -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
+          <a href="service-staining.html" class="block relative h-48 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" 
+                 alt="Custom Staining & Color Transformations" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Tonal Studio</span>
+            <span class="absolute bottom-3 right-3 bg-white/95 backdrop-blur text-[#2c1d16] text-[11px] font-bold px-2.5 py-0.5 rounded shadow">From ₹120 / sq. ft.</span>
+          </a>
+          <div class="p-5 flex flex-col justify-between flex-1">
+            <div>
+              <a href="service-staining.html" class="block">
+                <h3 class="font-serif text-lg font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Staining &amp; Fuming</h3>
+              </a>
+              <p class="text-xs text-[#5a3a29] leading-relaxed mb-4">
+                Transform dated amber oak into modern Nordic bleached blonde, moody smoked charcoal, or cafe walnut. We apply live test swatches directly on your sanded floor.
+              </p>
+              <ul class="space-y-1.5 text-xs text-[#8c786a] mb-5">
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Reactive chemical fuming with oak tannins</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Cerused wire-brushing for dramatic grain depth</li>
+                <li class="flex items-center gap-1.5"><span class="text-[#c58940]">✓</span> Non-yellowing UV-inhibiting formula</li>
+              </ul>
+            </div>
+            <div class="pt-3 border-t border-[#f0e8dc] flex items-center justify-between">
+              <a href="pricing.html?service=staining" class="text-[11px] text-[#8c786a] hover:text-[#2c1d16]">Pricing Guide</a>
+              <a href="service-staining.html" class="text-xs font-bold text-[#c58940] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Exterior Decking & Balcony Construction -->
+  <section id="decking-services" class="py-20 bg-[#f7f3ed] border-b border-[#e3d7c5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Collection 02 • Outdoor Decking</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] mt-1 mb-2">
+            Exterior Hardwood Decking &amp; Terrace Systems
+          </h2>
+          <p class="text-xs sm:text-sm text-[#5a3a29] max-w-2xl">
+            Engineered outdoor living decks crafted from ultra-dense Brazilian Ipe, Burmese Teak, and Cumaru with weather-shielded substructures and concealed marine clips.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0 flex-shrink-0">
+          <a href="service-decking.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#c58940] hover:text-[#2c1d16] transition">
+            <span>Explore Decking Specifications</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Decking Service 1: Hardwood Decking (Ipe, Teak, Cumaru) -->
         <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
           <a href="service-decking.html" class="block relative h-56 overflow-hidden flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" alt="Exterior Decking & Balconies" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
-            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Exterior Decking</span>
+            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" 
+                 alt="Brazilian Ipe Hardwood Decking" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Exotic Hardwoods</span>
             <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹650 / sq. ft.</span>
           </a>
           <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
             <div>
               <a href="service-decking.html" class="block">
-                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Exterior Decking &amp; Balconies</h3>
+                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Brazilian Ipe &amp; Teak Decking</h3>
               </a>
               <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
-                Engineered outdoor living decks crafted from Brazilian Ipe, Cumaru, Burmese Teak, and dual-capped architectural composite. Built with hidden side-clip fasteners for a barefoot walking surface.
+                Ironwood construction featuring Class-A fire ratings and natural termite resistance. Built with hidden side-clip fasteners for a completely smooth, barefoot-safe walking surface.
               </p>
               <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Joist-tape weather shielding prevents frame rot</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Pool deck drainage and slope management</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Integrated LED stair lighting &amp; privacy louvers</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Joist butyl tape weather shielding prevents frame dry rot</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> 40+ year natural exterior lifespan without chemicals</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Marine deep-penetrating UV shield oil finish</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
-              <a href="pricing.html?service=decking" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Quick Estimate</a>
+              <a href="pricing.html?service=decking" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Deck Estimator</a>
               <a href="service-decking.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
-                <span>View Full Service Specs</span>
+                <span>View Full Specs</span>
                 <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 3: 99.8% Dustless Sanding & Refinishing -->
+        <!-- Decking Service 2: Pool Decking & Waterfront Boardwalks -->
         <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
-          <a href="service-refinishing.html" class="block relative h-56 overflow-hidden flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Dustless Sanding & Refinishing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
-            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">99.8% Dustless</span>
-            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹270 / sq. ft.</span>
+          <a href="service-decking.html" class="block relative h-56 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
+                 alt="Pool Surround Decking" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Pool &amp; Waterfront</span>
+            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹720 / sq. ft.</span>
           </a>
           <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
             <div>
-              <a href="service-refinishing.html" class="block">
-                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Dustless Sanding &amp; Refinishing</h3>
+              <a href="service-decking.html" class="block">
+                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Pool Surrounds &amp; Marine Decks</h3>
               </a>
               <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
-                Our trailer-mounted German HEPA vacuum system captures 99.8% of particulates directly at the drum. We strip worn, yellowed, and deeply gouged polyurethane down to fresh wood grain.
+                Specialized coping integration, chlorine/salt water splash resistance, and positive slope drainage sub-framing. Non-slip grooved surfaces designed for wet footwear and children.
               </p>
               <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Pet urine stain extraction &amp; deep spot patching</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Odorless, zero-VOC waterborne ceramic sealants</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Walkable in 3 hours / Furniture returned in 24h</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> 316-grade marine stainless steel fasteners &amp; anchors</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Concealed inspection trapdoors for pool plumbing</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> High friction coefficient wet slip resistance</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
-              <a href="pricing.html?service=refinishing" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Quick Estimate</a>
-              <a href="service-refinishing.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
-                <span>View Full Service Specs</span>
+              <a href="contact.html" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Book Site Measure</a>
+              <a href="service-decking.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>View Full Specs</span>
                 <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 4: Custom Staining & Color Transformations -->
+        <!-- Decking Service 3: Rooftop Terraces & Balcony Systems -->
         <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
-          <a href="service-staining.html" class="block relative h-56 overflow-hidden flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="Color Tinting & Fuming" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
-            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Color &amp; Fuming</span>
-            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹120 / sq. ft.</span>
+          <a href="service-decking.html" class="block relative h-56 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+                 alt="Rooftop Terraces and Balconies" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Penthouse &amp; Terrace</span>
+            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹580 / sq. ft.</span>
           </a>
           <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
             <div>
-              <a href="service-staining.html" class="block">
-                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Color Tinting &amp; Fuming</h3>
+              <a href="service-decking.html" class="block">
+                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Rooftop Terraces &amp; Balconies</h3>
               </a>
               <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
-                Transform dated golden honey red oak into modern Scandinavian bleached blonde, moody smoked charcoal, or warm European cafe walnut. We apply live on-floor sample test swatches.
+                Floating screwjack pedestal sub-frames engineered for zero roof membrane penetrations. Features integrated warm LED stair lighting, louvered privacy screens, and wind-uplift bracing.
               </p>
               <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Reactive chemical stains reacting with oak tannins</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> White Nordic water-wash &amp; cerused wire brushing</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Non-yellowing UV-stable formulas</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Self-leveling pedestal pedestals up to 400mm height</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Waterproof membrane protection warranty compliant</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Integrated perimeter step and balustrade integration</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
-              <a href="contact.html" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Request Swatches</a>
-              <a href="service-staining.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
-                <span>View Full Service Specs</span>
+              <a href="pricing.html?service=decking" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Deck Estimator</a>
+              <a href="service-decking.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>View Full Specs</span>
                 <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 5: Historic Parquet Restoration -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
-          <a href="service-heritage.html" class="block relative h-56 overflow-hidden flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Heritage Parquet Restoration" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
-            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Historic Estates</span>
-            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">Bespoke Assessment</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Other Architectural Installation Services -->
+  <section id="other-services" class="py-20 bg-[#faf7f2] border-b border-[#e3d7c5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Collection 03 • Architectural Millwork &amp; Subfloor</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] mt-1 mb-2">
+            Wall Cladding, Ceilings &amp; Subfloor Engineering
+          </h2>
+          <p class="text-xs sm:text-sm text-[#5a3a29] max-w-2xl">
+            Complete architectural woodwork services including acoustic slatted walls, suspended timber ceiling grids, and subfloor moisture mitigation systems.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0 flex-shrink-0">
+          <a href="contact.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#c58940] hover:text-[#2c1d16] transition">
+            <span>Consult an Architectural Specialist</span>
+            <span>→</span>
           </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Other Service 1: Acoustic Slatted Wall Cladding -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
+          <div class="relative h-56 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80" 
+                 alt="Acoustic Slatted Wall Cladding" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Wall Cladding</span>
+            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹420 / sq. ft.</span>
+          </div>
           <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
             <div>
-              <a href="service-heritage.html" class="block">
-                <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Heritage Parquet Restoration</h3>
-              </a>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Acoustic Wall Cladding</h3>
               <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
-                Preservation and repair of vintage colonial and mid-century hardwood floors. We hand-cut replacement blocks from matching reclaimed timber stock to repair old conduits seamlessly.
+                Precision vertical slatted timber walls with sound-absorbing recycled PET felt backing. Transforms boardrooms, home cinemas, and living foyers with warmth and acoustic serenity (NRC 0.85).
               </p>
               <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Salvaged antique timber matching</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Loose block re-adhesion and squeak silencing</li>
-                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Heritage architectural preservation documentation</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Concealed split-batten and secret-nail mounting</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Available in Natural White Oak, Smoked Oak, &amp; Walnut</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Integrated hidden door and TV flush panel reveals</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
-              <a href="contact.html" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Book Assessment</a>
-              <a href="service-heritage.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
-                <span>View Full Service Specs</span>
+              <a href="products.html" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">View Profiles</a>
+              <a href="contact.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>Book Measure</span>
                 <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 6: Subfloor Testing & Soundproofing -->
+        <!-- Other Service 2: Suspended Timber Ceilings & Beams -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
+          <div class="relative h-56 overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" 
+                 alt="Suspended Timber Ceilings and Beams" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Ceiling Systems</span>
+            <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹480 / sq. ft.</span>
+          </div>
+          <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
+            <div>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Suspended Ceilings &amp; Beams</h3>
+              <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
+                Engineered timber coffers, architectural linear baffles, and structural box beams in Douglas Fir, White Oak, and Cedar. Includes flush linear lighting integration.
+              </p>
+              <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Seismic-rated heavy-gauge suspension wire clips</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Removable access panels for MEP and HVAC ducts</li>
+                <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Class-1 fire retardant treatment certified</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
+              <a href="products.html" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">View Profiles</a>
+              <a href="contact.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
+                <span>Book Measure</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Service 3: Subfloor Prep, Soundproofing & Moisture Barriers -->
         <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift flex flex-col justify-between group">
           <a href="service-subfloor.html" class="block relative h-56 overflow-hidden flex-shrink-0">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Subfloor Prep & Soundproofing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
-            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Acoustic Base</span>
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" 
+                 alt="Subfloor Testing and Soundproofing" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#d4a373] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/30">Subfloor Engineering</span>
             <span class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-lg shadow">From ₹140 / sq. ft.</span>
           </a>
           <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
@@ -426,7 +650,7 @@
                 <h3 class="font-serif text-xl font-bold text-[#2c1d16] group-hover:text-[#c58940] transition mb-2">Subfloor Prep &amp; Soundproofing</h3>
               </a>
               <p class="text-xs text-[#5a3a29] leading-relaxed mb-5">
-                Floors are only as good as what lies underneath. We test concrete slab relative humidity (RH), apply epoxy vapor barriers, and install high-density cork membranes for high-rise sound bylaws.
+                Floors are only as enduring as the foundation beneath. We diagnose concrete slab relative humidity (RH), apply 100% solids epoxy moisture vapor barriers, and install acoustic cork.
               </p>
               <ul class="space-y-2 text-xs text-[#8c786a] mb-6">
                 <li class="flex items-center gap-2"><span class="text-[#c58940]">✓</span> Tramex / Delmhorst RH probe moisture testing</li>
@@ -435,9 +659,9 @@
               </ul>
             </div>
             <div class="pt-4 border-t border-[#f0e8dc] flex items-center justify-between">
-              <a href="pricing.html" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Underlay Rates</a>
+              <a href="pricing.html?service=subfloor" class="text-xs text-[#8c786a] hover:text-[#2c1d16]">Underlay Rates</a>
               <a href="service-subfloor.html" class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36] flex items-center gap-1 group-hover:translate-x-1 transition">
-                <span>View Full Service Specs</span>
+                <span>View Full Specs</span>
                 <span>→</span>
               </a>
             </div>

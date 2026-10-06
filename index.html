@@ -162,7 +162,7 @@
     </div>
 
     <!-- Mobile Slide Down Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] bg-[#faf7f2] px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 w-full border-t border-[#e3d7c5] bg-[#faf7f2] dark:bg-[#18110c] px-4 sm:px-6 py-5 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto z-50">
       
       <!-- Home 1 & Home 2 Twin Cards on Mobile -->
       <div class="grid grid-cols-2 gap-2 pb-1">
@@ -219,7 +219,7 @@
   <!-- Hero Section with Showroom Ambiance -->
   <section class="relative bg-[#1b130e] text-[#f7f3ed] overflow-hidden py-24 lg:py-32">
     <div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity pointer-events-none">
-      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=80"
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
         alt="Timber Craftsmanship Showroom" class="w-full h-full object-cover">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b] via-[#1b130e]/90 to-transparent z-0"></div>
@@ -285,8 +285,309 @@
     </div>
   </section>
 
-  <!-- Flooring Finishes Showroom Section -->
-  <section id="flooring-finishes" class="py-20 lg:py-28 bg-[#faf7f2] relative border-b border-[#e3d7c5]">
+  
+  <!-- Section 1: Master Interactive Showroom Displays -->
+  <section id="showroom-displays" class="py-20 lg:py-24 bg-[#faf7f2] dark:bg-[#140e0a] relative border-b border-[#e3d7c5] dark:border-[#38271e]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Live Atelier Displays</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-2 mb-4">
+          Master Interactive Showroom Displays
+        </h2>
+        <p class="text-[#5a3a29] dark:text-[#c4b5a5] text-sm sm:text-base leading-relaxed">
+          Step inside our curated display environments. Examine real-world installations of indoor engineered hardwoods, weather-hardened exterior decking, certified timber reserves, and unified architectural collections.
+        </p>
+      </div>
+
+      <!-- 4 Showcase Display Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+
+        <!-- Display 1: Indoor Flooring -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col justify-between group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="Indoor Flooring Display" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Indoor Flooring</span>
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373] block">Herringbone &amp; Wide Plank</span>
+              <h3 class="font-serif text-base font-bold text-white">Artisan European Oak</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+              Precision 90° and 45° parquet geometries, 15–20mm engineered multi-ply with 4–6mm solid heartwood wear layers. Calibrated for hydronic underfloor heating.
+            </p>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,150 / sq. ft.</span>
+              <a href="products.html?style=herringbone" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">Explore Planks →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Display 2: Outdoor Decking -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col justify-between group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" alt="Outdoor Decking Display" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Outdoor Decking</span>
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373] block">Marine Hidden Fasteners</span>
+              <h3 class="font-serif text-base font-bold text-white">Brazilian Ipe &amp; Teak</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+              Janka 3,680 lbf ironwood density naturally impervious to monsoon moisture, chlorine splash, and termites. Milled with grooved edges for barefoot fastener concealment.
+            </p>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,850 / sq. ft.</span>
+              <a href="service-decking.html" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">Deck Systems →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Display 3: Certified Wood Types -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col justify-between group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1777284153909-01d607fbff70?auto=format&fit=crop&w=800&q=80" alt="Wood Types & Provenance Display" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Wood Types</span>
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373] block">FSC &amp; PEFC Certified</span>
+              <h3 class="font-serif text-base font-bold text-white">Noble Timber Reserves</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+              Detailed Janka hardness benchmarking across French Oak (1,360), American Walnut (1,010), Sugar Maple (1,450), and Brazilian Ipe (3,680) cured to 6–9% equilibrium.
+            </p>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">24 Milled Profiles</span>
+              <a href="about.html" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">Sawmill Origins →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Display 4: Available Collections -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col justify-between group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80" alt="Available Collections Matrix" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-3.5 left-3.5 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Collections</span>
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373] block">Floors, Walls &amp; Ceilings</span>
+              <h3 class="font-serif text-base font-bold text-white">Full Material Matrix</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+              Integrated architectural woodwork encompassing matched hardwood flooring, fluted acoustic wall slats, solid timber stair treads, and suspended beam ceiling treatments.
+            </p>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">Unified Atelier</span>
+              <a href="products.html" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Collections →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Space-Based Architecture & Collections Inspiration -->
+  <section id="space-inspiration" class="py-20 lg:py-24 bg-[#f3ede2] dark:bg-[#19120e] border-b border-[#e3d7c5] dark:border-[#38271e]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Architectural Space Guide</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-2 mb-2">
+            Inspiration by Space &amp; Typology
+          </h2>
+          <p class="text-sm text-[#5a3a29] dark:text-[#c4b5a5] max-w-2xl">
+            Explore curated wood species, surface treatments, and installation geometries engineered specifically for the moisture, acoustics, and foot-traffic demands of each space.
+          </p>
+        </div>
+        <a href="gallery.html" class="mt-4 md:mt-0 text-xs sm:text-sm font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] flex items-center gap-1.5 transition">
+          <span>View All Space Case Studies</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- 6 Space Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Space 1: Bedrooms -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Quiet Master Suite Bedroom Flooring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Bedrooms</span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373]">Acoustic Calm • Warm Barefoot Touch</span>
+              <h3 class="font-serif text-xl font-bold text-white">Quiet Luxury Master Suites</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                European White Oak 240mm wide planks treated with breathable natural hardwax oil. Coupled with high-density cork underlayment for maximum STC/IIC impact noise absorption.
+              </p>
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-[#8c786a] dark:text-[#b09e90] mb-4">
+                <span class="text-[#c58940]">✦ Recommended:</span> European White Oak Wide Plank
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,150 / sq. ft.</span>
+              <a href="products.html?wood=oak" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Planks →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Space 2: Living Rooms -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80" alt="Grand Living Room Chevron Parquet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Living Rooms</span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373]">Stately Grandeur • Light Reflection</span>
+              <h3 class="font-serif text-xl font-bold text-white">Grand Architectural Salons</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                Artisan French Chevron 45° and classical Herringbone parquet. Hand-mitered blocks create shimmering three-dimensional light paths under changing natural daylight.
+              </p>
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-[#8c786a] dark:text-[#b09e90] mb-4">
+                <span class="text-[#c58940]">✦ Recommended:</span> French Chevron 45° Parquet
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,300 / sq. ft.</span>
+              <a href="products.html?style=herringbone" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Parquet →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Space 3: Kitchens -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Kitchen Wood Flooring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Kitchens</span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373]">Water-Shielding • High Traffic</span>
+              <h3 class="font-serif text-xl font-bold text-white">Culinary Ateliers &amp; Dining</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                Nano-ceramic fortified satin coatings and moisture-sealed edge profiles designed to repel oil, red wine, and water drips while maintaining continuous flow with open living zones.
+              </p>
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-[#8c786a] dark:text-[#b09e90] mb-4">
+                <span class="text-[#c58940]">✦ Recommended:</span> Ceramic Satin White Oak
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,200 / sq. ft.</span>
+              <a href="products.html?wood=oak" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Planks →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Space 4: Offices & Studies -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Executive Home Office Walnut Flooring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Offices</span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373]">Executive Refinement • Acoustic Peace</span>
+              <h3 class="font-serif text-xl font-bold text-white">Executive Libraries &amp; Studios</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                American Black Walnut wide plank flooring with chocolate and violet grain swirls. Glued with elastic polymer to eliminate hollow echo during high-stakes calls and consultations.
+              </p>
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-[#8c786a] dark:text-[#b09e90] mb-4">
+                <span class="text-[#c58940]">✦ Recommended:</span> American Black Walnut Wide Plank
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,450 / sq. ft.</span>
+              <a href="products.html?wood=walnut" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Walnut →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Space 5: Swimming Pools -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Swimming Pool Hardwood Decking" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Swimming Pools</span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373]">Slip-Resistant • Splinter-Free</span>
+              <h3 class="font-serif text-xl font-bold text-white">Resort Pool Decks &amp; Spas</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                Extreme-density Brazilian Ipe and Cumaru hardwood decking. Immune to chlorine degradation, saltwater spray, and constant submersion splashes without surface warping.
+              </p>
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-[#8c786a] dark:text-[#b09e90] mb-4">
+                <span class="text-[#c58940]">✦ Recommended:</span> Brazilian Ipe Solid Ironwood
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,850 / sq. ft.</span>
+              <a href="service-decking.html" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Decking →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Space 6: Outdoor Areas & Terraces -->
+        <div class="bg-white dark:bg-[#1f1712] rounded-3xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-md hover-lift transition flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Outdoor Rooftop Terrace Decking" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#c58940]/40">Outdoor Areas</span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[11px] font-semibold text-[#d4a373]">UV Protection • High Elevation</span>
+              <h3 class="font-serif text-xl font-bold text-white">Skyline Terraces &amp; Verandas</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                Burmese Royal Teak and dual-capped architectural composite decks. Deep penetrating UV oils protect wood cells against silvering oxidation under intense direct sunlight.
+              </p>
+              <div class="flex items-center gap-2 text-[11px] font-semibold text-[#8c786a] dark:text-[#b09e90] mb-4">
+                <span class="text-[#c58940]">✦ Recommended:</span> Burmese Royal Teak &amp; Composite
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#f0e8dc] dark:border-[#38271e] flex items-center justify-between text-xs">
+              <span class="font-bold text-[#c58940]">From ₹1,650 / sq. ft.</span>
+              <a href="service-decking.html" class="font-semibold text-[#2c1d16] dark:text-[#f7f3ed] hover:text-[#c58940] transition">View Decking →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+<section id="flooring-finishes" class="py-20 lg:py-28 bg-[#faf7f2] relative border-b border-[#e3d7c5]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -496,111 +797,7 @@
     </div>
   </section>
 
-  <!-- Featured Wood Species & Styles (Prices in ₹) -->
-  <section class="py-20 bg-[#f3ede2] border-b border-[#e3d7c5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Showroom Collections</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] mt-1">
-            Noble Species &amp; Architectural Patterns
-          </h2>
-        </div>
-        <a href="products.html"
-          class="mt-4 md:mt-0 text-sm font-semibold text-[#2c1d16] hover:text-[#c58940] flex items-center gap-2">
-          <span>Explore All 24 Species &amp; Patterns</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Collection 1 -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift group">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80"
-              alt="French White Oak Herringbone"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span
-              class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-white text-[11px] font-semibold px-3 py-1 rounded-full">Indoor
-              Flooring</span>
-            <span
-              class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-full shadow">Janka:
-              1,360 lbf</span>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-[#2c1d16] mb-2">French White Oak Herringbone</h3>
-            <p class="text-xs text-[#5a3a29] mb-4 leading-relaxed">
-              Precision 90-degree parquet milled from century-old European sustainably managed forests. Offers stately
-              elegance for grand living rooms and foyers.
-            </p>
-            <div class="flex items-center justify-between pt-4 border-t border-[#f0e8dc]">
-              <span class="text-xs font-semibold text-[#c58940]">From ₹1,150 / sq. ft.</span>
-              <a href="products.html" class="text-xs font-semibold text-[#2c1d16] hover:text-[#c58940]">View Specs →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Collection 2 -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift group">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-              alt="American Black Walnut Wide Plank"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span
-              class="absolute top-4 left-4 bg-[#1b130e]/85 backdrop-blur text-white text-[11px] font-semibold px-3 py-1 rounded-full">Wide
-              Plank (220mm)</span>
-            <span
-              class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-full shadow">Janka:
-              1,010 lbf</span>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-[#2c1d16] mb-2">American Black Walnut</h3>
-            <p class="text-xs text-[#5a3a29] mb-4 leading-relaxed">
-              Deep espresso hues, purplish swirls, and organic sapwood swirls. Creates a cozy, ultra-luxurious ambiance
-              in residential master suites and libraries.
-            </p>
-            <div class="flex items-center justify-between pt-4 border-t border-[#f0e8dc]">
-              <span class="text-xs font-semibold text-[#c58940]">From ₹1,450 / sq. ft.</span>
-              <a href="products.html" class="text-xs font-semibold text-[#2c1d16] hover:text-[#c58940]">View Specs →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Collection 3 -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-[#e4d8c7] shadow-sm hover-lift group">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80"
-              alt="Brazilian Ipe Hardwood Exterior Decking"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span
-              class="absolute top-4 left-4 bg-[#c58940] text-white text-[11px] font-semibold px-3 py-1 rounded-full">Exterior
-              Decking</span>
-            <span
-              class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-[#2c1d16] text-xs font-bold px-3 py-1 rounded-full shadow">Janka:
-              3,680 lbf</span>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-[#2c1d16] mb-2">Brazilian Hardwood Decking</h3>
-            <p class="text-xs text-[#5a3a29] mb-4 leading-relaxed">
-              Ironwood density with natural Class A fire rating. Completely impervious to rot, termites, and chlorine
-              spray for resort-grade pools and verandas.
-            </p>
-            <div class="flex items-center justify-between pt-4 border-t border-[#f0e8dc]">
-              <span class="text-xs font-semibold text-[#c58940]">From ₹1,850 / sq. ft.</span>
-              <a href="products.html" class="text-xs font-semibold text-[#2c1d16] hover:text-[#c58940]">View Specs →</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Before & After Refinishing Section -->
+<!-- Interactive Before & After Refinishing Section -->
   <section class="py-20 lg:py-28 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -735,63 +932,62 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <div class="bg-white p-8 rounded-2xl border border-[#e4d8c7] shadow-sm flex flex-col justify-between">
+        <div class="bg-white dark:bg-[#1f1712] p-8 rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex text-amber-500 mb-4">★★★★★</div>
-            <p class="text-sm text-[#5a3a29] italic leading-relaxed mb-6">
+            <p class="text-sm text-[#5a3a29] dark:text-[#dfd3c5] italic leading-relaxed mb-6">
               "The French Chevron White Oak they installed in our penthouse is literally a work of art. The joints are
               microscopic, and their dustless sanding team was so clean we didn't even need to wash our walls."
             </p>
           </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-[#f0e8dc]">
-            <div
-              class="w-10 h-10 rounded-full bg-[#c58940]/20 text-[#c58940] font-serif font-bold flex items-center justify-center">
-              EH</div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-[#f0e8dc] dark:border-[#38271e]">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" 
+                 alt="Eleanor Hastings" 
+                 class="w-11 h-11 rounded-full object-cover border-2 border-[#c58940]/50 shadow-sm flex-shrink-0">
             <div>
-              <h4 class="text-xs font-bold text-[#2c1d16]">Eleanor Hastings</h4>
-              <p class="text-[11px] text-[#8c786a]">Principal Architect, Hastings &amp; Co.</p>
+              <h4 class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Eleanor Hastings</h4>
+              <p class="text-[11px] text-[#8c786a] dark:text-[#a89687]">Principal Architect, Hastings &amp; Co.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-[#e4d8c7] shadow-sm flex flex-col justify-between">
+        <div class="bg-white dark:bg-[#1f1712] p-8 rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex text-amber-500 mb-4">★★★★★</div>
-            <p class="text-sm text-[#5a3a29] italic leading-relaxed mb-6">
+            <p class="text-sm text-[#5a3a29] dark:text-[#dfd3c5] italic leading-relaxed mb-6">
               "Our 1,800 sq. ft. Ipe pool deck has survived 2 harsh monsoons and heavy sun exposure without warping.
               Their hidden fastener system makes walking barefoot completely splinter-free."
             </p>
           </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-[#f0e8dc]">
-            <div
-              class="w-10 h-10 rounded-full bg-[#c58940]/20 text-[#c58940] font-serif font-bold flex items-center justify-center">
-              MK</div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-[#f0e8dc] dark:border-[#38271e]">
+            <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=200&q=80" 
+                 alt="Marcus &amp; Clara Klein" 
+                 class="w-11 h-11 rounded-full object-cover border-2 border-[#c58940]/50 shadow-sm flex-shrink-0">
             <div>
-              <h4 class="text-xs font-bold text-[#2c1d16]">Marcus &amp; Clara Klein</h4>
-              <p class="text-[11px] text-[#8c786a]">Coastal Residence, Oak Bay</p>
+              <h4 class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Marcus &amp; Clara Klein</h4>
+              <p class="text-[11px] text-[#8c786a] dark:text-[#a89687]">Coastal Residence, Oak Bay</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-[#e4d8c7] shadow-sm flex flex-col justify-between">
+        <div class="bg-white dark:bg-[#1f1712] p-8 rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex text-amber-500 mb-4">★★★★★</div>
-            <p class="text-sm text-[#5a3a29] italic leading-relaxed mb-6">
+            <p class="text-sm text-[#5a3a29] dark:text-[#dfd3c5] italic leading-relaxed mb-6">
               "We bought a 1920s heritage home with original parquet that had terrible pet stains. Timber &amp; Plank
               restored it to museum quality. Their hardwax oil finish has such an authentic tactile feel."
             </p>
           </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-[#f0e8dc]">
-            <div
-              class="w-10 h-10 rounded-full bg-[#c58940]/20 text-[#c58940] font-serif font-bold flex items-center justify-center">
-              DL</div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-[#f0e8dc] dark:border-[#38271e]">
+            <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=200&q=80" 
+                 alt="David &amp; Sarah Lin" 
+                 class="w-11 h-11 rounded-full object-cover border-2 border-[#c58940]/50 shadow-sm flex-shrink-0">
             <div>
-              <h4 class="text-xs font-bold text-[#2c1d16]">David &amp; Sarah Lin</h4>
-              <p class="text-[11px] text-[#8c786a]">Heritage Restoration Clients</p>
+              <h4 class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">David &amp; Sarah Lin</h4>
+              <p class="text-[11px] text-[#8c786a] dark:text-[#a89687]">Heritage Restoration Clients</p>
             </div>
           </div>
         </div>
-
       </div>
 
     </div>

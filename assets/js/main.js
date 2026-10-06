@@ -311,8 +311,30 @@ function initNavigation() {
   if (orderBtn) {
     orderBtn.addEventListener('click', () => {
       const samples = SampleManager.getSamples();
-      if (samples.length === 0) return;
-      window.location.href = `contact.html?samples=${encodeURIComponent(samples.map(s => s.name).join(', '))}`;
+      if (samples.length === 0) {
+        showToast('Your sample box is empty. Add up to 5 wood swatches from the Products catalog.', 'warning');
+        return;
+      }
+      const sampleNames = samples.map(s => s.name).join(', ');
+      const isContactPage = window.location.pathname.endsWith('contact.html') || window.location.pathname.includes('contact');
+      if (isContactPage) {
+        closeDrawerFn();
+        const notesField = document.getElementById('book-notes');
+        const sampleText = `Requested free sample swatches: ${sampleNames}`;
+        if (notesField) {
+          notesField.value = notesField.value ? `${notesField.value}\n${sampleText}` : sampleText;
+        }
+        if (typeof BookingApp !== 'undefined') {
+          BookingApp.formData.notes = notesField ? notesField.value : sampleText;
+        }
+        const bookingSection = document.getElementById('booking-section');
+        if (bookingSection) {
+          bookingSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        showToast('Loaded your sample swatch selections into the consultation form!', 'info');
+      } else {
+        window.location.href = `contact.html?samples=${encodeURIComponent(sampleNames)}`;
+      }
     });
   }
 }

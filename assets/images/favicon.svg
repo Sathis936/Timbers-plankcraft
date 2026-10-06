@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1d16"/>
+      <stop offset="100%" stop-color="#120e0b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9c46a"/>
+      <stop offset="50%" stop-color="#d4a373"/>
+      <stop offset="100%" stop-color="#c58940"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="64" height="64" rx="14" fill="url(#woodGrad)" stroke="#c58940" stroke-width="2.5"/>
+  <!-- Top Plank -->
+  <polygon points="32,10 52,19 32,28 12,19" fill="url(#goldGrad)" opacity="0.95"/>
+  <!-- Middle Plank -->
+  <polygon points="12,25 32,34 52,25 52,30 32,39 12,30" fill="url(#goldGrad)" opacity="0.8"/>
+  <!-- Bottom Plank -->
+  <polygon points="12,36 32,45 52,36 52,41 32,50 12,41" fill="url(#goldGrad)" opacity="0.65"/>
+  <!-- Center Accent Grain Ring -->
+  <ellipse cx="32" cy="19" rx="6" ry="2.5" fill="#2c1d16" opacity="0.4"/>
+</svg>

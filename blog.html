@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Timber Journal | Timber &amp; Plank Craft Studio</title>
+  <meta name="description" content="Technical explorations into hardwood physics, radiant floor installation, bespoke geometric parquetry, and master restoration techniques.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  <!-- Immediate Theme & Direction Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('timber_plank_theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      const dir = localStorage.getItem('timber_plank_direction');
+      if (dir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.classList.add('rtl-mode');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Custom Showroom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              dark: '#1b130e',
+              charcoal: '#120e0b',
+              walnut: '#2c1d16',
+              espresso: '#3d281e',
+              pecan: '#5a3a29',
+              amber: '#c58940',
+              oak: '#d4a373',
+              honey: '#e9c46a',
+              bone: '#f7f3ed',
+              cream: '#faf7f2',
+              parchment: '#f0e8dc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="wood-texture-subtle min-h-screen flex flex-col antialiased text-left">
+
+  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] shadow-sm transition">
+    <div class="w-full px-3 sm:px-6 lg:px-4 xl:px-8 h-20 flex items-center justify-between gap-1.5 lg:gap-3">
+
+      <!-- Brand Logo Aligned Top-Left -->
+      <a href="index.html" class="flex items-center gap-2 xl:gap-3.5 group flex-shrink-0 whitespace-nowrap">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)" />
+            <path d="M3 12l9 4.5 9-4.5" />
+            <path d="M3 16.5l9 4.5 9-4.5" />
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center flex-shrink-0">
+          <span class="font-serif text-sm sm:text-base xl:text-lg font-bold tracking-wider text-[#c58940] leading-tight whitespace-nowrap">TIMBER &amp; PLANK</span>
+          <span class="text-[7px] sm:text-[8px] tracking-[0.15em] sm:tracking-[0.2em] text-[#c58940]/80 uppercase font-semibold mt-0.5 whitespace-nowrap">CRAFT STUDIO &amp; SHOWROOM</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Centered, visible on lg+) -->
+      <nav class="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-1 xl:mx-3 gap-0.5 xl:gap-1 text-xs xl:text-[13px] font-medium text-[#5a3a29] dark:text-[#dfd3c5] whitespace-nowrap">
+        
+        <!-- Home Dropdown (Home 1 & Home 2) -->
+        <div class="relative group">
+          <button type="button" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center gap-1 h-9">
+            <span>Home</span>
+            <svg class="w-3.5 h-3.5 text-[#c58940] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-1.5 hidden group-hover:block z-50 min-w-[250px]">
+            <div class="bg-white dark:bg-[#1c1511] border border-[#e3d7c5] dark:border-[#38271e] rounded-2xl shadow-xl p-2 space-y-1 backdrop-blur-lg">
+              <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-[#faf7f2] dark:hover:bg-[#261b14] transition text-[#2c1d16] dark:text-[#dfd3c5]">
+                <div class="w-8 h-8 rounded-lg bg-[#c58940]/15 text-[#c58940] flex items-center justify-center flex-shrink-0 font-bold text-xs">01</div>
+                <div>
+                  <div class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 1: Showroom</div>
+                  <div class="text-[10px] text-[#8c786a]">Artisan Finishes &amp; Restoration</div>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-[#faf7f2] dark:hover:bg-[#261b14] transition text-[#2c1d16] dark:text-[#dfd3c5]">
+                <div class="w-8 h-8 rounded-lg bg-[#c58940]/15 text-[#c58940] flex items-center justify-center flex-shrink-0 font-bold text-xs">02</div>
+                <div>
+                  <div class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 2: Architectural</div>
+                  <div class="text-[10px] text-[#8c786a]">Atelier &amp; Hardwood Matrix</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About<span class="hidden xl:inline">&nbsp;Us</span></a>
+        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products<span class="hidden xl:inline">&nbsp;&amp; Wood</span></a>
+        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Services<span class="hidden xl:inline">&nbsp;&amp; Refinishing</span></a>
+        <a href="gallery.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Gallery</a>
+        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing<span class="hidden 2xl:inline">&nbsp;Guide</span></a>
+        <a href="blog.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center h-9">Blog</a>
+        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact<span class="hidden 2xl:inline">&nbsp;&amp; Measure</span></a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0 whitespace-nowrap">
+        <button type="button" class="theme-toggle-btn hidden md:flex p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+          <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg class="theme-icon-sun hidden w-4 h-4 sm:w-5 sm:h-5 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+
+        <button type="button" class="rtl-toggle-btn hidden md:flex px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+
+        <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition items-center gap-1.5 flex-shrink-0">
+          <svg class="auth-icon-login w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+          </svg>
+          <span class="auth-btn-text">Login</span>
+        </a>
+
+        <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+          <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
+        </button>
+
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] flex items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Down Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-[#e3d7c5] dark:border-[#38271e] bg-[#faf7f2] dark:bg-[#18110c] px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+      <div class="grid grid-cols-2 gap-2 pb-1">
+        <a href="index.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] dark:text-[#dfd3c5] bg-white dark:bg-[#231812] border border-[#e3d7c5] dark:border-[#38271e] hover:border-[#c58940] text-center transition">
+          <span class="block text-[10px] uppercase tracking-wider text-[#c58940] font-bold">Style 1</span>
+          <span class="font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 1 (Showroom)</span>
+        </a>
+        <a href="home-2.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] dark:text-[#dfd3c5] bg-white dark:bg-[#231812] border border-[#e3d7c5] dark:border-[#38271e] hover:border-[#c58940] text-center transition">
+          <span class="block text-[10px] uppercase tracking-wider text-[#c58940] font-bold">Style 2</span>
+          <span class="font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 2 (Architectural)</span>
+        </a>
+      </div>
+
+      <div class="space-y-1">
+        <a href="about.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">About Our Studio</a>
+        <a href="products.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Products &amp; Wood Types</a>
+        <a href="services.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Services &amp; Refinishing</a>
+        <a href="gallery.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Showroom Gallery</a>
+        <a href="pricing.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Pricing Guide &amp; Estimator</a>
+        <a href="blog.html" class="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#c58940] bg-[#f0e8dc]/60 dark:bg-[#281c15] transition">The Timber Journal</a>
+        <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Contact &amp; Site Measurement</a>
+      </div>
+
+      <div class="pt-4 border-t border-[#e3d7c5] dark:border-[#38271e] space-y-3">
+        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            <span>Sample Swatch Box</span>
+          </span>
+          <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
+        </button>
+
+        <div class="grid grid-cols-2 gap-2">
+          <button type="button" class="theme-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
+            <svg class="theme-icon-moon w-4 h-4 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            <svg class="theme-icon-sun hidden w-4 h-4 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <span class="theme-mobile-label">Dark Mode</span>
+          </button>
+          <button type="button" class="rtl-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
+            <svg class="w-4 h-4 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+            <span>Direction: <strong class="rtl-btn-text">RTL</strong></span>
+          </button>
+        </div>
+
+        <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+          <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+          <span class="auth-btn-text">Login</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Hero Banner -->
+  <section class="py-16 bg-[#2c1d16] text-[#f7f3ed] relative overflow-hidden text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl text-left">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Architectural Woodcraft Publications</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#f7f3ed] mt-2 mb-4 leading-tight text-left">
+          The Timber Journal
+        </h1>
+        <p class="text-[#f7f3ed]/80 text-sm sm:text-base leading-relaxed text-left">
+          Technical explorations into timber physics, subfloor acoustic isolation, moisture equilibrium, and master guild joinery principles written for architects, interior designers, and discerning homeowners.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Search & Topic Pills Bar -->
+  <section class="sticky top-20 z-30 bg-white/95 dark:bg-[#1c1511]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] py-4 shadow-sm text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        
+        <!-- Category Filter Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full no-scrollbar" id="blog-category-container">
+          <span class="text-xs font-bold text-[#8c786a] dark:text-[#a89687] uppercase tracking-wider mr-1 flex-shrink-0">Topic:</span>
+          <button class="blog-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#2c1d16] text-white border border-[#2c1d16] transition active" data-category="all">All Articles</button>
+          <button class="blog-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="physics">Timber Physics</button>
+          <button class="blog-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="parquetry">Bespoke Parquetry</button>
+          <button class="blog-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="decking">Exterior Decking</button>
+          <button class="blog-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="restoration">Restoration &amp; Care</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative w-full lg:w-72 flex-shrink-0">
+          <input type="text" id="blog-search" placeholder="Search articles, timber species, guides..." class="w-full pl-9 pr-4 py-2 bg-[#faf7f2] dark:bg-[#281c15] border border-[#e4d8c7] dark:border-[#38271e] rounded-xl text-xs text-[#1b130e] dark:text-[#f7f3ed] focus:outline-none focus:border-[#c58940]">
+          <svg class="w-4 h-4 text-[#8c786a] absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Master Article -->
+  <section class="py-12 bg-white dark:bg-[#140e0a] border-b border-[#e3d7c5] dark:border-[#38271e] text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-[#e4d8c7] dark:border-[#38271e] bg-[#faf7f2] dark:bg-[#1c1511] overflow-hidden shadow-lg hover-lift transition">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <div class="lg:col-span-7 relative h-72 lg:h-auto min-h-[320px]">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80" alt="Radiant Heating and European Oak Floors" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-[#c58940] text-[#120e0b] text-xs font-bold rounded-full uppercase tracking-wider shadow">Featured Master Study</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between text-left">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-[#8c786a] dark:text-[#a89687] mb-3">
+                <span>Timber Physics</span>
+                <span>•</span>
+                <span>8 Min Read</span>
+                <span>•</span>
+                <span>Sept 2026</span>
+              </div>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-4 leading-tight text-left">
+                The Science of Hydronic Radiant Heat with European White Oak
+              </h2>
+              <p class="text-xs sm:text-sm text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-6 text-left">
+                Why multi-ply Baltic birch core engineering eliminates seasonal cup-and-crown movement under embedded hydronic coils, compared to solid quarter-sawn timbers.
+              </p>
+            </div>
+
+            <div class="pt-6 border-t border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c58940]/20 text-[#c58940] font-bold text-xs flex items-center justify-center border border-[#c58940]/40">HV</div>
+                <div>
+                  <div class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Hendrik Van Der Bilt</div>
+                  <div class="text-[10px] text-[#8c786a] dark:text-[#a89687]">Master Guild Joiner &amp; Timber Physicist</div>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#c58940] hover:underline">Read Paper &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Articles Grid -->
+  <section class="py-16 bg-[#faf7f2] dark:bg-[#18110c] flex-1 text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch" id="blog-cards-grid">
+        
+        <!-- Article 1: Parquetry Geometry -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="parquetry" data-title="Herringbone vs French Chevron Geometric Differences">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-56 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Herringbone vs French Chevron" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Parquetry</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1 text-left">
+              <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block mb-1">Architectural Geometry • 5 Min Read</span>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2 min-h-[3.25rem] flex items-center leading-snug text-left">
+                Herringbone vs. French Chevron: Room Proportions
+              </h3>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4 min-h-[3rem] flex items-start text-left">
+                A comparative analysis between 90° rectangular parquet blocks and 45° precision mitered arrowheads to visually lengthen narrow corridors.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-3">
+              <span class="text-[11px] font-semibold text-[#8c786a] dark:text-[#a89687]">Elena Rostova</span>
+              <span class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36]">Read Guide &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: Wood Physics & Janka -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="physics" data-title="Understanding Janka Hardness Brazilian Ipe">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-56 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" alt="Understanding Janka Hardness" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Timber Physics</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1 text-left">
+              <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block mb-1">Materials Science • 6 Min Read</span>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2 min-h-[3.25rem] flex items-center leading-snug text-left">
+                Understanding Janka Hardness: Ironwood Physics
+              </h3>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4 min-h-[3rem] flex items-start text-left">
+                Why 3,680 lbf Brazilian Ipe resists stiletto heels, claws, and salt-mist weathering where traditional red oak shows indentation.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-3">
+              <span class="text-[11px] font-semibold text-[#8c786a] dark:text-[#a89687]">Marcus Thorne</span>
+              <span class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36]">Read Guide &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: HEPA Sanding -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="restoration" data-title="Dustless Refinishing HEPA Containment">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-56 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Dustless Sanding Technology" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Restoration</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1 text-left">
+              <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block mb-1">Clean Air Protocols • 4 Min Read</span>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2 min-h-[3.25rem] flex items-center leading-snug text-left">
+                Dustless Refinishing: 99.8% HEPA Containment
+              </h3>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4 min-h-[3rem] flex items-start text-left">
+                How multi-stage cyclonic separators protect home drapery, HVAC ducts, and artwork while reviving historic chateau boards.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-3">
+              <span class="text-[11px] font-semibold text-[#8c786a] dark:text-[#a89687]">Alistair Sterling</span>
+              <span class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36]">Read Guide &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4: Marine Decking Clip Systems -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="decking" data-title="Concealed Marine Fasteners Exterior Decking">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-56 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="Marine Exterior Decking" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Decking</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1 text-left">
+              <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block mb-1">Exterior Architecture • 5 Min Read</span>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2 min-h-[3.25rem] flex items-center leading-snug text-left">
+                Concealed Marine Fasteners vs. Face Screws
+              </h3>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4 min-h-[3rem] flex items-start text-left">
+                Preventing water ingress points in oceanfront hardwood decking using biscuit clips on extruded structural aluminum joists.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-3">
+              <span class="text-[11px] font-semibold text-[#8c786a] dark:text-[#a89687]">Marcus Thorne</span>
+              <span class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36]">Read Guide &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5: Hardwax Oil vs Polyurethane -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="physics" data-title="Natural Hardwax Oil vs Ceramic Polyurethane">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-56 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="Hardwax Oil Finishes" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Finishes</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1 text-left">
+              <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block mb-1">Coatings &amp; Chemistry • 7 Min Read</span>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2 min-h-[3.25rem] flex items-center leading-snug text-left">
+                Natural Hardwax Oil vs. Ceramic Polyurethane
+              </h3>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4 min-h-[3rem] flex items-start text-left">
+                Comparing tactile barefoot warmth, micro-pore breathability, and spot repairability against high-traffic commercial scratch resistance.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-3">
+              <span class="text-[11px] font-semibold text-[#8c786a] dark:text-[#a89687]">Hendrik Van Der Bilt</span>
+              <span class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36]">Read Guide &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6: Heritage Wood Restoration -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-2xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="restoration" data-title="Reclaiming Antique Chateau Parquet Organic Lye">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-56 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80" alt="Heritage Restoration" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-[#1b130e]/85 backdrop-blur text-[#e9c46a] text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Heritage</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1 text-left">
+              <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block mb-1">Conservation • 6 Min Read</span>
+              <h3 class="font-serif text-xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2 min-h-[3.25rem] flex items-center leading-snug text-left">
+                Reclaiming Antique Chateau Parquet with Lye
+              </h3>
+              <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4 min-h-[3rem] flex items-start text-left">
+                The traditional Nordic and French practice of tannin neutralization using mild botanical lye to achieve silky, chalky patina tones.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-3">
+              <span class="text-[11px] font-semibold text-[#8c786a] dark:text-[#a89687]">Elena Rostova</span>
+              <span class="text-xs font-bold text-[#c58940] hover:text-[#8D5B36]">Read Guide &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter Signup CTA -->
+  <section class="py-14 bg-[#2c1d16] text-[#f7f3ed] text-left">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Master Joiner Insights</span>
+      <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1 mb-3">
+        Subscribe to The Architectural Timber Dispatch
+      </h3>
+      <p class="text-xs sm:text-sm text-[#f7f3ed]/75 max-w-xl mx-auto mb-6">
+        Receive quarterly technical white papers on equilibrium moisture physics, subfloor leveling, and private invitations to showroom exhibitions.
+      </p>
+      <form id="blog-newsletter" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" required placeholder="Enter professional email" class="flex-1 px-4 py-3 bg-[#18110c] border border-[#38271e] rounded-xl text-xs text-white focus:outline-none focus:border-[#c58940]">
+        <button type="submit" class="px-6 py-3 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+    <!-- Showroom Footer -->
+  <footer class="bg-[#1b130e] text-[#f7f3ed] border-t border-[#3d281e] mt-auto text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 text-left">
+
+        <!-- Column 1: Brand & Contact Info -->
+        <div class="lg:col-span-2 text-left">
+          <a href="index.html" class="flex items-center gap-3.5 mb-4 group inline-flex text-left">
+            <div class="w-10 h-10 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 group-hover:border-[#c58940] transition">
+              <svg class="w-5 h-5 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)" />
+                <path d="M3 12l9 4.5 9-4.5" />
+                <path d="M3 16.5l9 4.5 9-4.5" />
+              </svg>
+            </div>
+            <div class="text-left">
+              <span class="block font-serif text-lg font-bold tracking-wide text-[#d4a373]">TIMBER &amp; PLANK</span>
+              <span class="text-[9px] tracking-[0.25em] text-[#d4a373] uppercase font-semibold">CRAFT STUDIO &amp; SHOWROOM</span>
+            </div>
+          </a>
+          <p class="text-xs text-[#f7f3ed]/70 leading-relaxed max-w-sm mb-6 text-left">
+            Dedicated to architectural hardwood floors, structural outdoor decking, and zero-VOC refinishing. Every project is measured by laser and laid by master artisans.
+          </p>
+          <div class="text-xs text-[#d4a373] space-y-1 text-left">
+            <p>Showroom Address: 480 Artisan Boulevard, Suite 100</p>
+            <p>Direct Line: +91 98765 43210 • concierge@timberplankcraft.com</p>
+          </div>
+        </div>
+
+        <!-- Column 2: Showroom Pages -->
+        <div class="text-left">
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4 text-left">Showroom Pages</h4>
+          <ul class="space-y-2 text-xs text-[#f7f3ed]/75 text-left">
+            <li><a href="about.html" class="hover:text-[#c58940] transition">About Our Atelier</a></li>
+            <li><a href="products.html" class="hover:text-[#c58940] transition">Products by Species</a></li>
+            <li><a href="services.html" class="hover:text-[#c58940] transition">Installation &amp; Refinishing</a></li>
+            <li><a href="gallery.html" class="hover:text-[#c58940] transition">Showroom Gallery</a></li>
+            <li><a href="pricing.html" class="hover:text-[#c58940] transition">Pricing &amp; Estimator</a></li>
+            <li><a href="blog.html" class="hover:text-[#c58940] transition">The Timber Journal</a></li>
+            <li><a href="contact.html" class="hover:text-[#c58940] transition">Free Site Measure</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Wood Collections -->
+        <div class="text-left">
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4 text-left">Wood Collections</h4>
+          <ul class="space-y-2 text-xs text-[#f7f3ed]/75 text-left">
+            <li><a href="products.html?wood=oak" class="hover:text-[#c58940] transition">European White Oak</a></li>
+            <li><a href="products.html?wood=walnut" class="hover:text-[#c58940] transition">American Black Walnut</a></li>
+            <li><a href="products.html?style=herringbone" class="hover:text-[#c58940] transition">French Chevron &amp; Parquet</a></li>
+            <li><a href="products.html?wood=teak-ipe" class="hover:text-[#c58940] transition">Brazilian Ipe Decking</a></li>
+            <li><a href="products.html?wood=maple" class="hover:text-[#c58940] transition">Solid Canadian Maple</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Craftsman Newsletter -->
+        <div class="text-left">
+          <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4 text-left">Craftsman Newsletter</h4>
+          <p class="text-xs text-[#f7f3ed]/70 mb-3 text-left">Seasonal wood care guides, timber trends, and private showroom event invitations.</p>
+          <form id="newsletter-form" class="space-y-2 text-left">
+            <input type="email" required placeholder="Enter your email"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-[#2c1d16] border border-[#3d281e] text-xs text-white placeholder-gray-400 focus:outline-none focus:border-[#c58940]">
+            <button type="submit"
+              class="w-full py-2 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Centered Copyright Bar -->
+      <div class="pt-10 mt-12 border-t border-[#3d281e] text-center text-xs text-[#f7f3ed]/60">
+        <p>© 2026 Timber &amp; Plank Craft Studio. All rights reserved. NWFA Certified Master Craftsperson.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    let currentBlogCategory = 'all';
+    let currentBlogSearch = '';
+
+    function filterBlogPosts() {
+      const cards = document.querySelectorAll('.blog-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const text = card.textContent.toLowerCase();
+
+        const matchCategory = (currentBlogCategory === 'all' || cat === currentBlogCategory);
+        const matchSearch = (currentBlogSearch === '' || title.includes(currentBlogSearch) || text.includes(currentBlogSearch));
+
+        if (matchCategory && matchSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    document.querySelectorAll('.blog-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentBlogCategory = btn.getAttribute('data-category');
+        document.querySelectorAll('.blog-filter-btn').forEach(b => {
+          b.classList.remove('bg-[#2c1d16]', 'text-white', 'border-[#2c1d16]');
+          b.classList.add('bg-[#faf7f2]', 'dark:bg-[#281c15]', 'text-[#5a3a29]', 'dark:text-[#ece2d0]', 'border-[#e4d8c7]', 'dark:border-[#38271e]');
+        });
+        btn.classList.add('bg-[#2c1d16]', 'text-white', 'border-[#2c1d16]');
+        btn.classList.remove('bg-[#faf7f2]', 'dark:bg-[#281c15]', 'text-[#5a3a29]', 'dark:text-[#ece2d0]', 'border-[#e4d8c7]', 'dark:border-[#38271e]');
+        filterBlogPosts();
+      });
+    });
+
+    const blogSearchInput = document.getElementById('blog-search');
+    if (blogSearchInput) {
+      blogSearchInput.addEventListener('input', (e) => {
+        currentBlogSearch = e.target.value.toLowerCase().trim();
+        filterBlogPosts();
+      });
+    }
+
+    const blogNewsletter = document.getElementById('blog-newsletter');
+    if (blogNewsletter) {
+      blogNewsletter.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = blogNewsletter.querySelector('input[type="email"]');
+        if (emailInput && emailInput.value) {
+          showNotification('Thank you for subscribing to The Timber Journal dispatch!', 'success');
+          emailInput.value = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

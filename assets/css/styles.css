@@ -183,6 +183,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   width: 50%;
   overflow: hidden;
   z-index: 10;
+  box-shadow: 3px 0 16px rgba(0,0,0,0.45);
 }
 
 .ba-image-before img {
@@ -193,6 +194,18 @@ input[type=range]::-webkit-slider-thumb:hover {
   width: 100cqw;
   max-width: none;
   object-fit: cover;
+  /* Authentic aged, oxidized, yellowed, dull floor transformation */
+  filter: sepia(0.38) saturate(0.62) brightness(0.72) contrast(0.88) hue-rotate(-12deg);
+}
+
+.ba-image-before::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(65, 42, 22, 0.32) 0%, rgba(25, 18, 12, 0.45) 100%),
+    repeating-linear-gradient(45deg, transparent, transparent 16px, rgba(0, 0, 0, 0.06) 16px, rgba(0, 0, 0, 0.06) 17px);
+  pointer-events: none;
 }
 
 .ba-slider-handle {
@@ -205,7 +218,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   z-index: 20;
   cursor: ew-resize;
   transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 12px rgba(0,0,0,0.65);
 }
 
 .ba-slider-button {
@@ -221,8 +234,9 @@ input[type=range]::-webkit-slider-thumb:hover {
   align-items: center;
   justify-content: center;
   color: var(--wood-dark);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.35);
   pointer-events: none;
+  border: 2px solid var(--wood-warm-amber);
 }
 
 /* Swatch Circle Styles */
@@ -333,41 +347,109 @@ html[data-theme="dark"] .wood-texture-subtle {
   background-image: radial-gradient(rgba(212, 163, 115, 0.06) 1px, transparent 0) !important;
 }
 
-/* Sections & Page Layouts in Dark Mode */
-html.dark section,
-html.dark [class*="bg-[#faf7f2]"],
-html.dark .bg-\[\#faf7f2\],
-html.dark [class*="bg-[#f7f3ed]"],
-html.dark .bg-\[\#f7f3ed\],
-html.dark [class*="bg-[#f3ede2]"],
-html.dark .bg-\[\#f3ede2\] {
-  background-color: #120e0b !important;
+/* ==========================================================================
+   Dark Mode System - Subtle Background Colour Variations Between Sections
+   Warm Walnut, Smoked Oak & Deep Charcoal Aesthetic
+   ========================================================================== */
+
+/* Base Default for Sections in Dark Mode (fallback) */
+html.dark section {
+  background-color: #15100c;
 }
 
-/* Panels, Subsections, and Containers */
-html.dark [class*="bg-[#fbf9f5]"],
-html.dark .bg-\[\#fbf9f5\],
-html.dark [class*="bg-[#f0e8dc]"],
-html.dark .bg-\[\#f0e8dc\],
-html.dark [class*="bg-[#fffdfa]"],
-html.dark .bg-\[\#fffdfa\],
-html.dark [class*="bg-[#f5efe6]"],
-html.dark .bg-\[\#f5efe6\],
-html.dark [class*="bg-[#ede3d5]"],
-html.dark .bg-\[\#ede3d5\],
-html.dark [class*="bg-[#e8dcce]"],
-html.dark .bg-\[\#e8dcce\] {
+/* Subtle Natural Alternation between adjacent sections in Dark Mode */
+html.dark section:nth-of-type(odd) {
+  background-color: #130e0b;
+}
+
+html.dark section:nth-of-type(even) {
+  background-color: #1a130f;
+}
+
+/* Specific Subtle Dark Variations Mapped to Page Section Classes */
+/* Lightest Cream Sections (#faf7f2) -> Deep Charred Espresso */
+html.dark [class*="bg-[#faf7f2]"],
+html.dark .bg-\[\#faf7f2\] {
+  background-color: #140f0c !important;
+}
+
+/* Bone Cream Sections (#f7f3ed) -> Dark Roasted Timber */
+html.dark [class*="bg-[#f7f3ed]"],
+html.dark .bg-\[\#f7f3ed\] {
   background-color: #18120e !important;
 }
 
-/* Cards, Modals, Flyouts, Accordions */
-html.dark .bg-white,
-html.dark [class*="bg-white"] {
-  background-color: #1c1511 !important;
+/* Warm Sand Sections (#f3ede2) -> Rich Walnut Charcoal */
+html.dark [class*="bg-[#f3ede2]"],
+html.dark .bg-\[\#f3ede2\] {
+  background-color: #1d1510 !important;
+}
+
+/* Parchment Sections (#f0e8dc) -> Smoked Warm Oak */
+html.dark [class*="bg-[#f0e8dc]"],
+html.dark .bg-\[\#f0e8dc\] {
+  background-color: #221812 !important;
+}
+
+/* Wheat / Linen / Light Timber Sections (#ede3d5, #f5efe6, #e8dcce) -> Deep Roasted Chestnut */
+html.dark [class*="bg-[#ede3d5]"],
+html.dark .bg-\[\#ede3d5\],
+html.dark [class*="bg-[#f5efe6]"],
+html.dark .bg-\[\#f5efe6\],
+html.dark [class*="bg-[#e8dcce]"],
+html.dark .bg-\[\#e8dcce\] {
+  background-color: #271c15 !important;
+}
+
+/* Popout Panels, Inset Containers & Subsections (#fbf9f5, #fffdfa) -> Dark Walnut Panel */
+html.dark [class*="bg-[#fbf9f5]"],
+html.dark .bg-\[\#fbf9f5\],
+html.dark [class*="bg-[#fffdfa]"],
+html.dark .bg-\[\#fffdfa\] {
+  background-color: #1b140f !important;
+}
+
+/* Deep Accent Sections maintain rich dark wood differentiation */
+html.dark [class*="bg-[#1b130e]"],
+html.dark .bg-\[\#1b130e\] {
+  background-color: #150f0c !important;
+}
+
+html.dark [class*="bg-[#2c1d16]"],
+html.dark .bg-\[\#2c1d16\] {
+  background-color: #1c140f !important;
+}
+
+html.dark [class*="bg-[#120e0b]"],
+html.dark .bg-\[\#120e0b\] {
+  background-color: #0f0b09 !important;
+}
+
+html.dark [class*="bg-[#3d281e]"],
+html.dark .bg-\[\#3d281e\] {
+  background-color: #241812 !important;
+}
+
+/* Cards, Modals, Flyouts, Accordions on Elevated Layer */
+html.dark .bg-white:not(section),
+html.dark [class*="bg-white"]:not(section) {
+  background-color: #1f1712 !important;
   color: #f7f3ed !important;
 }
 
-/* Dark Mode Hover States - Prevent Reverting to Light Cream */
+html.dark section.bg-white,
+html.dark section[class*="bg-white"] {
+  background-color: #18120e !important;
+}
+
+/* Section Separator Borders in Dark Mode */
+html.dark section.border-b,
+html.dark section[class*="border-b"],
+html.dark div[class*="border-b"] {
+  border-color: #2e2019 !important;
+}
+
+/* Dark Mode Hover States - Warm subtle illumination */
 html.dark [class*="hover:bg-[#faf7f2]"]:hover,
 html.dark [class*="hover:bg-[#f3ede2]"]:hover,
 html.dark [class*="hover:bg-[#f0e8dc]"]:hover,
@@ -531,7 +613,63 @@ html.dark textarea::placeholder {
   color: #8c786a !important;
 }
 
+/* Collection & Filter Tab Buttons - Guaranteed High Legibility (Light & Dark) */
+.collection-tab {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #5a3a29;
+}
+
+.collection-tab:not(.active):hover {
+  background-color: rgba(197, 137, 64, 0.12);
+  color: #2c1d16;
+}
+
+/* Active State: Bold dark text (#120e0b) on warm amber (#c58940) */
+.collection-tab.active,
+.collection-tab.active:hover,
+.collection-tab.active:focus,
+.collection-tab.active:active,
+.collection-tab[class*="bg-[#c58940]"],
+.collection-tab[class*="bg-[#c58940]"]:hover,
+.collection-tab[class*="bg-[#c58940]"]:focus,
+.collection-tab[class*="bg-[#c58940]"]:active {
+  background-color: #c58940 !important;
+  color: #120e0b !important;
+  -webkit-text-fill-color: #120e0b !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  box-shadow: 0 2px 8px rgba(197, 137, 64, 0.35) !important;
+}
+
 /* Filter & Chip Buttons in Dark Mode */
+html.dark .collection-tab {
+  color: #dfd3c5;
+}
+
+html.dark .collection-tab:not(.active):hover {
+  background-color: rgba(197, 137, 64, 0.2);
+  color: #f7f3ed !important;
+  -webkit-text-fill-color: #f7f3ed !important;
+}
+
+html.dark .collection-tab.active,
+html.dark .collection-tab.active:hover,
+html.dark .collection-tab.active:focus,
+html.dark .collection-tab.active:active,
+html.dark .collection-tab[class*="bg-[#c58940]"],
+html.dark .collection-tab[class*="bg-[#c58940]"]:hover,
+html.dark .collection-tab[class*="bg-[#c58940]"]:focus,
+html.dark .collection-tab[class*="bg-[#c58940]"]:active {
+  background-color: #c58940 !important;
+  color: #120e0b !important;
+  -webkit-text-fill-color: #120e0b !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 html.dark .gallery-filter-btn[class*="bg-white"],
 html.dark .wood-filter-btn[class*="bg-[#faf7f2]"],
 html.dark .style-filter-btn:not(.active),
@@ -551,6 +689,8 @@ html.dark .calc-service-btn[class*="bg-white"]:hover {
 }
 
 html.dark .gallery-filter-btn[class*="bg-[#2c1d16]"],
+html.dark .collection-filter-btn[class*="bg-[#2c1d16]"],
+html.dark .blog-filter-btn[class*="bg-[#2c1d16]"],
 html.dark .wood-filter-btn[class*="bg-[#2c1d16]"],
 html.dark .style-filter-btn.active,
 html.dark .style-filter-btn[class*="bg-[#f0e8dc]"] {
@@ -558,6 +698,12 @@ html.dark .style-filter-btn[class*="bg-[#f0e8dc]"] {
   color: #120e0b !important;
   border-color: #c58940 !important;
   font-weight: 700 !important;
+}
+
+html.dark .gallery-filter-btn[class*="bg-[#2c1d16]"]:hover,
+html.dark .collection-filter-btn[class*="bg-[#2c1d16]"]:hover,
+html.dark .blog-filter-btn[class*="bg-[#2c1d16]"]:hover {
+  color: #120e0b !important;
 }
 
 /* Calculator Stair Stepper in Dark Mode */

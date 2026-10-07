@@ -31,7 +31,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts & Custom Showroom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261007">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -144,7 +144,7 @@
           <span class="auth-btn-text">Login</span>
         </a>
 
-        <!-- Sample Box Drawer Trigger -->
+<!-- Sample Box Drawer Trigger -->
         <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
@@ -208,11 +208,12 @@
           </button>
         </div>
 
-        <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
-          <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
-          <span class="auth-btn-text">Login</span>
-        </a>
-      </div>
+          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+            <span class="auth-btn-text">Login</span>
+          </a>
+
+</div>
     </div>
   </header>
 
@@ -237,7 +238,7 @@
         </div>
 
         <h1
-          class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#f7f3ed] leading-[1.15] mb-6">
+          class="font-serif text-3xl sm:text-5xl lg:text-4xl font-bold tracking-tight text-[#f7f3ed] leading-[1.15] mb-6">
           Crafted Underfoot.<br>
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#d4a373] via-[#e9c46a] to-[#c58940]">
             Engineered for Generations.
@@ -858,36 +859,15 @@
 
         <!-- Right: Interactive Before / After Split Slider -->
         <div class="lg:col-span-7">
-          <div class="text-center mb-3 text-xs text-[#8c786a]">
-            <span>⇄ Drag the slider left and right to inspect the transformation</span>
-          </div>
+          
 
           <div
             class="ba-container rounded-3xl h-[280px] sm:h-[400px] lg:h-[460px] border-2 border-[#3d281e] shadow-2xl relative">
             <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=80"
               alt="Restored White Oak Flooring" class="w-full h-full object-cover">
-            <span
-              class="absolute bottom-4 right-4 bg-[#1b130e]/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-emerald-400 border border-emerald-500/30 z-0">
-              AFTER: Refinished Matte Oak
-            </span>
+ 
 
-            <div class="ba-image-before">
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
-                alt="Scratched Worn Wood Floor">
-              <span
-                class="absolute bottom-4 left-4 bg-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-amber-400 border border-amber-500/30 z-10">
-                BEFORE: 45-Yr Worn Floor
-              </span>
-            </div>
-
-            <div class="ba-slider-handle">
-              <div class="ba-slider-button">
-                <svg class="w-5 h-5 text-[#2c1d16]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l4-4 4 4m0 6l-4 4-4-4">
-                  </path>
-                </svg>
-              </div>
-            </div>
+          
           </div>
         </div>
 

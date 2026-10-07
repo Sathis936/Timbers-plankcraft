@@ -25,7 +25,7 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261007">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -119,10 +119,15 @@
         <button type="button" class="rtl-toggle-btn hidden md:flex px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0">
           <span class="rtl-btn-text">RTL</span>
         </button>
-        <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white text-xs sm:text-sm font-semibold shadow-sm transition items-center gap-1.5 flex-shrink-0">
+
+        <!-- Login / Logout Button -->
+        <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition items-center gap-1.5 flex-shrink-0">
+          <svg class="auth-icon-login w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+          </svg>
           <span class="auth-btn-text">Login</span>
         </a>
-        <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0">
+<button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
           <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
         </button>
@@ -153,18 +158,44 @@
         <a href="blog.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">The Timber Journal</a>
         <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Contact &amp; Site Measurement</a>
       </div>
-    </div>
+    
+        <!-- Quick Actions for Mobile in Drawer -->
+        <div class="pt-4 border-t border-[#e3d7c5] dark:border-[#38271e] space-y-3">
+
+          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+            <span class="auth-btn-text">Login</span>
+          </a>
+        </div>
+      </div>
   </header>
+
+
+  <!-- Terms of Service Header Banner with Timber Background -->
+  <section class="py-14 sm:py-20 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1920&q=80" 
+         alt="Timber & Plank architectural standards and terms" 
+         class="absolute inset-0 w-full h-full object-cover opacity-25">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/95 via-[#1b130e]/85 to-[#120e0b]/75"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Master Craft Guild Standards</span>
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#f7f3ed] mt-2 mb-3 leading-tight">
+        Terms of Service &amp; Guild Warranty
+      </h1>
+      <p class="text-xs sm:text-sm text-[#f7f3ed]/80 max-w-2xl">
+        Architectural scope of work, equilibrium moisture tolerances, warranty terms, and project specifications.
+      </p>
+    </div>
+  </section>
 
   <!-- Content -->
   <main class="flex-1 py-16 bg-[#faf7f2] dark:bg-[#18110c]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="bg-white dark:bg-[#1f1712] rounded-3xl border border-[#e4d8c7] dark:border-[#38271e] p-8 sm:p-12 shadow-md">
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Master Craft Guild Standards</span>
-        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-2 mb-6">
-          Terms of Service &amp; Guild Warranty
-        </h1>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-4">
+          Master Installation Agreement &amp; Guild Standards
+        </h2>
         <p class="text-xs text-[#8c786a] dark:text-[#a89687] mb-8 pb-6 border-b border-[#f0e8dc] dark:border-[#38271e]">
           Effective date: September 19, 2026 • NWFA Certified Master Craftsperson Protocols
         </p>

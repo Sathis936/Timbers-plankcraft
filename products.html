@@ -29,7 +29,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts & Custom Showroom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261007">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -141,7 +141,7 @@
           <span class="auth-btn-text">Login</span>
         </a>
 
-        <!-- Sample Box Drawer Trigger -->
+<!-- Sample Box Drawer Trigger -->
         <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
@@ -205,20 +205,25 @@
           </button>
         </div>
 
-        <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
-          <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
-          <span class="auth-btn-text">Login</span>
-        </a>
-      </div>
+          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+            <span class="auth-btn-text">Login</span>
+          </a>
+
+</div>
     </div>
   </header>
 
-  <!-- Products Header Banner -->
-  <section class="py-16 bg-[#2c1d16] text-[#f7f3ed] relative overflow-hidden">
+  <!-- Products Header Banner with Curated Timber Planks Backdrop -->
+  <section class="py-16 sm:py-20 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1920&q=80" 
+         alt="Curated architectural hardwood timber planks collection" 
+         class="absolute inset-0 w-full h-full object-cover opacity-25">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/95 via-[#1b130e]/85 to-[#120e0b]/75"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
         <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940]">Architectural Wood Library</span>
-        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#f7f3ed] mt-2 mb-4 leading-tight">
+        <h1 class="font-serif text-3xl sm:text-3xl font-bold text-[#f7f3ed] mt-2 mb-4 leading-tight">
           Products by Wood Type &amp; Installation Style
         </h1>
         <p class="text-[#f7f3ed]/80 text-sm sm:text-base leading-relaxed">
@@ -316,7 +321,7 @@
              data-collection="flooring" data-wood="walnut" data-style="wide-plank" data-name="American Black Walnut Wide Plank" data-price="1,450">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="American Black Walnut Wide Plank" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="./assets/images/Walnut.jpg" alt="American Black Walnut Wide Plank" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
                 <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Indoor Flooring</span>
                 <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Wide Plank</span>
@@ -789,7 +794,7 @@
              data-collection="other" data-wood="bamboo" data-style="wide-plank" data-name="Strand-Woven Carbonized Bamboo" data-price="650">
           <div class="flex flex-col flex-1">
             <div class="relative h-60 overflow-hidden group flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Strand Woven Carbonized Bamboo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Strand Woven Carbonized Bamboo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
                 <span class="bg-[#1b130e]/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Other Products</span>
                 <span class="bg-[#c58940] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Bamboo</span>
@@ -816,11 +821,11 @@
                 <span class="text-[11px] text-[#8c786a] dark:text-[#a89687] block">Material Price</span>
                 <span class="font-serif font-bold text-lg text-[#2c1d16] dark:text-[#f7f3ed]">₹650 <span class="text-xs font-normal text-[#8c786a] dark:text-[#a89687]">/ sq. ft.</span></span>
               </div>
-              <button onclick="openProductModal('Strand Carbonized Bamboo', 'Phyllostachys Edulis', '650', '3,000+ lbf', '14mm solid compressed profile', '135mm x 1850mm', 'Aluminum Oxide Ceramic', 'Drop-lock floating or full glue-down over subfloor.', 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
+              <button onclick="openProductModal('Strand Carbonized Bamboo', 'Phyllostachys Edulis', '650', '3,000+ lbf', '14mm solid compressed profile', '135mm x 1850mm', 'Aluminum Oxide Ceramic', 'Drop-lock floating or full glue-down over subfloor.', 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1200&q=80')" class="text-xs font-semibold text-[#c58940] hover:text-[#8D5B36] transition">
                 Quick Specs ↗
               </button>
             </div>
-            <button onclick="SampleManager.addSample({id: 'prod-bamboo-strand', name: 'Strand Carbonized Bamboo', type: 'Other Products', finish: 'Ceramic Matte', image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
+            <button onclick="SampleManager.addSample({id: 'prod-bamboo-strand', name: 'Strand Carbonized Bamboo', type: 'Other Products', finish: 'Ceramic Matte', image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=400&q=80'})" class="w-full py-2.5 h-10 bg-[#f3ede2] dark:bg-[#2c1d16] hover:bg-[#c58940] dark:hover:bg-[#c58940] hover:text-white dark:hover:text-[#120e0b] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs rounded-xl transition border border-[#e4d8c7] dark:border-[#38271e] flex items-center justify-center gap-1.5 shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
               <span>Order Free Sample Swatch</span>
             </button>

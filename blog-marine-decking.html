@@ -29,7 +29,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts & Custom Showroom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261007">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -131,6 +131,7 @@
           <span class="rtl-btn-text">RTL</span>
         </button>
 
+        <!-- Login / Logout Button -->
         <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition items-center gap-1.5 flex-shrink-0">
           <svg class="auth-icon-login w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
@@ -138,7 +139,7 @@
           <span class="auth-btn-text">Login</span>
         </a>
 
-        <button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
+<button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
@@ -197,18 +198,24 @@
           </button>
         </div>
 
-        <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
-          <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
-          <span class="auth-btn-text">Login</span>
-        </a>
-      </div>
+          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+            <span class="auth-btn-text">Login</span>
+          </a>
+
+</div>
     </div>
   </header>
 
-  <!-- Breadcrumbs & Editorial Header -->
-  <div class="bg-[#faf7f2] dark:bg-[#1c1511] border-b border-[#e3d7c5] dark:border-[#38271e] py-6 text-left">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-2 text-xs text-[#8c786a] dark:text-[#a89687] mb-4">
+  <!-- Breadcrumbs & Editorial Header Banner with Timber Background -->
+  <section class="relative bg-[#1b130e] text-[#f7f3ed] py-12 lg:py-16 overflow-hidden border-b border-[#38271e] text-left">
+    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1920&q=80" 
+         alt="Marine exterior teak and Ipe timber decking" 
+         class="absolute inset-0 w-full h-full object-cover opacity-25">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/95 via-[#1b130e]/85 to-[#120e0b]/75"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
+
+      <nav class="flex items-center gap-2 text-xs text-[#d4a373] mb-4">
         <a href="index.html" class="hover:text-[#c58940] transition">Home</a>
         <span>/</span>
         <a href="blog.html" class="hover:text-[#c58940] transition">The Timber Journal</a>
@@ -216,25 +223,26 @@
         <span class="text-[#c58940] font-semibold">Exterior Decking</span>
       </nav>
 
-      <div class="flex items-center gap-3 text-xs text-[#8c786a] dark:text-[#a89687] mb-3">
-        <span class="px-2.5 py-0.5 rounded-full bg-[#c58940]/15 text-[#c58940] font-bold uppercase tracking-wider text-[11px]">Exterior Decking</span>
+      <div class="flex items-center gap-3 text-xs text-[#d4a373] mb-3">
+        <span class="px-2.5 py-0.5 rounded-full bg-[#c58940]/25 text-[#e9c46a] border border-[#c58940]/40 font-bold uppercase tracking-wider text-[11px]">Exterior Decking</span>
         <span>•</span>
         <span>5 Min Read</span>
         <span>•</span>
         <span>Aug 29, 2026</span>
       </div>
 
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] leading-tight mb-6">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7f3ed] leading-tight mb-6">
         Concealed Marine Fasteners vs. Face Screws in Coastal Decking
       </h1>
 
       <!-- Author Byline -->
-      <div class="flex items-center gap-4 pt-4 border-t border-[#e4d8c7] dark:border-[#38271e]">
+      <div class="flex items-center gap-4 pt-4 border-t border-[#3d281e]">
         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Marcus Thorne" class="w-12 h-12 rounded-full object-cover border-2 border-[#c58940]/50 shadow-sm flex-shrink-0">
         <div>
-          <div class="text-sm font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Marcus Thorne</div>
-          <div class="text-xs text-[#8c786a] dark:text-[#a89687]">Director of Field Installation</div>
-        </div>
+          <div class="text-sm font-bold text-[#f7f3ed]">Marcus Thorne</div>
+          <div class="text-xs text-[#d4a373]">Director of Field Installation
+    </div>
+  </section>
       </div>
     </div>
   </div>

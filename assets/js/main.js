@@ -339,10 +339,10 @@ function initNavigation() {
   }
 }
 
-// Newsletter Signup Handler with strict email validation
+// Newsletter Signup Handler and Sitewide Strict Email Validation
 function initNewsletter() {
-  const forms = document.querySelectorAll('#newsletter-form, form.newsletter-form');
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const forms = document.querySelectorAll('#newsletter-form, form.newsletter-form, #blog-newsletter');
 
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
@@ -351,13 +351,39 @@ function initNewsletter() {
       const val = input ? input.value.trim() : '';
 
       if (!val || !emailRegex.test(val)) {
-        showToast('Please enter a valid email address with a proper domain (e.g. name@example.com).', 'warning');
-        if (input) input.focus();
+        showToast('Please enter a valid email address with a proper domain (e.g. name@example.com). Format like "ice@g" is not allowed.', 'warning');
+        if (input) {
+          input.focus();
+          input.classList.add('border-rose-500');
+        }
         return;
       }
 
+      if (input) input.classList.remove('border-rose-500');
       showToast('Thank you for subscribing to our timber craftsmanship digest!', 'success');
       if (input) input.value = '';
+    });
+  });
+
+  // Attach live constraint validation on all email inputs across all forms
+  document.querySelectorAll('input[type="email"]').forEach(input => {
+    input.setAttribute('pattern', '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$');
+    input.setAttribute('title', 'Please enter a valid email address with a domain extension (e.g. name@example.com)');
+
+    input.addEventListener('input', () => {
+      const val = input.value.trim();
+      if (val && !emailRegex.test(val)) {
+        input.setCustomValidity('Please include a valid domain extension, e.g. name@example.com (formats like ice@g are not accepted).');
+      } else {
+        input.setCustomValidity('');
+      }
+    });
+
+    input.addEventListener('invalid', () => {
+      const val = input.value.trim();
+      if (val && !emailRegex.test(val)) {
+        input.setCustomValidity('Please enter a valid email address with a proper domain extension (e.g. name@example.com). Format like "ice@g" is invalid.');
+      }
     });
   });
 }

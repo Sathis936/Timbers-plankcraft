@@ -843,44 +843,138 @@ html.dark .shadow-xl {
 }
 
 /* ==========================================================================
-   RTL (Right-to-Left) Styles
+   RTL (Right-to-Left) Styles & Alignments
    ========================================================================== */
 html[dir="rtl"] body {
   direction: rtl;
   text-align: right;
 }
 
-html[dir="rtl"] .text-left {
-  text-align: right;
+/* Text Alignments */
+html[dir="rtl"] .text-left,
+html[dir="rtl"] [class*="text-left"] {
+  text-align: right !important;
 }
 
-html[dir="rtl"] .text-right {
-  text-align: left;
+html[dir="rtl"] .text-right,
+html[dir="rtl"] [class*="text-right"] {
+  text-align: left !important;
 }
 
+html[dir="rtl"] .text-center,
+html[dir="rtl"] [class*="text-center"] {
+  text-align: center !important;
+}
+
+/* Tailwind Space-X utilities in RTL */
+html[dir="rtl"] [class*="space-x-"] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+
+/* Borders */
 html[dir="rtl"] .border-l {
-  border-left-width: 0;
-  border-right-width: 1px;
+  border-left-width: 0 !important;
+  border-right-width: 1px !important;
 }
 
 html[dir="rtl"] .border-r {
-  border-right-width: 0;
-  border-left-width: 1px;
+  border-right-width: 0 !important;
+  border-left-width: 1px !important;
 }
 
+/* Dropdown Menus */
+html[dir="rtl"] .group .absolute.left-0 {
+  left: auto !important;
+  right: 0 !important;
+}
+
+html[dir="rtl"] .group .absolute.right-0 {
+  right: auto !important;
+  left: 0 !important;
+}
+
+/* Form Inputs, Paddings & Positioned Icons */
+html[dir="rtl"] input[type="text"],
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] input[type="password"],
+html[dir="rtl"] input[type="search"],
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  text-align: right;
+}
+
+html[dir="rtl"] input.pl-8,
+html[dir="rtl"] input[class*="pl-8"] {
+  padding-left: 0.875rem !important;
+  padding-right: 2.25rem !important;
+}
+
+html[dir="rtl"] input.pl-10,
+html[dir="rtl"] input[class*="pl-10"] {
+  padding-left: 0.875rem !important;
+  padding-right: 2.5rem !important;
+}
+
+html[dir="rtl"] input.pr-10,
+html[dir="rtl"] input[class*="pr-10"] {
+  padding-right: 0.875rem !important;
+  padding-left: 2.5rem !important;
+}
+
+html[dir="rtl"] .relative > svg.absolute.left-2,
+html[dir="rtl"] .relative > svg.absolute.left-2\.5,
+html[dir="rtl"] .relative > svg.absolute.left-3,
+html[dir="rtl"] .relative > svg.absolute.left-3\.5 {
+  left: auto !important;
+  right: 0.75rem !important;
+}
+
+html[dir="rtl"] .relative > svg.absolute.right-3,
+html[dir="rtl"] .relative > svg.absolute.right-3\.5 {
+  right: auto !important;
+  left: 0.75rem !important;
+}
+
+/* Before / After Comparison Sliders strictly stay LTR for accurate coordinate drag */
+html[dir="rtl"] .ba-container {
+  direction: ltr !important;
+}
+
+/* Sample Drawer */
 html[dir="rtl"] #sample-drawer {
-  left: 0;
-  right: auto;
-  transform: translateX(-100%);
+  left: 0 !important;
+  right: auto !important;
+  transform: translateX(-100%) !important;
 }
 
 html[dir="rtl"] #sample-drawer.translate-x-0 {
-  transform: translateX(0);
+  transform: translateX(0) !important;
 }
 
+html[dir="rtl"] .sample-count-badge {
+  right: auto !important;
+  left: -0.375rem !important;
+}
+
+/* Toast Container */
 html[dir="rtl"] #toast-container {
-  right: auto;
-  left: 16px;
+  right: auto !important;
+  left: 16px !important;
+}
+
+/* Directional Arrow Indicators */
+html[dir="rtl"] .arrow-right,
+html[dir="rtl"] .arrow-icon {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Lists */
+html[dir="rtl"] ul.list-disc,
+html[dir="rtl"] ul.list-decimal {
+  padding-right: 1.25rem !important;
+  padding-left: 0 !important;
 }
 
 
@@ -913,4 +1007,40 @@ h3, .font-serif.text-2xl, .font-serif[class*="text-2xl"] {
 .service-card .relative.h-56,
 .showcase-card .relative.h-64 {
   max-height: 175px !important;
+}
+
+/* Blog Card Consistent Alignment & Circular Author Avatars */
+.blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  justify-content: space-between !important;
+}
+
+.blog-card .author-avatar,
+.blog-card img.rounded-full {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+
+/* Mobile Navbar Clean Alignment & Menu Icon Pinning */
+@media (max-width: 639px) {
+  header > div {
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
+  }
+  #mobile-menu-toggle {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }

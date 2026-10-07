@@ -59,20 +59,20 @@
 
   <!-- Main Navigation Header -->
   <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] shadow-sm transition">
-    <div class="w-full px-3 sm:px-6 lg:px-4 xl:px-8 h-20 flex items-center justify-between gap-1.5 lg:gap-3">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-3">
 
       <!-- Brand Logo Aligned Top-Left -->
-      <a href="index.html" class="flex items-center gap-2 xl:gap-3.5 group flex-shrink-0 whitespace-nowrap">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
-          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <a href="index.html" class="flex items-center gap-1.5 sm:gap-2.5 xl:gap-3.5 group flex-shrink-0">
+        <div class="w-8 h-8 sm:w-10 sm:h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
+          <svg class="w-4 h-4 sm:w-5 sm:h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)" />
             <path d="M3 12l9 4.5 9-4.5" />
             <path d="M3 16.5l9 4.5 9-4.5" />
           </svg>
         </div>
         <div class="flex flex-col justify-center flex-shrink-0">
-          <span class="font-serif text-sm sm:text-base xl:text-lg font-bold tracking-wider text-[#c58940] leading-tight whitespace-nowrap">TIMBER &amp; PLANK</span>
-          <span class="text-[7px] sm:text-[8px] tracking-[0.15em] sm:tracking-[0.2em] text-[#c58940]/80 uppercase font-semibold mt-0.5 whitespace-nowrap">CRAFT STUDIO &amp; SHOWROOM</span>
+          <span class="font-serif text-xs sm:text-base xl:text-lg font-bold tracking-wide sm:tracking-wider text-[#c58940] leading-tight whitespace-nowrap">TIMBER &amp; PLANK</span>
+          <span class="hidden sm:block text-[7px] sm:text-[8px] tracking-[0.15em] sm:tracking-[0.2em] text-[#c58940]/80 uppercase font-semibold mt-0.5 whitespace-nowrap">CRAFT STUDIO &amp; SHOWROOM</span>
         </div>
       </a>
 
@@ -118,7 +118,7 @@
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0 whitespace-nowrap">
-        <button type="button" class="theme-toggle-btn hidden md:flex p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
           <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
           </svg>
@@ -127,7 +127,7 @@
           </svg>
         </button>
 
-        <button type="button" class="rtl-toggle-btn hidden md:flex px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn flex px-2 py-1 sm:px-3 sm:py-2 text-[11px] sm:text-xs rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
           <span class="rtl-btn-text">RTL</span>
         </button>
 
@@ -139,14 +139,14 @@
           <span class="auth-btn-text">Login</span>
         </a>
 
-<button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
+<button class="open-sample-drawer relative hidden sm:flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
           <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
         </button>
 
-        <button id="mobile-menu-toggle" class="lg:hidden p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] flex items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
+        <button id="mobile-menu-toggle" class="lg:hidden flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
           <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -185,18 +185,6 @@
           </span>
           <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
         </button>
-
-        <div class="grid grid-cols-2 gap-2">
-          <button type="button" class="theme-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
-            <svg class="theme-icon-moon w-4 h-4 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-            <svg class="theme-icon-sun hidden w-4 h-4 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <span class="theme-mobile-label">Dark Mode</span>
-          </button>
-          <button type="button" class="rtl-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
-            <svg class="w-4 h-4 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-            <span>Direction: <strong class="rtl-btn-text">RTL</strong></span>
-          </button>
-        </div>
 
           <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
             <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
@@ -240,12 +228,11 @@
         <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Hendrik Van Der Bilt" class="w-12 h-12 rounded-full object-cover border-2 border-[#c58940]/50 shadow-sm flex-shrink-0">
         <div>
           <div class="text-sm font-bold text-[#f7f3ed]">Hendrik Van Der Bilt</div>
-          <div class="text-xs text-[#d4a373]">Master Guild Joiner & Timber Physicist
-    </div>
-  </section>
+          <div class="text-xs text-[#d4a373]">Master Guild Joiner & Timber Physicist</div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Main Article Body -->
   <main class="py-12 bg-white dark:bg-[#140e0a] flex-1 text-left">
@@ -506,7 +493,7 @@
           <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4 text-left">Craftsman Newsletter</h4>
           <p class="text-xs text-[#f7f3ed]/70 mb-3 text-left">Seasonal wood care guides, timber trends, and private showroom event invitations.</p>
           <form id="newsletter-form" class="space-y-2 text-left">
-            <input type="email" required placeholder="Enter your email"
+            <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address with a domain extension (e.g. name@example.com)" placeholder="Enter your email"
               class="w-full px-3.5 py-2.5 rounded-xl bg-[#2c1d16] border border-[#3d281e] text-xs text-white placeholder-gray-400 focus:outline-none focus:border-[#c58940]">
             <button type="submit"
               class="w-full py-2 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">

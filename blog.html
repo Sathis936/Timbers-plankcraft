@@ -59,20 +59,20 @@
 
   <!-- Main Navigation Header -->
   <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] shadow-sm transition">
-    <div class="w-full px-3 sm:px-6 lg:px-4 xl:px-8 h-20 flex items-center justify-between gap-1.5 lg:gap-3">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-3">
 
       <!-- Brand Logo Aligned Top-Left -->
-      <a href="index.html" class="flex items-center gap-2 xl:gap-3.5 group flex-shrink-0 whitespace-nowrap">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
-          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <a href="index.html" class="flex items-center gap-1.5 sm:gap-2.5 xl:gap-3.5 group flex-shrink-0">
+        <div class="w-8 h-8 sm:w-10 sm:h-11 bg-gradient-to-br from-[#2c1d16] to-[#120e0b] border border-[#c58940]/50 rounded-xl flex items-center justify-center shadow-md group-hover:border-[#c58940] transition flex-shrink-0">
+          <svg class="w-4 h-4 sm:w-5 sm:h-6 text-[#d4a373]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 7.5L12 3l9 4.5-9 4.5-9-4.5z" fill="rgba(197, 137, 64, 0.22)" />
             <path d="M3 12l9 4.5 9-4.5" />
             <path d="M3 16.5l9 4.5 9-4.5" />
           </svg>
         </div>
         <div class="flex flex-col justify-center flex-shrink-0">
-          <span class="font-serif text-sm sm:text-base xl:text-lg font-bold tracking-wider text-[#c58940] leading-tight whitespace-nowrap">TIMBER &amp; PLANK</span>
-          <span class="text-[7px] sm:text-[8px] tracking-[0.15em] sm:tracking-[0.2em] text-[#c58940]/80 uppercase font-semibold mt-0.5 whitespace-nowrap">CRAFT STUDIO &amp; SHOWROOM</span>
+          <span class="font-serif text-xs sm:text-base xl:text-lg font-bold tracking-wide sm:tracking-wider text-[#c58940] leading-tight whitespace-nowrap">TIMBER &amp; PLANK</span>
+          <span class="hidden sm:block text-[7px] sm:text-[8px] tracking-[0.15em] sm:tracking-[0.2em] text-[#c58940]/80 uppercase font-semibold mt-0.5 whitespace-nowrap">CRAFT STUDIO &amp; SHOWROOM</span>
         </div>
       </a>
 
@@ -118,7 +118,7 @@
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0 whitespace-nowrap">
-        <button type="button" class="theme-toggle-btn hidden md:flex p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+        <button type="button" class="theme-toggle-btn flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
           <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
           </svg>
@@ -127,7 +127,7 @@
           </svg>
         </button>
 
-        <button type="button" class="rtl-toggle-btn hidden md:flex px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+        <button type="button" class="rtl-toggle-btn flex px-2 py-1 sm:px-3 sm:py-2 text-[11px] sm:text-xs rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
           <span class="rtl-btn-text">RTL</span>
         </button>
 
@@ -139,14 +139,14 @@
           <span class="auth-btn-text">Login</span>
         </a>
 
-<button class="open-sample-drawer relative p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
+        <button class="open-sample-drawer relative hidden sm:flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
           <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
         </button>
 
-        <button id="mobile-menu-toggle" class="lg:hidden p-2 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] flex items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
+        <button id="mobile-menu-toggle" class="lg:hidden flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
           <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -186,18 +186,6 @@
           <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
         </button>
 
-        <div class="grid grid-cols-2 gap-2">
-          <button type="button" class="theme-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
-            <svg class="theme-icon-moon w-4 h-4 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-            <svg class="theme-icon-sun hidden w-4 h-4 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <span class="theme-mobile-label">Dark Mode</span>
-          </button>
-          <button type="button" class="rtl-toggle-btn py-2.5 px-3 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-medium text-xs flex items-center justify-center gap-2 shadow-sm hover:border-[#c58940] transition">
-            <svg class="w-4 h-4 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-            <span>Direction: <strong class="rtl-btn-text">RTL</strong></span>
-          </button>
-        </div>
-
           <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
             <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
             <span class="auth-btn-text">Login</span>
@@ -209,10 +197,10 @@
 
   <!-- Editorial Hero Banner -->
   <section class="py-12 sm:py-14 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden text-left">
-    <img src="https://images.unsplash.com/photo-1414497729697-b8555ba6c1cc?auto=format&fit=crop&w=1920&q=80" 
+    <img src="./assets//images/Blog.jpg" 
          alt="Master woodcraft artisan workbench and timber plane curls" 
-         class="absolute inset-0 w-full h-full object-cover opacity-25">
-    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/95 via-[#1b130e]/85 to-[#120e0b]/75"></div>
+         class="absolute inset-0 w-full h-full object-cover opacity-60 sm:opacity-65">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/92 via-[#1b130e]/75 to-[#120e0b]/35"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl text-left">
         <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#c58940]">Architectural Woodcraft Publications</span>
@@ -239,6 +227,7 @@
           <button class="blog-filter-btn px-3 py-1 rounded-full text-[11px] font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="parquetry">Bespoke Parquetry</button>
           <button class="blog-filter-btn px-3 py-1 rounded-full text-[11px] font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="decking">Exterior Decking</button>
           <button class="blog-filter-btn px-3 py-1 rounded-full text-[11px] font-semibold bg-[#faf7f2] dark:bg-[#281c15] text-[#5a3a29] dark:text-[#ece2d0] border border-[#e4d8c7] dark:border-[#38271e] hover:border-[#c58940] transition" data-category="restoration">Restoration &amp; Care</button>
+          <a href="#collections-pricing-guide" class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#c58940]/15 text-[#c58940] border border-[#c58940]/40 hover:bg-[#c58940] hover:text-[#120e0b] transition flex items-center gap-1 flex-shrink-0"><span>Collections &amp; Pricing</span><span>↓</span></a>
         </div>
 
         <!-- Search Bar -->
@@ -327,7 +316,7 @@
           <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
             <div class="flex items-center justify-between pt-2.5">
               <div class="flex items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="w-5.5 h-5.5 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
                 <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Elena Rostova</span>
               </div>
               <a href="blog-herringbone-chevron.html" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">Read Guide &rarr;</a>
@@ -357,7 +346,7 @@
           <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
             <div class="flex items-center justify-between pt-2.5">
               <div class="flex items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Thorne" class="w-5.5 h-5.5 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Thorne" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
                 <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Marcus Thorne</span>
               </div>
               <a href="blog-janka-hardness.html" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">Read Guide &rarr;</a>
@@ -387,7 +376,7 @@
           <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
             <div class="flex items-center justify-between pt-2.5">
               <div class="flex items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Alistair Sterling" class="w-5.5 h-5.5 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Alistair Sterling" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
                 <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Alistair Sterling</span>
               </div>
               <a href="blog-dustless-refinishing.html" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">Read Guide &rarr;</a>
@@ -417,7 +406,7 @@
           <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
             <div class="flex items-center justify-between pt-2.5">
               <div class="flex items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Thorne" class="w-5.5 h-5.5 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Thorne" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
                 <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Marcus Thorne</span>
               </div>
               <a href="blog-marine-decking.html" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">Read Guide &rarr;</a>
@@ -447,7 +436,7 @@
           <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
             <div class="flex items-center justify-between pt-2.5">
               <div class="flex items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Hendrik Van Der Bilt" class="w-5.5 h-5.5 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Hendrik Van Der Bilt" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
                 <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Hendrik Van Der Bilt</span>
               </div>
               <a href="blog-hardwax-oil.html" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">Read Guide &rarr;</a>
@@ -477,13 +466,449 @@
           <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
             <div class="flex items-center justify-between pt-2.5">
               <div class="flex items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="w-5.5 h-5.5 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
                 <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Elena Rostova</span>
               </div>
               <a href="blog-heritage-parquet.html" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">Read Guide &rarr;</a>
             </div>
           </div>
         </article>
+
+        <!-- Article 7: 2026 Hardwood Flooring & Parquetry Pricing Guide -->
+        <article class="blog-card bg-white dark:bg-[#1f1712] rounded-xl overflow-hidden border border-[#e4d8c7] dark:border-[#38271e] shadow-sm hover-lift flex flex-col h-full justify-between" data-category="physics" data-title="2026 Hardwood Flooring Pricing Guide Species Costs">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-40 sm:h-44 overflow-hidden flex-shrink-0">
+              <a href="#collections-pricing-guide" class="block w-full h-full">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="2026 Hardwood Flooring & Parquetry Pricing Guide" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <span class="absolute top-2.5 left-2.5 bg-[#c58940] text-[#120e0b] text-[9px] font-bold px-2 py-0.5 rounded uppercase pointer-events-none">Pricing &amp; Specs</span>
+            </div>
+            <div class="p-4 sm:p-4.5 flex flex-col flex-1 text-left">
+              <span class="text-[10px] text-[#8c786a] dark:text-[#a89687] block mb-1">Cost Compendium • 10 Min Read</span>
+              <h3 class="font-serif text-[15px] sm:text-base font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-1.5 min-h-[2.5rem] flex items-center leading-snug text-left">
+                <a href="#collections-pricing-guide" class="hover:text-[#c58940] transition">2026 Architectural Flooring: Species, Collections &amp; Costs</a>
+              </h3>
+              <p class="text-[11.5px] text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-3 min-h-[2.5rem] flex items-start text-left">
+                A line-by-line financial breakdown across European Oak, American Walnut, Chevron, and Ipe Decking including installation labor.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-3.5 pt-0 border-t border-[#f0e8dc] dark:border-[#38271e] mt-auto">
+            <div class="flex items-center justify-between pt-2.5">
+              <div class="flex items-center gap-1.5">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Hendrik Van Der Bilt" class="author-avatar w-7 h-7 rounded-full object-cover border border-[#c58940]/50 flex-shrink-0">
+                <span class="text-[10.5px] font-semibold text-[#8c786a] dark:text-[#a89687]">Hendrik Van Der Bilt</span>
+              </div>
+              <a href="#collections-pricing-guide" class="text-[11px] font-bold text-[#c58940] hover:text-[#8D5B36] transition flex items-center gap-0.5">View Guide &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Architectural Compendium: Available Collections, Wood Types & Pricing -->
+  <section id="collections-pricing-guide" class="py-14 sm:py-20 bg-white dark:bg-[#140e0a] border-t border-[#e3d7c5] dark:border-[#38271e] text-left">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl text-left">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940] flex items-center gap-2">
+          <span>Architectural Specifier Manual</span>
+          <span class="w-8 h-px bg-[#c58940]/50"></span>
+        </span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-2 mb-4 leading-tight text-left">
+          Available Collections, Wood Species &amp; Pricing Compendium
+        </h2>
+        <p class="text-xs sm:text-sm text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed text-left">
+          A definitive technical index detailing our primary timber architectural collections, botanical species mechanics (Janka ratings, stability, grain porosity), and transparent per-square-foot investment schedules for residential estates and commercial ateliers.
+        </p>
+      </div>
+
+      <!-- 1. Available Collections Overview Grid -->
+      <div>
+        <div class="flex items-center justify-between mb-6 pb-3 border-b border-[#e4d8c7] dark:border-[#38271e]">
+          <div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+              1. Available Architectural Collections
+            </h3>
+            <p class="text-xs text-[#8c786a] dark:text-[#a89687] mt-0.5">Engineered board profiles, parquet geometry, and marine-grade exterior surfaces</p>
+          </div>
+          <span class="hidden sm:inline-block px-3 py-1 bg-[#faf7f2] dark:bg-[#1f1712] border border-[#e4d8c7] dark:border-[#38271e] rounded-full text-[11px] font-semibold text-[#c58940]">5 Signature Collections</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Collection 1: Chateau Royal Wide Plank -->
+          <div class="group bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] hover-lift transition flex flex-col justify-between overflow-hidden shadow-sm">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#e8dfd3] dark:bg-[#251a14] flex-shrink-0">
+              <img src="./assets/images/collection-wide-oak.jpg" alt="Château Royal Wide Plank French Oak Living Room Flooring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-[#c58940] bg-[#c58940]/10 px-2 py-0.5 rounded">Collection 01</span>
+                  <span class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">₹680 – ₹950 <span class="text-[10px] text-[#8c786a] font-normal">/ sq.ft</span></span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2">Château Royal Wide Plank French Oak</h4>
+                <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                  Ultra-wide 240mm – 320mm engineered European White Oak planks with a 6mm dry-sawn wear layer over an 11-ply cross-laminated Baltic Birch core. Ideal for grand salons and expansive open floor plans.
+                </p>
+                <ul class="text-[11.5px] space-y-1.5 text-[#5a3a29] dark:text-[#c4b5a5] mb-5 border-t border-[#e4d8c7]/70 dark:border-[#38271e]/70 pt-3">
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Widths: 240mm, 280mm, 320mm | Lengths: 2.2m – 3.0m</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Finish: Deep Wire-Brushed &amp; Triple Saicos Hardwax Oil</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Compatibility: Hydronic Radiant Subfloor Coils Certified</li>
+                </ul>
+              </div>
+              <a href="products.html?collection=wide-plank" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c58940] hover:underline mt-auto">
+                <span>View Collection Specs</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Collection 2: Versailles Parquet Panels -->
+          <div class="group bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] hover-lift transition flex flex-col justify-between overflow-hidden shadow-sm">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#e8dfd3] dark:bg-[#251a14] flex-shrink-0">
+              <img src="./assets/images/collection-versailles.jpg" alt="Versailles Parquet & Historic Coffers Heritage Salon Flooring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-[#c58940] bg-[#c58940]/10 px-2 py-0.5 rounded">Collection 02</span>
+                  <span class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">₹1,450 – ₹2,200 <span class="text-[10px] text-[#8c786a] font-normal">/ sq.ft</span></span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2">Versailles Parquet &amp; Historic Coffers</h4>
+                <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                  Hand-assembled 800×800mm interlocking artisan panels using traditional mortise-and-tenon joints secured with hardwood dowels. Replicates historic French châteaux estates with heirloom durability.
+                </p>
+                <ul class="text-[11.5px] space-y-1.5 text-[#5a3a29] dark:text-[#c4b5a5] mb-5 border-t border-[#e4d8c7]/70 dark:border-[#38271e]/70 pt-3">
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Dimensions: 800 × 800mm × 20mm Solid/Engineered</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Craftsmanship: Hand-Scraped Bevels &amp; Antique Tannin Lye</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Ideal For: Dining Salons, Libraries &amp; Historic Galleries</li>
+                </ul>
+              </div>
+              <a href="products.html?collection=versailles" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c58940] hover:underline mt-auto">
+                <span>View Collection Specs</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Collection 3: French Chevron & Herringbone -->
+          <div class="group bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] hover-lift transition flex flex-col justify-between overflow-hidden shadow-sm">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#e8dfd3] dark:bg-[#251a14] flex-shrink-0">
+              <img src="./assets/images/collection-chevron.jpg" alt="French Chevron 45° and Double Herringbone Parquet Flooring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-[#c58940] bg-[#c58940]/10 px-2 py-0.5 rounded">Collection 03</span>
+                  <span class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">₹820 – ₹1,180 <span class="text-[10px] text-[#8c786a] font-normal">/ sq.ft</span></span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2">French Chevron 45° &amp; Double Herringbone</h4>
+                <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                  Precision CNC-mitered parquet blocks that form crisp directional arrows. French Chevron creates an optical lengthening effect, while 90° Herringbone delivers timeless architectural symmetry.
+                </p>
+                <ul class="text-[11.5px] space-y-1.5 text-[#5a3a29] dark:text-[#c4b5a5] mb-5 border-t border-[#e4d8c7]/70 dark:border-[#38271e]/70 pt-3">
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Block Dimensions: 120 × 600mm / 90 × 450mm</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Tongue &amp; Groove: Handed Left &amp; Right Milling</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Finish: Matte Bone, Smoked Amber, or Raw Natural Oak</li>
+                </ul>
+              </div>
+              <a href="blog-herringbone-chevron.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c58940] hover:underline mt-auto">
+                <span>Read Parquet Comparison</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Collection 4: Marine Cantilever Decking -->
+          <div class="group bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] hover-lift transition flex flex-col justify-between overflow-hidden shadow-sm">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#e8dfd3] dark:bg-[#251a14] flex-shrink-0">
+              <img src="./assets/images/collection-ipe-deck.jpg" alt="Marine Cantilever Exterior Ipe Decking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-[#c58940] bg-[#c58940]/10 px-2 py-0.5 rounded">Collection 04</span>
+                  <span class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">₹980 – ₹1,400 <span class="text-[10px] text-[#8c786a] font-normal">/ sq.ft</span></span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2">Marine Cantilever Exterior Ipe Decking</h4>
+                <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                  3,680 lbf Brazilian Ipe ironwood decking engineered with side-grooved channels for concealed marine-grade stainless biscuit fasteners. Zero face screws, completely impervious to pool salts and rot.
+                </p>
+                <ul class="text-[11.5px] space-y-1.5 text-[#5a3a29] dark:text-[#c4b5a5] mb-5 border-t border-[#e4d8c7]/70 dark:border-[#38271e]/70 pt-3">
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Board Profile: 21 × 145mm Kiln-Dried Double Grooved</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Durability: 40+ Years Without Chemical Pressure Treatment</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> System: Aluminum Sub-Joists &amp; Concealed CAMO Clips</li>
+                </ul>
+              </div>
+              <a href="service-decking.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c58940] hover:underline mt-auto">
+                <span>View Decking Systems</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Collection 5: Acoustic Slat Paneling -->
+          <div class="group bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] hover-lift transition flex flex-col justify-between overflow-hidden shadow-sm">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#e8dfd3] dark:bg-[#251a14] flex-shrink-0">
+              <img src="./assets/images/collection-acoustic-slats.jpg" alt="Acoustic Slat Timber Wall Paneling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-[#c58940] bg-[#c58940]/10 px-2 py-0.5 rounded">Collection 05</span>
+                  <span class="text-xs font-bold text-[#2c1d16] dark:text-[#f7f3ed]">₹520 – ₹780 <span class="text-[10px] text-[#8c786a] font-normal">/ sq.ft</span></span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-[#2c1d16] dark:text-[#f7f3ed] mb-2">Acoustic Slat Timber Wall Paneling</h4>
+                <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed mb-4">
+                  Architectural 27mm slatted solid European oak battens mounted onto recycled acoustic PET felt (NRC 0.85). Eliminates flutter echo while creating dramatic floor-to-ceiling wooden verticality.
+                </p>
+                <ul class="text-[11.5px] space-y-1.5 text-[#5a3a29] dark:text-[#c4b5a5] mb-5 border-t border-[#e4d8c7]/70 dark:border-[#38271e]/70 pt-3">
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Module: 600 × 2400mm / 600 × 3000mm Panels</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Acoustic Absorption: Class A (NRC 0.85)</li>
+                  <li class="flex items-center gap-2"><span class="text-[#c58940] font-bold">✓</span> Species Options: White Oak, Smoked Walnut, Charcoal Oak</li>
+                </ul>
+              </div>
+              <a href="products.html?category=wall-cladding" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c58940] hover:underline mt-auto">
+                <span>View Wall Cladding</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Collection Summary Quick Quote Card -->
+          <div class="group bg-gradient-to-br from-[#2c1d16] to-[#120e0b] rounded-2xl border border-[#c58940]/40 text-white flex flex-col justify-between overflow-hidden shadow-sm">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-[#221610] flex-shrink-0">
+              <img src="./assets/images/woodden.jpg" alt="Bespoke Architectural Woodcraft Spec Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#2c1d16] via-transparent to-black/20"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-between flex-1">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-[#e9c46a] bg-white/10 px-2 py-0.5 rounded">Architect Direct</span>
+                <h4 class="font-serif text-lg font-bold text-white mt-3 mb-2">Bespoke Timber Specifications</h4>
+                <p class="text-xs text-[#f7f3ed]/80 leading-relaxed mb-4">
+                  Need custom plank lengths up to 4.5 meters, custom reactive wood smoking, or specialized acoustic dampening test certificates for commercial projects?
+                </p>
+                <div class="space-y-2 text-xs text-[#f7f3ed]/90 mb-4 border-t border-[#c58940]/20 pt-3">
+                  <div class="flex items-center gap-2"><span class="text-[#c58940]">●</span> Free 5-Piece Architectural Swatch Box</div>
+                  <div class="flex items-center gap-2"><span class="text-[#c58940]">●</span> BIM / CAD Hatch Files &amp; Technical DWGs</div>
+                  <div class="flex items-center gap-2"><span class="text-[#c58940]">●</span> NWFA Certified Site Laser Measurement</div>
+                </div>
+              </div>
+              <a href="contact.html" class="w-full py-2.5 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl text-center transition shadow mt-auto block">
+                Request Architect Spec Kit &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2. Wood Types & Species Mechanics Table -->
+      <div>
+        <div class="mb-6 pb-3 border-b border-[#e4d8c7] dark:border-[#38271e]">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+            2. Wood Species Mechanics &amp; Janka Hardness Matrix
+          </h3>
+          <p class="text-xs text-[#8c786a] dark:text-[#a89687] mt-0.5">Physical properties, dimensional stability under radiant heating, and ideal room applications</p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] shadow-sm">
+          <table class="w-full text-xs text-left border-collapse">
+            <thead class="bg-[#faf7f2] dark:bg-[#1f1712] text-[#2c1d16] dark:text-[#f7f3ed] font-serif border-b border-[#e4d8c7] dark:border-[#38271e]">
+              <tr>
+                <th class="py-3 px-4 font-bold">Wood Species</th>
+                <th class="py-3 px-3 font-bold">Botanical Origin</th>
+                <th class="py-3 px-3 font-bold">Janka Rating</th>
+                <th class="py-3 px-3 font-bold">Moisture Stability</th>
+                <th class="py-3 px-3 font-bold">Natural Grain Tone</th>
+                <th class="py-3 px-4 font-bold">Optimal Room Allocation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#f0e8dc] dark:divide-[#281c15] text-[#5a3a29] dark:text-[#c4b5a5]">
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+                  European White Oak
+                  <span class="block text-[10px] text-[#8c786a] font-normal">Quercus robur</span>
+                </td>
+                <td class="py-3.5 px-3">Bavaria / Northern France</td>
+                <td class="py-3.5 px-3"><span class="font-bold text-[#c58940]">1,360 lbf</span> (Baseline)</td>
+                <td class="py-3.5 px-3"><span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold rounded">High (Radiant Ready)</span></td>
+                <td class="py-3.5 px-3">Honey amber, biscuit blonde, muted oatmeal</td>
+                <td class="py-3.5 px-4 font-medium">Whole residences, living salons, kitchens, underfloor heat</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+                  American Black Walnut
+                  <span class="block text-[10px] text-[#8c786a] font-normal">Juglans nigra</span>
+                </td>
+                <td class="py-3.5 px-3">Ohio / Pennsylvania Forests</td>
+                <td class="py-3.5 px-3"><span class="font-bold text-[#c58940]">1,010 lbf</span> (Tactile velvet)</td>
+                <td class="py-3.5 px-3"><span class="px-2 py-0.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold rounded">Medium (Low Humidity)</span></td>
+                <td class="py-3.5 px-3">Deep chocolate, mocha, subtle aubergine streaks</td>
+                <td class="py-3.5 px-4 font-medium">Master bedroom suites, private libraries, executive studios</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+                  Brazilian Ipe (Ironwood)
+                  <span class="block text-[10px] text-[#8c786a] font-normal">Handroanthus heptaphyllus</span>
+                </td>
+                <td class="py-3.5 px-3">South America (FSC Certified)</td>
+                <td class="py-3.5 px-3"><span class="font-bold text-[#c58940]">3,680 lbf</span> (Ultra Hard)</td>
+                <td class="py-3.5 px-3"><span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold rounded">Extreme (Weatherproof)</span></td>
+                <td class="py-3.5 px-3">Olive bronze, warm walnut, oxidizes silver</td>
+                <td class="py-3.5 px-4 font-medium">Exterior swimming pool decks, oceanfront boardwalks, verandas</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+                  Burmese Golden Teak
+                  <span class="block text-[10px] text-[#8c786a] font-normal">Tectona grandis</span>
+                </td>
+                <td class="py-3.5 px-3">Southeast Asia Sustainable Plantations</td>
+                <td class="py-3.5 px-3"><span class="font-bold text-[#c58940]">1,155 lbf</span> (Resin rich)</td>
+                <td class="py-3.5 px-3"><span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold rounded">High (Natural Oils)</span></td>
+                <td class="py-3.5 px-3">Lustrous golden brown, warm buttery sheen</td>
+                <td class="py-3.5 px-4 font-medium">Spa bath suites, yacht interiors, sheltered indoor-outdoor transitions</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+                  Canadian Sugar Maple
+                  <span class="block text-[10px] text-[#8c786a] font-normal">Acer saccharum</span>
+                </td>
+                <td class="py-3.5 px-3">Eastern Canada / New England</td>
+                <td class="py-3.5 px-3"><span class="font-bold text-[#c58940]">1,450 lbf</span> (Dense fiber)</td>
+                <td class="py-3.5 px-3"><span class="px-2 py-0.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold rounded">Medium-High</span></td>
+                <td class="py-3.5 px-3">Nordic platinum, pale cream with fine bird's eye</td>
+                <td class="py-3.5 px-4 font-medium">Modernist contemporary galleries, dance studios, boutique lofts</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+                  Reclaimed Antique Chestnut
+                  <span class="block text-[10px] text-[#8c786a] font-normal">Castanea dentata (Salvaged)</span>
+                </td>
+                <td class="py-3.5 px-3">Historic Timber Salvage Barns</td>
+                <td class="py-3.5 px-3"><span class="font-bold text-[#c58940]">1,180 lbf</span> (Aged patina)</td>
+                <td class="py-3.5 px-3"><span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold rounded">High (Kiln Stabilized)</span></td>
+                <td class="py-3.5 px-3">Warm caramel, cinnamon, historic nail stains</td>
+                <td class="py-3.5 px-4 font-medium">Heritage restoration estates, wine cellars, mountain châteaux</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. Transparent Pricing Schedule & Investment Breakdown -->
+      <div>
+        <div class="mb-6 pb-3 border-b border-[#e4d8c7] dark:border-[#38271e]">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#2c1d16] dark:text-[#f7f3ed]">
+            3. Transparent 2026 Architectural Pricing Schedule
+          </h3>
+          <p class="text-xs text-[#8c786a] dark:text-[#a89687] mt-0.5">Comprehensive line-by-line financial breakdown covering material, preparation, NWFA installation, and finish seals</p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] shadow-sm mb-8">
+          <table class="w-full text-xs text-left border-collapse">
+            <thead class="bg-[#faf7f2] dark:bg-[#1f1712] text-[#2c1d16] dark:text-[#f7f3ed] font-serif border-b border-[#e4d8c7] dark:border-[#38271e]">
+              <tr>
+                <th class="py-3 px-4 font-bold">Collection / Wood Type</th>
+                <th class="py-3 px-3 font-bold">Material Cost (sq.ft)</th>
+                <th class="py-3 px-3 font-bold">Acoustic Subfloor Prep</th>
+                <th class="py-3 px-3 font-bold">NWFA Installation Labor</th>
+                <th class="py-3 px-3 font-bold">Protective Seal / Oil</th>
+                <th class="py-3 px-4 font-bold text-[#c58940]">Total Fully Installed (sq.ft)</th>
+                <th class="py-3 px-3 font-bold">Structural Warranty</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#f0e8dc] dark:divide-[#281c15] text-[#5a3a29] dark:text-[#c4b5a5]">
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Wide Plank European Oak</td>
+                <td class="py-3.5 px-3 font-medium">₹680 – ₹950</td>
+                <td class="py-3.5 px-3">₹120 – ₹180</td>
+                <td class="py-3.5 px-3">₹180 – ₹240</td>
+                <td class="py-3.5 px-3">Included (Factory)</td>
+                <td class="py-3.5 px-4 font-bold text-[#c58940] text-sm">₹980 – ₹1,370</td>
+                <td class="py-3.5 px-3">25 Years Residential</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">French Chevron &amp; Herringbone</td>
+                <td class="py-3.5 px-3 font-medium">₹820 – ₹1,180</td>
+                <td class="py-3.5 px-3">₹140 – ₹200</td>
+                <td class="py-3.5 px-3">₹240 – ₹340</td>
+                <td class="py-3.5 px-3">₹90 – ₹140</td>
+                <td class="py-3.5 px-4 font-bold text-[#c58940] text-sm">₹1,290 – ₹1,860</td>
+                <td class="py-3.5 px-3">25 Years Residential</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">American Black Walnut</td>
+                <td class="py-3.5 px-3 font-medium">₹1,100 – ₹1,650</td>
+                <td class="py-3.5 px-3">₹140 – ₹200</td>
+                <td class="py-3.5 px-3">₹200 – ₹280</td>
+                <td class="py-3.5 px-3">Included (Hardwax)</td>
+                <td class="py-3.5 px-4 font-bold text-[#c58940] text-sm">₹1,440 – ₹2,130</td>
+                <td class="py-3.5 px-3">30 Years Residential</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Versailles Parquet Panels</td>
+                <td class="py-3.5 px-3 font-medium">₹1,450 – ₹2,200</td>
+                <td class="py-3.5 px-3">₹180 – ₹250</td>
+                <td class="py-3.5 px-3">₹320 – ₹480</td>
+                <td class="py-3.5 px-3">₹110 – ₹180</td>
+                <td class="py-3.5 px-4 font-bold text-[#c58940] text-sm">₹2,060 – ₹3,110</td>
+                <td class="py-3.5 px-3">50 Years Heirloom</td>
+              </tr>
+              <tr class="hover:bg-[#faf7f2]/50 dark:hover:bg-[#1a120d] transition">
+                <td class="py-3.5 px-4 font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Marine Exterior Ipe Decking</td>
+                <td class="py-3.5 px-3 font-medium">₹980 – ₹1,400</td>
+                <td class="py-3.5 px-3">₹220 – ₹320 (Alu Joists)</td>
+                <td class="py-3.5 px-3">₹260 – ₹380</td>
+                <td class="py-3.5 px-3">₹120 – ₹180 (UV Oil)</td>
+                <td class="py-3.5 px-4 font-bold text-[#c58940] text-sm">₹1,580 – ₹2,280</td>
+                <td class="py-3.5 px-3">40 Years Exterior</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Real-World Project Scope Investment Estimates -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-5 bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] text-left">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#8c786a]">Scope Level: Boutique</span>
+            <h4 class="font-serif text-base font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-1 mb-2">500 sq.ft (Salon or Penthouse Suite)</h4>
+            <div class="text-xl font-serif font-bold text-[#c58940] mb-2">₹4.9L – ₹6.8L</div>
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed">
+              Complete Wide Plank French Oak installation including laser subfloor leveling, Wakol silane adhesive, and sound-isolation acoustic underlayment.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#c58940]/40 rounded-2xl shadow-sm text-left relative">
+            <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-wider text-[#c58940] bg-[#c58940]/10 px-2 py-0.5 rounded">Most Popular</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#8c786a]">Scope Level: Whole Floor</span>
+            <h4 class="font-serif text-base font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-1 mb-2">1,200 sq.ft (Full Residence Level)</h4>
+            <div class="text-xl font-serif font-bold text-[#c58940] mb-2">₹11.8L – ₹16.4L</div>
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed">
+              Full residence installation with custom transition thresholds, perimeter flush baseboards, and moisture-sealed hydronic radiant system alignment.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#faf7f2] dark:bg-[#1c1511] rounded-2xl border border-[#e4d8c7] dark:border-[#38271e] text-left">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#8c786a]">Scope Level: Luxury Estate</span>
+            <h4 class="font-serif text-base font-bold text-[#2c1d16] dark:text-[#f7f3ed] mt-1 mb-2">2,500 sq.ft (Bespoke Villa / Estate)</h4>
+            <div class="text-xl font-serif font-bold text-[#c58940] mb-2">₹24.5L – ₹38.0L</div>
+            <p class="text-xs text-[#5a3a29] dark:text-[#c4b5a5] leading-relaxed">
+              Combination of handcrafted Versailles panels in formal reception galleries, French Chevron in private salons, and marine-grade Ipe pool decking.
+            </p>
+          </div>
+        </div>
 
       </div>
 
@@ -501,7 +926,7 @@
         Receive quarterly technical white papers on equilibrium moisture physics, subfloor leveling, and private invitations to showroom exhibitions.
       </p>
       <form id="blog-newsletter" class="flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto">
-        <input type="email" required placeholder="Enter professional email" class="flex-1 px-3.5 py-2.5 bg-[#18110c] border border-[#38271e] rounded-xl text-xs text-white focus:outline-none focus:border-[#c58940]">
+        <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address with a domain extension (e.g. name@example.com)" placeholder="Enter professional email" class="flex-1 px-3.5 py-2.5 bg-[#18110c] border border-[#38271e] rounded-xl text-xs text-white focus:outline-none focus:border-[#c58940]">
         <button type="submit" class="px-5 py-2.5 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">
           Subscribe
         </button>
@@ -569,7 +994,7 @@
           <h4 class="font-serif text-sm font-bold text-[#d4a373] uppercase tracking-wider mb-4 text-left">Craftsman Newsletter</h4>
           <p class="text-xs text-[#f7f3ed]/70 mb-3 text-left">Seasonal wood care guides, timber trends, and private showroom event invitations.</p>
           <form id="newsletter-form" class="space-y-2 text-left">
-            <input type="email" required placeholder="Enter your email"
+            <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address with a domain extension (e.g. name@example.com)" placeholder="Enter your email"
               class="w-full px-3.5 py-2.5 rounded-xl bg-[#2c1d16] border border-[#3d281e] text-xs text-white placeholder-gray-400 focus:outline-none focus:border-[#c58940]">
             <button type="submit"
               class="w-full py-2 bg-[#c58940] hover:bg-[#b07730] text-[#120e0b] font-bold text-xs rounded-xl transition">
@@ -637,10 +1062,15 @@
       blogNewsletter.addEventListener('submit', (e) => {
         e.preventDefault();
         const emailInput = blogNewsletter.querySelector('input[type="email"]');
-        if (emailInput && emailInput.value) {
-          showNotification('Thank you for subscribing to The Timber Journal dispatch!', 'success');
-          emailInput.value = '';
+        const val = emailInput ? emailInput.value.trim() : '';
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!val || !emailRegex.test(val)) {
+          showToast('Please provide a valid email address with a proper domain (e.g. name@example.com).', 'warning');
+          if (emailInput) emailInput.focus();
+          return;
         }
+        showToast('Thank you for subscribing to The Timber Journal dispatch!', 'success');
+        if (emailInput) emailInput.value = '';
       });
     }
   </script>

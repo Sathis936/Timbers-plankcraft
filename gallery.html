@@ -55,10 +55,8 @@
     }
   </script>
 </head>
-<body class="wood-texture-subtle min-h-screen flex flex-col antialiased">
-
-      <!-- Main Navigation Header -->
-  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e3d7c5] shadow-sm transition">
+<body class="wood-texture-subtle min-h-screen flex flex-col antialiased">  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] shadow-sm transition">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-3">
 
       <!-- Brand Logo Aligned Top-Left -->
@@ -107,16 +105,16 @@
           </div>
         </div>
 
-        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About<span class="hidden xl:inline">&nbsp;Us</span></a>
-        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products<span class="hidden xl:inline">&nbsp;&amp; Wood</span></a>
-        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Services<span class="hidden xl:inline">&nbsp;&amp; Refinishing</span></a>
+        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About</a>
+        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products</a>
+        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Services</a>
         <a href="gallery.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center h-9">Gallery</a>
-        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing<span class="hidden 2xl:inline">&nbsp;Guide</span></a>
+        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing</a>
         <a href="blog.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Blog</a>
-        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact<span class="hidden 2xl:inline">&nbsp;&amp; Measure</span></a>
+        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact</a>
       </nav>
 
-      <!-- Action Buttons (Theme Toggle, RTL Button, Login/Logout Button, Sample Drawer, Mobile Hamburger) -->
+      <!-- Action Buttons (Theme Toggle, RTL Button, Sample Drawer, Primary CTA, Mobile Hamburger) -->
       <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0 whitespace-nowrap">
         <!-- Theme Toggle Button -->
         <button type="button" class="theme-toggle-btn flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
@@ -133,21 +131,19 @@
           <span class="rtl-btn-text">RTL</span>
         </button>
 
-        <!-- Login / Logout Button -->
-        <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition items-center gap-1.5 flex-shrink-0">
-          <svg class="auth-icon-login w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
-          </svg>
-          <span class="auth-btn-text">Login</span>
-        </a>
-
-<!-- Sample Box Drawer Trigger -->
+        <!-- Sample Box Drawer Trigger -->
         <button class="open-sample-drawer relative hidden sm:flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
           <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
         </button>
+
+        <!-- Primary Consultation CTA Button -->
+        <a href="contact.html#booking-section" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition flex-shrink-0 hover-lift">
+          <svg class="w-3.5 h-3.5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book Consultation</span>
+        </a>
 
         <!-- Mobile Menu Hamburger Button -->
         <button id="mobile-menu-toggle" class="lg:hidden flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
@@ -174,46 +170,48 @@
       </div>
 
       <div class="space-y-1">
-        <a href="about.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">About Our Studio</a>
-        <a href="products.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Products &amp; Wood Types</a>
-        <a href="services.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Services &amp; Refinishing</a>
-        <a href="gallery.html" class="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#c58940] bg-[#f0e8dc]/60 transition">Showroom Gallery</a>
-        <a href="pricing.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Pricing Guide &amp; Estimator</a>
+        <a href="about.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">About Our Studio</a>
+        <a href="products.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Products &amp; Wood Types</a>
+        <a href="services.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Services &amp; Refinishing</a>
+        <a href="gallery.html" class="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#c58940] bg-[#f0e8dc]/60 dark:bg-[#281c15] transition">Showroom Gallery</a>
+        <a href="pricing.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Pricing Guide &amp; Estimator</a>
         <a href="blog.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">The Timber Journal</a>
-        <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Contact &amp; Site Measurement</a>
+        <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Contact &amp; Site Measurement</a>
       </div>
 
       <!-- Quick Actions for Mobile in Drawer -->
-      <div class="pt-4 border-t border-[#e3d7c5] space-y-3">
-        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] bg-white text-[#2c1d16] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
+      <div class="pt-4 border-t border-[#e3d7c5] dark:border-[#38271e] space-y-3">
+        <a href="contact.html#booking-section" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+          <svg class="w-4 h-4 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book Free Consultation</span>
+        </a>
+        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#261b14] text-[#2c1d16] dark:text-[#f7f3ed] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
             <span>Sample Swatch Box</span>
           </span>
           <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
         </button>
-
-          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
-            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
-            <span class="auth-btn-text">Login</span>
-          </a>
-
-</div>
+      </div>
     </div>
   </header>
 
-  <!-- Gallery Header with Subtle Architectural Timber Backdrop -->
-  <section class="py-16 sm:py-20 lg:py-24 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden flex items-center justify-center text-center">
-    <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1920&q=80" 
+            <!-- Gallery Header with Subtle Architectural Timber Backdrop -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-[#120e0b] relative overflow-hidden flex items-center justify-center text-center">
+    <!-- 100% Local Hero Image: French Chevron Parquet Luxury Salon -->
+    <img src="./assets/images/gallery_hero.jpg" 
          alt="Architectural chevron timber showroom and gallery collections" 
-         class="absolute inset-0 w-full h-full object-cover opacity-50 sm:opacity-55">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#120e0b]/90 via-[#1b130e]/80 to-[#120e0b]/90"></div>
+         class="absolute inset-0 w-full h-full object-cover opacity-90 sm:opacity-95 dark:opacity-85 transition-opacity">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65 pointer-events-none"></div>
+
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center">
-      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940] mb-3 inline-block">Architectural Portfolio</span>
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7f3ed] mb-4 max-w-4xl mx-auto leading-tight text-center">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#e9c46a] mb-3 inline-block bg-[#120e0b]/90 px-4 py-1.5 rounded-full border border-[#c58940] shadow-lg backdrop-blur-sm">Architectural Portfolio</span>
+      
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-4xl mx-auto leading-tight text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
         Craftsmanship Gallery &amp; Collections
       </h1>
-      <p class="text-sm sm:text-base text-[#f7f3ed]/85 max-w-2xl mx-auto leading-relaxed mb-4 text-center">
+      
+      <p class="text-sm sm:text-base text-[#f7f3ed] max-w-2xl mx-auto leading-relaxed text-center font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
         Explore our real-world completed projects organized by collection: Indoor Hardwood Flooring, Exterior Marine Decking, Architectural Wall Paneling, and Custom Millwork &amp; Subfloor Engineering. Click any installation for detailed species and finish specifications.
       </p>
     </div>
@@ -263,10 +261,10 @@
                  alt="White Oak Herringbone Foyer" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Flooring Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">French White Oak Herringbone Foyer</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">European White Oak • Natural Hardwax Oil • Bel Air</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Flooring Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">French White Oak Herringbone Foyer</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">European White Oak • Natural Hardwax Oil • Bel Air</p>
           </div>
         </div>
 
@@ -278,10 +276,10 @@
                  alt="American Black Walnut Living Room" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Flooring Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">American Black Walnut Great Room</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">American Black Walnut • Satin Finish • Aspen</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Flooring Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">American Black Walnut Great Room</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">American Black Walnut • Satin Finish • Aspen</p>
           </div>
         </div>
 
@@ -293,10 +291,10 @@
                  alt="Scandinavian Wire-Brushed Chevron Living Room" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Flooring Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Scandinavian Wire-Brushed Chevron</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">White Oak Chevron 45° • Ultra Matte • Tribeca</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Flooring Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Scandinavian Wire-Brushed Chevron</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">White Oak Chevron 45° • Ultra Matte • Tribeca</p>
           </div>
         </div>
 
@@ -308,10 +306,10 @@
                  alt="Wide Plank White Oak Master Suite" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Flooring Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Wide Plank White Oak Master Suite</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">European White Oak 240mm • Sonoma Valley</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Flooring Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Wide Plank White Oak Master Suite</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">European White Oak 240mm • Sonoma Valley</p>
           </div>
         </div>
 
@@ -324,10 +322,10 @@
                  alt="Cantilevered Brazilian Ipe Pool Deck" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Decking Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Cantilevered Brazilian Ipe Pool Deck</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">Brazilian Ipe • Hidden Marine Clips • Malibu</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Decking Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Cantilevered Brazilian Ipe Pool Deck</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">Brazilian Ipe • Hidden Marine Clips • Malibu</p>
           </div>
         </div>
 
@@ -339,10 +337,10 @@
                  alt="Modern Rooftop Teak Terrace" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Decking Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Modern Rooftop Teak Terrace</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">Royal Burmese Teak • Pedestal Substructure</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Decking Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Modern Rooftop Teak Terrace</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">Royal Burmese Teak • Pedestal Substructure</p>
           </div>
         </div>
 
@@ -354,10 +352,10 @@
                  alt="Coastal Waterfront Ash Sun Deck" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Decking Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Coastal Waterfront Ash Sun Deck</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">Thermo Nordic Ash • 316 Stainless Fasteners</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Decking Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Coastal Waterfront Ash Sun Deck</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">Thermo Nordic Ash • 316 Stainless Fasteners</p>
           </div>
         </div>
 
@@ -370,10 +368,10 @@
                  alt="Acoustic Slatted Timber Wall" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Wall Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Hinoki Cypress Acoustic Slatted Wall</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">NRC 0.85 Sound Absorb • Concealed Fasteners</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Wall Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Hinoki Cypress Acoustic Slatted Wall</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">NRC 0.85 Sound Absorb • Concealed Fasteners</p>
           </div>
         </div>
 
@@ -385,10 +383,10 @@
                  alt="Smoked Oak Architectural Paneling" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Wall Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Smoked European Oak Wall Paneling</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">European White Oak • Deep Tannin Smoked</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Wall Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Smoked European Oak Wall Paneling</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">European White Oak • Deep Tannin Smoked</p>
           </div>
         </div>
 
@@ -400,10 +398,10 @@
                  alt="Fluted American Walnut Feature Wall" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Wall Collection</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Fluted American Walnut Feature Wall</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">Precision CNC Flutes • Integrated LED Channel</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Wall Collection</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Fluted American Walnut Feature Wall</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">Precision CNC Flutes • Integrated LED Channel</p>
           </div>
         </div>
 
@@ -416,10 +414,10 @@
                  alt="Suspended Timber Ceiling Beams" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Other Products • Ceilings</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Suspended Douglas Fir Ceiling Beams</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">Douglas Fir • Flush HVAC &amp; Linear Light Revealing</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Other Products • Ceilings</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Suspended Douglas Fir Ceiling Beams</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">Douglas Fir • Flush HVAC &amp; Linear Light Revealing</p>
           </div>
         </div>
 
@@ -431,10 +429,10 @@
                  alt="Subfloor Soundproofing and Laser Prep" 
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#120e0b]/90 via-[#1b130e]/30 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
-            <span class="text-[9.5px] uppercase font-bold tracking-widest text-[#d4a373] mb-0.5">Other Products • Subfloor</span>
-            <h4 class="font-serif text-base sm:text-lg font-bold">Subfloor Acoustic &amp; Moisture Base</h4>
-            <p class="text-[11.5px] text-white/80 mt-0.5">100% Epoxy Vapor Barrier • IIC 74 Acoustic Cork</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 sm:p-5 text-white">
+            <span class="inline-block self-start text-[10px] uppercase font-bold tracking-wider text-[#e9c46a] bg-black/75 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10 mb-1.5 shadow-sm">Other Products • Subfloor</span>
+            <h4 class="font-serif text-base sm:text-lg font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Subfloor Acoustic &amp; Moisture Base</h4>
+            <p class="text-[11.5px] text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] mt-0.5">100% Epoxy Vapor Barrier • IIC 74 Acoustic Cork</p>
           </div>
         </div>
 

@@ -52,10 +52,8 @@
     }
   </script>
 </head>
-<body class="wood-texture-subtle min-h-screen flex flex-col antialiased">
-
-    <!-- Main Navigation Header -->
-  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e3d7c5] shadow-sm transition">
+<body class="wood-texture-subtle min-h-screen flex flex-col antialiased">  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] shadow-sm transition">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-3">
 
       <!-- Brand Logo Aligned Top-Left -->
@@ -104,16 +102,16 @@
           </div>
         </div>
 
-        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About<span class="hidden xl:inline">&nbsp;Us</span></a>
-        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products<span class="hidden xl:inline">&nbsp;&amp; Wood</span></a>
-        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center h-9">Services<span class="hidden xl:inline">&nbsp;&amp; Refinishing</span></a>
+        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About</a>
+        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products</a>
+        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center h-9">Services</a>
         <a href="gallery.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Gallery</a>
-        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing<span class="hidden 2xl:inline">&nbsp;Guide</span></a>
+        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing</a>
         <a href="blog.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Blog</a>
-        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact<span class="hidden 2xl:inline">&nbsp;&amp; Measure</span></a>
+        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact</a>
       </nav>
 
-      <!-- Action Buttons (Theme Toggle, RTL Button, Login/Logout Button, Sample Drawer, Mobile Hamburger) -->
+      <!-- Action Buttons (Theme Toggle, RTL Button, Sample Drawer, Primary CTA, Mobile Hamburger) -->
       <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0 whitespace-nowrap">
         <!-- Theme Toggle Button -->
         <button type="button" class="theme-toggle-btn flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
@@ -130,21 +128,19 @@
           <span class="rtl-btn-text">RTL</span>
         </button>
 
-        <!-- Login / Logout Button -->
-        <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition items-center gap-1.5 flex-shrink-0">
-          <svg class="auth-icon-login w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
-          </svg>
-          <span class="auth-btn-text">Login</span>
-        </a>
-
-<!-- Sample Box Drawer Trigger -->
+        <!-- Sample Box Drawer Trigger -->
         <button class="open-sample-drawer relative hidden sm:flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
           <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
         </button>
+
+        <!-- Primary Consultation CTA Button -->
+        <a href="contact.html#booking-section" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition flex-shrink-0 hover-lift">
+          <svg class="w-3.5 h-3.5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book Consultation</span>
+        </a>
 
         <!-- Mobile Menu Hamburger Button -->
         <button id="mobile-menu-toggle" class="lg:hidden flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
@@ -171,40 +167,38 @@
       </div>
 
       <div class="space-y-1">
-        <a href="about.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">About Our Studio</a>
-        <a href="products.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Products &amp; Wood Types</a>
-        <a href="services.html" class="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#c58940] bg-[#f0e8dc]/60 transition">Services &amp; Refinishing</a>
-        <a href="gallery.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Showroom Gallery</a>
-        <a href="pricing.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Pricing Guide &amp; Estimator</a>
+        <a href="about.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">About Our Studio</a>
+        <a href="products.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Products &amp; Wood Types</a>
+        <a href="services.html" class="block py-2.5 px-3 rounded-xl text-sm font-bold text-[#c58940] bg-[#f0e8dc]/60 dark:bg-[#281c15] transition">Services &amp; Refinishing</a>
+        <a href="gallery.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Showroom Gallery</a>
+        <a href="pricing.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Pricing Guide &amp; Estimator</a>
         <a href="blog.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">The Timber Journal</a>
-        <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] hover:text-[#c58940] hover:bg-[#f0e8dc] transition">Contact &amp; Site Measurement</a>
+        <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Contact &amp; Site Measurement</a>
       </div>
 
       <!-- Quick Actions for Mobile in Drawer -->
-      <div class="pt-4 border-t border-[#e3d7c5] space-y-3">
-        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] bg-white text-[#2c1d16] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
+      <div class="pt-4 border-t border-[#e3d7c5] dark:border-[#38271e] space-y-3">
+        <a href="contact.html#booking-section" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+          <svg class="w-4 h-4 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book Free Consultation</span>
+        </a>
+        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#261b14] text-[#2c1d16] dark:text-[#f7f3ed] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
             <span>Sample Swatch Box</span>
           </span>
           <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
         </button>
-
-          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
-            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
-            <span class="auth-btn-text">Login</span>
-          </a>
-
-</div>
+      </div>
     </div>
   </header>
 
   <!-- Service Hero Section -->
   <section class="relative bg-[#1b130e] text-[#f7f3ed] py-20 lg:py-28 overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity pointer-events-none">
+    <div class="absolute inset-0 z-0 opacity-45 pointer-events-none">
       <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=2000&q=80" alt="Historic Estate Parquet" class="w-full h-full object-cover">
     </div>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b] via-[#1b130e]/90 to-transparent z-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#120e0b]/95 via-[#1b130e]/85 to-transparent z-0"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Breadcrumb -->

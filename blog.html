@@ -55,9 +55,7 @@
     }
   </script>
 </head>
-<body class="wood-texture-subtle min-h-screen flex flex-col antialiased text-left">
-
-  <!-- Main Navigation Header -->
+<body class="wood-texture-subtle min-h-screen flex flex-col antialiased text-left">  <!-- Main Navigation Header -->
   <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#18110c]/95 backdrop-blur-md border-b border-[#e3d7c5] dark:border-[#38271e] shadow-sm transition">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-3">
 
@@ -107,19 +105,20 @@
           </div>
         </div>
 
-        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About<span class="hidden xl:inline">&nbsp;Us</span></a>
-        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products<span class="hidden xl:inline">&nbsp;&amp; Wood</span></a>
-        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Services<span class="hidden xl:inline">&nbsp;&amp; Refinishing</span></a>
+        <a href="about.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">About</a>
+        <a href="products.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Products</a>
+        <a href="services.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Services</a>
         <a href="gallery.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Gallery</a>
-        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing<span class="hidden 2xl:inline">&nbsp;Guide</span></a>
+        <a href="pricing.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Pricing</a>
         <a href="blog.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap text-[#c58940] font-semibold border-b-2 border-[#c58940] transition flex items-center h-9">Blog</a>
-        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact<span class="hidden 2xl:inline">&nbsp;&amp; Measure</span></a>
+        <a href="contact.html" class="px-1.5 xl:px-2.5 py-1.5 whitespace-nowrap hover:text-[#c58940] transition flex items-center h-9">Contact</a>
       </nav>
 
-      <!-- Action Buttons -->
+      <!-- Action Buttons (Theme Toggle, RTL Button, Sample Drawer, Primary CTA, Mobile Hamburger) -->
       <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0 whitespace-nowrap">
-        <button type="button" class="theme-toggle-btn flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
-          <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29] dark:text-[#dfd3c5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift items-center justify-center shadow-sm flex-shrink-0" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+          <svg class="theme-icon-moon w-4 h-4 sm:w-5 sm:h-5 text-[#5a3a29]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
           </svg>
           <svg class="theme-icon-sun hidden w-4 h-4 sm:w-5 sm:h-5 text-[#e9c46a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,26 +126,27 @@
           </svg>
         </button>
 
-        <button type="button" class="rtl-toggle-btn flex px-2 py-1 sm:px-3 sm:py-2 text-[11px] sm:text-xs rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#5a3a29] dark:text-[#dfd3c5] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
+        <!-- RTL Toggle Button -->
+        <button type="button" class="rtl-toggle-btn flex px-2 py-1 sm:px-3 sm:py-2 text-[11px] sm:text-xs rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#5a3a29] font-bold text-xs tracking-wider transition hover-lift shadow-sm items-center justify-center flex-shrink-0" title="Toggle RTL / LTR Layout" aria-label="Toggle Direction">
           <span class="rtl-btn-text">RTL</span>
         </button>
 
-        <!-- Login / Logout Button -->
-        <a href="login.html" class="auth-btn hidden md:flex px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition items-center gap-1.5 flex-shrink-0">
-          <svg class="auth-icon-login w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
-          </svg>
-          <span class="auth-btn-text">Login</span>
-        </a>
-
-        <button class="open-sample-drawer relative hidden sm:flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] transition hover-lift items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
+        <!-- Sample Box Drawer Trigger -->
+        <button class="open-sample-drawer relative hidden sm:flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] transition hover-lift flex items-center justify-center flex-shrink-0" title="View Sample Swatch Box">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
           <span class="sample-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#c58940] text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow">0</span>
         </button>
 
-        <button id="mobile-menu-toggle" class="lg:hidden flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
+        <!-- Primary Consultation CTA Button -->
+        <a href="contact.html#booking-section" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] hover:from-[#b37833] hover:to-[#966324] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-sm hover:shadow transition flex-shrink-0 hover-lift">
+          <svg class="w-3.5 h-3.5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book Consultation</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden flex p-1.5 sm:p-2.5 rounded-xl border border-[#e3d7c5] hover:border-[#c58940] bg-white text-[#2c1d16] items-center justify-center shadow-sm transition flex-shrink-0" aria-label="Toggle navigation">
           <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -155,15 +155,17 @@
     </div>
 
     <!-- Mobile Slide Down Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 w-full border-t border-[#e3d7c5] dark:border-[#38271e] bg-[#faf7f2] dark:bg-[#18110c] px-4 sm:px-6 py-5 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto z-50">
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 w-full border-t border-[#e3d7c5] bg-[#faf7f2] dark:bg-[#18110c] px-4 sm:px-6 py-5 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto z-50">
+      
+      <!-- Home 1 & Home 2 Twin Cards on Mobile -->
       <div class="grid grid-cols-2 gap-2 pb-1">
-        <a href="index.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] dark:text-[#dfd3c5] bg-white dark:bg-[#231812] border border-[#e3d7c5] dark:border-[#38271e] hover:border-[#c58940] text-center transition">
+        <a href="index.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] bg-white border border-[#e3d7c5] hover:border-[#c58940] text-center transition">
           <span class="block text-[10px] uppercase tracking-wider text-[#c58940] font-bold">Style 1</span>
-          <span class="font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 1 (Showroom)</span>
+          <span class="font-bold text-[#2c1d16]">Home 1 (Showroom)</span>
         </a>
-        <a href="home-2.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] dark:text-[#dfd3c5] bg-white dark:bg-[#231812] border border-[#e3d7c5] dark:border-[#38271e] hover:border-[#c58940] text-center transition">
+        <a href="home-2.html" class="block py-2.5 px-3 rounded-xl text-xs font-medium text-[#5a3a29] bg-white border border-[#e3d7c5] hover:border-[#c58940] text-center transition">
           <span class="block text-[10px] uppercase tracking-wider text-[#c58940] font-bold">Style 2</span>
-          <span class="font-bold text-[#2c1d16] dark:text-[#f7f3ed]">Home 2 (Architectural)</span>
+          <span class="font-bold text-[#2c1d16]">Home 2 (Architectural)</span>
         </a>
       </div>
 
@@ -177,36 +179,39 @@
         <a href="contact.html" class="block py-2.5 px-3 rounded-xl text-sm font-medium text-[#5a3a29] dark:text-[#dfd3c5] hover:text-[#c58940] hover:bg-[#f0e8dc] dark:hover:bg-[#281c15] transition">Contact &amp; Site Measurement</a>
       </div>
 
+      <!-- Quick Actions for Mobile in Drawer -->
       <div class="pt-4 border-t border-[#e3d7c5] dark:border-[#38271e] space-y-3">
-        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#231812] text-[#2c1d16] dark:text-[#f7f3ed] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
+        <a href="contact.html#booking-section" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
+          <svg class="w-4 h-4 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book Free Consultation</span>
+        </a>
+        <button class="open-sample-drawer w-full py-2.5 px-4 rounded-xl border border-[#e3d7c5] dark:border-[#38271e] bg-white dark:bg-[#261b14] text-[#2c1d16] dark:text-[#f7f3ed] font-semibold text-sm flex items-center justify-between shadow-sm hover:border-[#c58940] transition">
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4 text-[#c58940]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
             <span>Sample Swatch Box</span>
           </span>
           <span class="sample-count-badge hidden px-2 py-0.5 bg-[#c58940] text-white text-xs font-bold rounded-full">0</span>
         </button>
-
-          <a href="login.html" class="auth-btn w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#c58940] to-[#b37833] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow transition">
-            <svg class="auth-icon-login w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
-            <span class="auth-btn-text">Login</span>
-          </a>
-
-</div>
+      </div>
     </div>
   </header>
 
-  <!-- Editorial Hero Banner -->
-  <section class="py-16 sm:py-20 lg:py-24 bg-[#1b130e] text-[#f7f3ed] relative overflow-hidden flex items-center justify-center text-center">
+            <!-- Editorial Hero Banner -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-[#120e0b] relative overflow-hidden flex items-center justify-center text-center">
+    <!-- 100% Local Hero Image: Artisan Workbench with Wood Plane Curls -->
     <img src="./assets/images/Blog.jpg" 
          alt="Master woodcraft artisan workbench and timber plane curls" 
-         class="absolute inset-0 w-full h-full object-cover opacity-50 sm:opacity-55">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#120e0b]/90 via-[#1b130e]/80 to-[#120e0b]/90"></div>
+         class="absolute inset-0 w-full h-full object-cover opacity-90 sm:opacity-95 dark:opacity-85 transition-opacity">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65 pointer-events-none"></div>
+
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center">
-      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c58940] mb-3 inline-block">Architectural Woodcraft Publications</span>
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f7f3ed] mb-4 max-w-4xl mx-auto leading-tight text-center">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#e9c46a] mb-3 inline-block bg-[#120e0b]/90 px-4 py-1.5 rounded-full border border-[#c58940] shadow-lg backdrop-blur-sm">Architectural Woodcraft Publications</span>
+      
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-4xl mx-auto leading-tight text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
         The Timber Journal &amp; Publications
       </h1>
-      <p class="text-sm sm:text-base text-[#f7f3ed]/85 max-w-2xl mx-auto leading-relaxed mb-4 text-center">
+      
+      <p class="text-sm sm:text-base text-[#f7f3ed] max-w-2xl mx-auto leading-relaxed text-center font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
         Technical explorations into timber physics, subfloor acoustic isolation, moisture equilibrium, and master guild joinery principles written for architects, interior designers, and discerning homeowners.
       </p>
     </div>

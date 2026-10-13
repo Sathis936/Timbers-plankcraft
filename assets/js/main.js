@@ -123,58 +123,6 @@ function showToast(message, type = 'info') {
   }, 4000);
 }
 
-// Authentication & Session Management (Dummy Mode - Login button only)
-const AuthManager = {
-  STORAGE_KEY: 'timber_plank_logged_in',
-  USER_KEY: 'timber_plank_user_email',
-
-  isLoggedIn() {
-    return localStorage.getItem(this.STORAGE_KEY) === 'true';
-  },
-
-  getUserEmail() {
-    return localStorage.getItem(this.USER_KEY) || 'client@timberplank.com';
-  },
-
-  login(email) {
-    localStorage.setItem(this.STORAGE_KEY, 'true');
-    if (email) localStorage.setItem(this.USER_KEY, email);
-    this.updateUI();
-  },
-
-  logout() {
-    localStorage.removeItem(this.STORAGE_KEY);
-    localStorage.removeItem(this.USER_KEY);
-    this.updateUI();
-  },
-
-  updateUI() {
-    const authBtns = document.querySelectorAll('.auth-btn');
-
-    authBtns.forEach(btn => {
-      const textSpan = btn.querySelector('.auth-btn-text');
-      const iconSvg = btn.querySelector('.auth-icon-login');
-
-      // The navbar button always links to login.html and strictly displays Login
-      btn.setAttribute('href', 'login.html');
-      btn.onclick = null;
-      btn.title = 'Login';
-
-      // Keep constant showroom button styling
-      btn.classList.remove('border', 'border-[#c58940]', 'bg-white', 'text-[#c58940]', 'hover:bg-[#c58940]');
-      btn.classList.add('bg-gradient-to-r', 'from-[#c58940]', 'to-[#b37833]', 'text-white');
-
-      if (textSpan) {
-        textSpan.textContent = 'Login';
-      }
-
-      if (iconSvg) {
-        iconSvg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>`;
-      }
-    });
-  }
-};
-
 // Dark / Light Theme Toggle Management
 const ThemeManager = {
   STORAGE_KEY: 'timber_plank_theme',
@@ -392,7 +340,6 @@ function initNewsletter() {
 document.addEventListener('DOMContentLoaded', () => {
   ThemeManager.init();
   DirectionManager.init();
-  AuthManager.updateUI();
   initNavigation();
   initNewsletter();
   SampleManager.updateUI();
